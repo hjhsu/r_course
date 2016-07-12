@@ -120,79 +120,79 @@ $(document).ready(function () {
 
 <div id="stage-1" class="section level2">
 <h2>stage 1</h2>
-<p>NA</p>
+<p>這門課程的主題是，當資訊已經被結構化之後，我們要如何整理結構化的資料。</p>
 </div>
 <div id="stage-2" class="section level2">
 <h2>stage 2</h2>
-<p>R<U+653C><U+3E36><U+393C><U+3E63>迂憭圾瘙粹<U+613C><U+3E31><U+393C><U+3E35><U+613C><U+3E31><U+393C><U+3E61><U+653C><U+3E36>嚗<U+623C><U+3E65><U+613C><U+3E36><U+623C><U+3E63>melt<code>&lt;U+653C&gt;&lt;U+3E33&gt;subset</code>蝑<U+613C><U+3E64><U+393C><U+3E37><U+623C><U+3E39><U+623C><U+3E38><U+383C><U+3E66><U+383C><U+3E32><U+623C><U+3E63><U+623C><U+3E61><U+653C><U+3E36><U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E30>迂銝捆<U+653C><U+3E36><U+393C><U+3E38><U+613C><U+3E38>嚗<U+623C><U+3E38><U+393C><U+3E35>銝虫<U+623C><U+3E38>敺末<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>R有許多解決這類問題的函數，例如：<code>melt</code>、<code>subset</code>等等。族繁不及備載。這些函數的名稱不容易記憶，而且效能並不是很好。</p>
 </div>
 <div id="stage-3" class="section level2">
 <h2>stage 3</h2>
-<p>dplyr憟辣<U+653C><U+3E36>HadleyWickham<U+653C><U+3E35><U+393C><U+3E32>omainFrancois<U+653C><U+3E35>2014銝<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E38><U+653C><U+3E35><U+613C><U+3E35>辣嚗<U+653C><U+3E37><U+653C><U+3E35><U+383C><U+3E39><U+383C><U+3E38><U+613C><U+3E61><U+653C><U+3E36><U+653C><U+3E35>R<U+653C><U+3E35><U+383C><U+3E31><U+393C><U+3E61>鞈<U+393C><U+3E36><U+653C><U+3E37><U+393C><U+3E30><U+623C><U+3E38><U+393C><U+3E63>摰<U+393C><U+3E36><U+393C><U+3E61><U+613C><U+3E35>辣銋<U+623C><U+3E38><U+653C><U+3E33>plyr<U+653C><U+3E36><U+383C><U+3E66><U+623C><U+3E65><U+623C><U+3E61>閫<U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E36>嚗蒂銝憭<U+393C><U+3E32>QLexpression<U+653C><U+3E35><U+383C><U+3E31><U+623C><U+3E30><U+383C><U+3E37><U+623C><U+3E63><U+393C><U+3E35>銋◤Romain<U+653C><U+3E39><U+383C><U+3E31>++<U+653C><U+3E35><U+653C><U+3E35><U+653C><U+3E35><U+383C><U+3E63><U+383C><U+3E31><U+623C><U+3E63>車蝔桀<U+653C><U+3E35>霈<U+383C><U+3E38>捱摰歲<U+653C><U+3E39><U+383C><U+3E31>蝯崇<U+653C><U+3E36><U+653C><U+3E37><U+393C><U+3E30><U+623C><U+3E33><U+393C><U+3E36><U+393C><U+3E61>極<U+653C><U+3E35>嚗<U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E35>之摰辜plyr<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>dplyr套件是HadleyWickham和RomainFrancois在2014上架的一個套件，是目前我認為是在R做資料整理上最完善的套件之一。dplyr提供了直觀的函數，並且能夠和SQLexpression做對應，效能也被Romain透過C++去優化過，種種優勢讓我決定跳過傳統R整理資料的工具，直接教大家dplyr。</p>
 </div>
 <div id="stage-4" class="section level2">
 <h2>stage 4</h2>
-<p>NA</p>
+<p>請大家先安裝<code>dplyr</code>套件。</p>
 <pre class="r"><code>check_then_install(&quot;dplyr&quot;, &quot;0.4.3&quot;)</code></pre>
 </div>
 <div id="stage-5" class="section level2">
 <h2>stage 5</h2>
-<p>NA</p>
+<p>接著請大家載入dplyr套件</p>
 <pre class="r"><code>library(dplyr)</code></pre>
 </div>
 <div id="stage-6" class="section level2">
 <h2>stage 6</h2>
-<p>隢<U+393C><U+3E30>飛頛詨摮詨<U+613C><U+3E35>辣<U+653C><U+3E37><U+393C><U+3E61>絲<U+653C><U+3E36><U+383C><U+3E39><U+623C><U+3E63><U+623C><U+3E63>vignette(package=“dplyr”)`</p>
+<p>請同學輸入學套件的起手式：<code>vignette(package=&quot;dplyr&quot;)</code></p>
 <pre class="r"><code>vignette(package = &quot;dplyr&quot;)</code></pre>
 </div>
 <div id="stage-7" class="section level2">
 <h2>stage 7</h2>
-<p>Hadley蝑犖<U+653C><U+3E39><U+653C><U+3E36><U+653C><U+3E39><U+393C><U+3E36>R憟辣<U+653C><U+3E37><U+393C><U+3E35><U+393C><U+3E61>之憭改<U+623C><U+3E63><U+623C><U+3E62><U+623C><U+3E30>ignette<U+653C><U+3E36><U+653C><U+3E39><U+393C><U+3E64>虜<U+653C><U+3E39><U+383C><U+3E37><U+613C><U+3E36><U+393C><U+3E61><U+623C><U+3E63><U+383C><U+3E39>隞交<U+383C><U+3E38><U+393C><U+3E63><U+393C><U+3E63>閮勗<U+613C><U+3E34><U+393C><U+3E61>vignette<U+653C><U+3E33>牧撖西店嚗<U+383C><U+3E38>犖撖怎<U+393C><U+3E61>plyr憟辣<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E62>晶蝯<U+623C><U+3E30><U+623C><U+3E39><U+623C><U+3E38><U+393C><U+3E63><U+613C><U+3E66>adley憭批之隞神<U+653C><U+3E37><U+393C><U+3E61>移敶押<U+623C><U+3E38><U+383C><U+3E31><U+383C><U+3E31><U+383C><U+3E65>swirl<U+653C><U+3E37><U+393C><U+3E61>末<U+653C><U+3E38><U+393C><U+3E39><U+623C><U+3E63>停<U+653C><U+3E36><U+653C><U+3E36><U+383C><U+3E38>隞交<U+383C><U+3E61><U+653C><U+3E35>plyr<U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E61>韏圈<U+383C><U+3E31><U+623C><U+3E38><U+653C><U+3E39><U+383C><U+3E31><U+383C><U+3E32></p>
+<p>Hadley等人都是開發R套件界的大大，他們對vignette是非常重視的，所以我們會看到許多vignette。說實話，我個人寫的dplyr套件的介紹絕對也不會比Hadley大大他們寫的精彩。不過透過swirl的好處，就是我們可以把整個dplyr的功能走過一遍。</p>
 </div>
 <div id="stage-8" class="section level2">
 <h2>stage 8</h2>
-<p>隢<U+393C><U+3E30>飛<U+653C><U+3E35>銵vignette(“introduction”,package=“dplyr”)`<U+653C><U+3E36><U+383C><U+3E39><U+393C><U+3E36>ntroduction<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>請同學執行<code>vignette(&quot;introduction&quot;,package=&quot;dplyr&quot;)</code>打開Introduction。</p>
 <pre class="r"><code>vignette(&quot;introduction&quot;, package = &quot;dplyr&quot;)</code></pre>
 </div>
 <div id="stage-9" class="section level2">
 <h2>stage 9</h2>
-<p>蝪∪韏瑁<U+613C><U+3E36><U+623C><U+3E63><U+383C><U+3E38><U+653C><U+3E36>頝<U+393C><U+3E31>ignette嚗<code>nycflights13</code>鋆⊿<U+653C><U+3E37><U+393C><U+3E61>flights<code>鞈&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E62&gt;&lt;U+383C&gt;&lt;U+3E31&gt;毀蝧&lt;U+383C&gt;&lt;U+3E32&gt;隢&lt;U+393C&gt;&lt;U+3E30&gt;飛&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E35&gt;&lt;U+613C&gt;&lt;U+3E65&gt;&lt;U+613C&gt;&lt;U+3E33&gt;nycflights13</code>憟辣<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>簡單起見，我們直接跟著vignette，拿<code>nycflights13</code>裡面的<code>flights</code>資料集做練習。請同學先安裝<code>nycflights13</code>套件。</p>
 <pre class="r"><code>check_then_install(&quot;nycflights13&quot;, &quot;0.1&quot;)</code></pre>
 </div>
 <div id="stage-10" class="section level2">
 <h2>stage 10</h2>
-<p>NA</p>
+<p>接著載入<code>nycflights13</code>套件。</p>
 <pre class="r"><code>library(nycflights13)</code></pre>
 </div>
 <div id="stage-11" class="section level2">
 <h2>stage 11</h2>
-<p>NA</p>
+<p>套件<code>nycflights13</code>中的flights資料集合，是所有於2013年在紐約起降的飛機資料。</p>
 </div>
 <div id="stage-12" class="section level2">
 <h2>stage 12</h2>
-<p>Vignette銝剖恐蝔庶lights<U+653C><U+3E35><U+653C><U+3E36><U+393C><U+3E63><U+383C><U+3E39>336776蝑<U+623C><U+3E33><U+393C><U+3E36><U+383C><U+3E38><U+383C><U+3E37>府閬<U+613C><U+3E39><U+613C><U+3E64><U+623C><U+3E38>銝<U+623C><U+3E63><U+623C><U+3E39><U+613C><U+3E30>噶霈<U+393C><U+3E30>飛銴<U+623C><U+3E66><U+393C><U+3E32>data.frame<U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E33><U+623C><U+3E64><U+613C><U+3E62><U+393C><U+3E30>飛<U+653C><U+3E37><U+653C><U+3E36><U+383C><U+3E63>誘<U+653C><U+3E36>閰▅lights<U+653C><U+3E35><U+653C><U+3E36><U+393C><U+3E63><U+613C><U+3E34><U+623C><U+3E30><U+623C><U+3E33><U+393C><U+3E36><U+383C><U+3E32></p>
+<p>Vignette中宣稱flights共有336776筆資料。我們應該要驗證一下，也順便讓同學複習data.frame的操作。請同學用指令查詢flights共有多少資料。</p>
 <pre class="r"><code>nrow(flights)</code></pre>
 </div>
 <div id="stage-13" class="section level2">
 <h2>stage 13</h2>
-<p>dplyr銝剖<U+653C><U+3E38><U+393C><U+3E39><U+393C><U+3E30>ata.frame<U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E36>嚗<U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E63>filter<code>&lt;U+653C&gt;&lt;U+3E33&gt;slice</code><U+653C><U+3E33>arrange<code>&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+383C&gt;&lt;U+3E31&gt;</code>select<code>&lt;U+653C&gt;&lt;U+3E33&gt;distinct</code><U+653C><U+3E33>mutate<code>&lt;U+653C&gt;&lt;U+3E33&gt;summarise</code><U+653C><U+3E35><U+393C><U+3E32>sample_n`<U+653C><U+3E36>銝<U+623C><U+3E65><U+393C><U+3E61>玨蝔<U+383C><U+3E62>銝哨<U+623C><U+3E63><U+383C><U+3E38><U+623C><U+3E38><U+653C><U+3E39><U+383C><U+3E32><U+393C><U+3E33><U+623C><U+3E64><U+623C><U+3E63><U+623C><U+3E38><U+653C><U+3E39><U+383C><U+3E32><U+613C><U+3E63>圾<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>dplyr中在處理data.frame的函數，共有：<code>filter</code>、<code>slice</code>、<code>arrange</code>、<code>select</code>、<code>distinct</code>、<code>mutate</code>、<code>summarise</code>和<code>sample_n</code>接下來的課程中，我們一邊操作，一邊講解。</p>
 </div>
 <div id="stage-14" class="section level2">
 <h2>stage 14</h2>
-<p><code>filter</code><U+653C><U+3E36><U+653C><U+3E37>靘<U+383C><U+3E31><U+383C><U+3E38><U+653C><U+3E35><U+393C><U+3E30><U+393C><U+3E61><U+383C><U+3E31>蕪嚗<U+383C><U+3E39>隞亦<U+623C><U+3E36><U+383C><U+3E31>filter<code>&lt;U+653C&gt;&lt;U+3E38&gt;&lt;U+393C&gt;&lt;U+3E39&gt;&lt;U+393C&gt;&lt;U+3E30&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E61&gt;嚗nrow</code>嚗<U+393C><U+3E63><U+383C><U+3E33>銝<U+393C><U+3E39>filter<code>&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;瘜嚗洵銝&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E66&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E39&gt;&lt;U+393C&gt;&lt;U+3E30&gt;&lt;U+393C&gt;&lt;U+3E61&gt;ata.frame嚗&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E30&gt;車&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E31&gt;蕪璇辣&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+623C&gt;&lt;U+3E63&gt;filter(flights,month==1,day==1)</code>嚗<U+613C><U+3E62><U+393C><U+3E30>飛閰西岫<U+653C><U+3E37><U+393C><U+3E63><U+383C><U+3E32></p>
+<p><code>filter</code>是用來做列方向的過濾，所以經過<code>filter</code>處理後，資料的個數（<code>nrow</code>）會下降。<code>filter</code>函數的用法是，第一個參數放我們要處理的data.frame，後面接各種過濾條件。例如：<code>filter(flights,month==1,day==1)</code>，請同學試試看。</p>
 <pre class="r"><code>filter(flights, month == 1, day == 1)</code></pre>
 </div>
 <div id="stage-15" class="section level2">
 <h2>stage 15</h2>
-<p><U+653C><U+3E35><U+393C><U+3E30>飛<U+653C><U+3E36><U+383C><U+3E37>府<U+653C><U+3E36><U+393C><U+3E63>釣<U+653C><U+3E36><U+383C><U+3E34>嚗撓<U+653C><U+3E35>蝯<U+393C><U+3E65>葉<code>month</code><U+653C><U+3E35><U+393C><U+3E32>day<code>&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+653C&gt;&lt;U+3E36&gt;1鈭&lt;U+393C&gt;&lt;U+3E62&gt;</code>filter<code>&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+623C&gt;&lt;U+3E38&gt;蝑&lt;U+623C&gt;&lt;U+3E38&gt;蝑&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E30&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+613C&gt;&lt;U+3E61&gt;嚗month==1</code><U+653C><U+3E35><U+393C><U+3E32>day==1<code>嚗&lt;U+383C&gt;&lt;U+3E31&gt;炎&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+653C&gt;&lt;U+3E35&gt;閫&lt;U+613C&gt;&lt;U+3E33&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E65&gt;&lt;U+623C&gt;&lt;U+3E61&gt;&lt;U+613C&gt;&lt;U+3E61&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E39&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E62&gt;&lt;U+383C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E61&gt;&lt;U+613C&gt;&lt;U+3E65&gt;撠&lt;U+383C&gt;&lt;U+3E37&gt;</code>flights<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+613C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E64&gt;&lt;U+383C&gt;&lt;U+3E39&gt;隞亙</code>filter<code>銝剔&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E34&gt;</code>month<code>撠梁&lt;U+613C&gt;&lt;U+3E64&gt;&lt;U+393C&gt;&lt;U+3E30&gt;</code>flights<span class="math">\(month`嚗day`撠梁&lt;U+613C&gt;&lt;U+3E64&gt;&lt;U+393C&gt;&lt;U+3E30&gt;`flights\)</span>day`</p>
+<p>同學應該會注意到，輸出結果中<code>month</code>和<code>day</code>都是1了。因為<code>filter</code>會把資料一筆一筆的對後面的語句（<code>month==1</code>和<code>day==1</code>）做檢查。R在解析這些語句時，自動把這些變數對應到<code>flights</code>的欄位。所以在<code>filter</code>中的<code>month</code>就等同於<code>flights$month</code>，<code>day</code>就等同於<code>flights$day</code></p>
 </div>
 <div id="stage-16" class="section level2">
 <h2>stage 16</h2>
-<p><U+653C><U+3E37><U+383C><U+3E36><U+383C><U+3E32>QLexpression<U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E30>飛隢釣<U+653C><U+3E36><U+383C><U+3E34><U+623C><U+3E63>filter<code>撠望SQL&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;WHERE</code><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>熟悉SQLexpression的同學請注意，<code>filter</code>就是SQL的<code>WHERE</code>。</p>
 </div>
 <div id="stage-17" class="section level2">
 <h2>stage 17</h2>
-<p>憒<U+393C><U+3E65><U+383C><U+3E38><U+613C><U+3E36>蝙<U+653C><U+3E37>RBasic蝟餃<U+383C><U+3E38><U+383C><U+3E39><U+653C><U+3E36><U+383C><U+3E39>雿輻<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E61><U+623C><U+3E33><U+623C><U+3E63><U+613C><U+3E36><U+613C><U+3E36><U+623C><U+3E64><U+623C><U+3E65><U+653C><U+3E35><U+393C><U+3E30>見<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E35><U+393C><U+3E65>嚗<U+613C><U+3E62><U+393C><U+3E30>飛閰西<U+393C><U+3E31>神撖怎<U+393C><U+3E63><U+383C><U+3E66>內嚗<U+653C><U+3E35><U+623C><U+3E38><U+393C><U+3E65><U+613C><U+3E66><U+623C><U+3E63><U+393C><U+3E32><U+623C><U+3E38><U+653C><U+3E35>[`<U+653C><U+3E33><U+613C><U+3E31><U+613C><U+3E62>瑼<U+613C><U+3E31><U+623C><U+3E63>DataEngineer-05-01.R銝凋<U+623C><U+3E64><U+613C><U+3E64><U+623C><U+3E63><U+613C><U+3E65><U+383C><U+3E38><U+623C><U+3E65><U+613C><U+3E62><U+613C><U+3E64><U+613C><U+3E61>蒂<U+653C><U+3E35><U+383C><U+3E38><U+383C><U+3E66>console銝剛撓<U+653C><U+3E35>嚗ubmit()</p>
+<p>如果我們要使用RBasic系列所所使用的語法，要如何得到同樣的結果呢？請同學試著寫寫看。提示：兩個布林比較和一個<code>[</code>。這題請在檔案：RDataEngineer-05-01.R中作答，完成後請存檔並切換到console中輸入：submit()</p>
 <pre class="r"><code># local&lt;e5&gt;&lt;e6&gt;&lt;e5&gt;&lt;e6&gt;&lt;9c&gt;撓&lt;e5&gt;&lt;e6&gt;&lt;9c&gt;敺&lt;b8&gt;&lt;e5&gt;xpression&lt;e7&gt;&lt;9a&gt;&lt;b5&gt;&lt;9e&gt;&lt;9c&gt;
 # &lt;e6&gt;&lt;89&gt;隞乩葉&lt;e9&gt;&lt;96&gt;遣蝡&lt;9a&gt;&lt;ae&gt;銝&lt;9c&gt;情&lt;e6&gt;&lt;9f&gt;憭
 answer01 &lt;- local({
@@ -207,32 +207,32 @@ answer01 &lt;- local({
 </div>
 <div id="stage-18" class="section level2">
 <h2>stage 18</h2>
-<p><U+653C><U+3E37>鈭<U+393C><U+3E39><U+623C><U+3E64>摨佗<U+623C><U+3E63><U+383C><U+3E39>隞交<U+383C><U+3E38>scripts銝剛<U+613C><U+3E65>之摰嗆銝甇乩<U+623C><U+3E38>甇亦<U+393C><U+3E61><U+383C><U+3E31><U+393C><U+3E33><U+623C><U+3E64>祕<U+653C><U+3E35><U+383C><U+3E62><U+623C><U+3E38><U+623C><U+3E63><U+383C><U+3E36><U+383C><U+3E32><U+653C><U+3E37><U+393C><U+3E61>蝙<U+653C><U+3E37><U+653C><U+3E38><U+383C><U+3E35><U+653C><U+3E36><U+393C><U+3E63><U+653C><U+3E36>撖思<U+623C><U+3E38>銵<U+623C><U+3E63>flights[flights<span class="math">\(month==1&amp;flights\)</span>day==1,]`嚗銝蝔桃<U+613C><U+3E38><U+623C><U+3E63>Ⅳ<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E33>葬<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>為了降低難度，所以我們在scripts中讓大家是一步一步的做操作。實務上，熟悉R的使用者會直接寫一行：<code>flights[flights$month==1&amp;flights$day==1,]</code>，這是一種程式碼的壓縮。</p>
 </div>
 <div id="stage-19" class="section level2">
 <h2>stage 19</h2>
-<p>蝔<U+623C><U+3E63>Ⅳ<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E33>葬嚗<U+613C><U+3E65>蝙<U+653C><U+3E37><U+653C><U+3E38>隞亙<U+623C><U+3E30><U+383C><U+3E39><U+613C><U+3E64><U+623C><U+3E30>身摰摮<U+613C><U+3E65>嚗<U+613C><U+3E36><U+383C><U+3E39><U+383C><U+3E39>神<U+653C><U+3E37><U+393C><U+3E61>month_is_1<code>&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+383C&gt;&lt;U+3E31&gt;</code>day_is_1<code>&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E32&gt;is_target</code>蝑<U+613C><U+3E64><U+623C><U+3E64><U+653C><U+3E35>雿踹<U+613C><U+3E36>迨嚗plyr<U+653C><U+3E36><U+383C><U+3E66><U+623C><U+3E65><U+393C><U+3E61>filter<code>&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E32&gt;&lt;U+653C&gt;&lt;U+3E35&gt;隞亦&lt;U+653C&gt;&lt;U+3E36&gt;蝪⊥&lt;U+623C&gt;&lt;U+3E64&gt;&lt;U+393C&gt;&lt;U+3E34&gt;蝔&lt;U+623C&gt;&lt;U+3E63&gt;Ⅳ&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E31&gt;銝璅&lt;U+613C&gt;&lt;U+3E33&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E65&gt;&lt;U+383C&gt;&lt;U+3E33&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E65&gt;&lt;U+393C&gt;&lt;U+3E62&gt;停&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;</code>flights<span class="math">\(month`&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E32&gt;flights\)</span>day<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;flights</code>鋡怎<U+393C><U+3E63>鈭<U+383C><U+3E32></p>
+<p>程式碼的壓縮，讓使用者可以少打字、少設定暫存變數，如剛剛寫的<code>month_is_1</code>、<code>day_is_1</code>和<code>is_target</code>等等。但是即使如此，dplyr提供的<code>filter</code>還是可以用更簡潔程式碼達到一樣的效果。背後的原因就在於<code>flights$month</code>和<code>flights$day</code>的<code>flights</code>被省略了。</p>
 </div>
 <div id="stage-20" class="section level2">
 <h2>stage 20</h2>
-<p>銝<U+653C><U+3E38>靘牧嚗filter<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;洵銝&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E66&gt;隞&lt;U+613C&gt;&lt;U+3E33&gt;銵刻&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E31&gt;&lt;U+393C&gt;&lt;U+3E39&gt;&lt;U+393C&gt;&lt;U+3E30&gt;&lt;U+393C&gt;&lt;U+3E61&gt;ata.frame嚗&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E66&gt;&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+653C&gt;&lt;U+3E36&gt;璇辣&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+383C&gt;&lt;U+3E32&gt;瘥&lt;U+613C&gt;&lt;U+3E32&gt;辣撠望銝&lt;U+653C&gt;&lt;U+3E35&gt;xpression嚗蒂銝撓&lt;U+653C&gt;&lt;U+3E35&gt;撣&lt;U+393C&gt;&lt;U+3E65&gt;&lt;U+393C&gt;&lt;U+3E30&gt;&lt;U+383C&gt;&lt;U+3E37&gt;filter</code><U+653C><U+3E35><U+653C><U+3E36><U+393C><U+3E63><U+393C><U+3E62><U+653C><U+3E39>鈭遛頞單<U+383C><U+3E39><U+653C><U+3E36><U+393C><U+3E63><U+613C><U+3E32>辣<U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E34>鞈<U+393C><U+3E36><U+383C><U+3E32></p>
+<p>一般來說，<code>filter</code>的第一個參數代表要做處理的data.frame，而後面的參數通通都是條件。每個條件就是一個expression，並且輸出布林向量。<code>filter</code>只會回傳那些滿足所有條件的資料。</p>
 </div>
 <div id="stage-21" class="section level2">
 <h2>stage 21</h2>
-<p><U+653C><U+3E39><U+613C><U+3E30>玨蝔<U+623C><U+3E62>晶<U+653C><U+3E37><U+393C><U+3E61>plyr<U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E36>嚗<U+653C><U+3E35><U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E38>璅<U+613C><U+3E33><U+653C><U+3E37><U+393C><U+3E61>扯釭嚗洵銝<U+653C><U+3E35><U+383C><U+3E66><U+653C><U+3E36>閬<U+393C><U+3E39><U+393C><U+3E30><U+393C><U+3E61>ata.frame嚗擗<U+393C><U+3E38><U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E66><U+653C><U+3E36><U+653C><U+3E35><U+393C><U+3E30>車expression嚗蒂銝<U+623C><U+3E61>xpression銝剔<U+393C><U+3E61><U+613C><U+3E65><U+653C><U+3E35><U+393C><U+3E30>迂嚗<U+653C><U+3E36><U+393C><U+3E63><U+653C><U+3E35><U+383C><U+3E35><U+623C><U+3E30><U+383C><U+3E37>data.frame銝剔<U+393C><U+3E61><U+613C><U+3E63><U+623C><U+3E64><U+383C><U+3E32></p>
+<p>這堂課程介紹的dplyr的函數，都具有一樣的性質：第一個參數是要處理的data.frame，而其餘的參數是各種expression，並且這些expression中的變數名稱，都會優先對應到data.frame中的欄位。</p>
 </div>
 <div id="stage-22" class="section level2">
 <h2>stage 22</h2>
-<p>隢<U+393C><U+3E30>飛閰西<U+393C><U+3E31><U+623C><U+3E65>flights<code>銝剜&lt;U+653C&gt;&lt;U+3E35&gt;</code>flights<span class="math">\(month`&lt;U+653C&gt;&lt;U+3E37&gt;1嚗flights\)</span>day`<U+653C><U+3E37>2<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+383C><U+3E32></p>
+<p>請同學試著從<code>flights</code>中找出<code>flights$month</code>為1，<code>flights$day</code>為2的資料。</p>
 <pre class="r"><code>filter(flights, month == 1, day == 2)</code></pre>
 </div>
 <div id="stage-23" class="section level2">
 <h2>stage 23</h2>
-<p>filter銋<U+393C><U+3E63><U+653C><U+3E35><U+383C><U+3E62><U+383C><U+3E31>蕪<U+653C><U+3E36><U+383C><U+3E65><U+623C><U+3E35><U+393C><U+3E65>NA<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E32>辣<U+653C><U+3E33>銝<U+623C><U+3E38><U+653C><U+3E35><U+613C><U+3E31>嚗<U+393C><U+3E30>飛<U+653C><U+3E35>隞亥<U+623C><U+3E36><U+613C><U+3E39>蝝Ｙ<U+393C><U+3E63><U+393C><U+3E63><U+383C><U+3E32></p>
+<p>filter也會自動過濾掉結果為NA的條件。在下一個題目，同學可以趁機摸索看看。</p>
 </div>
 <div id="stage-24" class="section level2">
 <h2>stage 24</h2>
-<p>隢<U+393C><U+3E35><U+393C><U+3E30>飛嚗2013撟渡<U+393C><U+3E61><U+623C><U+3E34><U+623C><U+3E34><U+623C><U+3E63><U+653C><U+3E36><U+393C><U+3E63><U+613C><U+3E34><U+623C><U+3E30>甈∠<U+393C><U+3E61><U+613C><U+3E33><U+613C><U+3E39>絲憌<U+393C><U+3E63>辣隤歹<U+623C><U+3E63><U+393C><U+3E66>(<code>dep_delay&gt;0</code>)隢<U+393C><U+3E30>飛<U+653C><U+3E35>閬<U+613C><U+3E61><U+393C><U+3E36><U+393C><U+3E35><U+393C><U+3E61>cript銝剔楊撖恬<U+623C><U+3E63>蒂銝摰<U+383C><U+3E38><U+623C><U+3E65>撓<U+653C><U+3E35><code>submit()</code></p>
+<p>請問同學，在2013年的紐約，共有多少班次的飛機起飛有延誤？(<code>dep_delay&gt;0</code>)請同學在視窗開啟的Script中編寫，並且在完成後輸入<code>submit()</code></p>
 <pre class="r"><code>answer02 &lt;- local({
   # 隢&lt;be&gt;lights蝭拚&lt;e5&gt;dep_delay &gt; 0&lt;e7&gt;&lt;9a&gt;&lt;b3&gt;&lt;96&gt;&lt;99&gt;
   target &lt;- filter(flights, dep_delay &gt; 0)
@@ -241,98 +241,98 @@ answer01 &lt;- local({
 </div>
 <div id="stage-25" class="section level2">
 <h2>stage 25</h2>
-<p>銝<U+623C><U+3E38>憿<U+393C><U+3E61><U+613C><U+3E64><U+613C><U+3E31><U+623C><U+3E39><U+653C><U+3E35>隞亙<U+383C><U+3E31><U+613C><U+3E38><U+623C><U+3E63>Ⅳ<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E33>葬<U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E30>飛<U+653C><U+3E35>隞亙<U+383C><U+3E35><code>filter(flights,dep_delay&gt;0)</code>蝭拚<U+653C><U+3E35>鞈<U+393C><U+3E36><U+393C><U+3E62><U+623C><U+3E39><U+623C><U+3E65><U+623C><U+3E63><U+653C><U+3E36><U+653C><U+3E36><U+383C><U+3E61><U+623C><U+3E35><U+393C><U+3E65><U+393C><U+3E61>澆<U+653C><U+3E35><code>nrow</code><U+653C><U+3E37><U+393C><U+3E61>洵銝<U+653C><U+3E35><U+383C><U+3E66>嚗<U+623C><U+3E39>停<U+653C><U+3E36>嚗<U+393C><U+3E61><code>nrow(filter(flights,dep_delay&gt;0))</code></p>
+<p>上一題的答案也是可以做程式碼的壓縮的。同學可以先用<code>filter(flights,dep_delay&gt;0)</code>篩選出資料集之後，直接把結果的值傳到<code>nrow</code>的第一個參數，也就是：<code>nrow(filter(flights,dep_delay&gt;0))</code></p>
 </div>
 <div id="stage-26" class="section level2">
 <h2>stage 26</h2>
-<p><U+653C><U+3E36><U+393C><U+3E63><U+393C><U+3E39><U+383C><U+3E38><U+623C><U+3E38><U+393C><U+3E63><U+653C><U+3E35>蝚血<U+393C><U+3E30><U+393C><U+3E66><U+623C><U+3E61><U+613C><U+3E32>辣<U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E36><U+613C><U+3E64><U+383C><U+3E38><U+623C><U+3E65><U+623C><U+3E65>牧嚗<U+613C><U+3E36><U+393C><U+3E65><U+383C><U+3E38><U+613C><U+3E36><U+653C><U+3E35><code>tailnum</code>銝剖<U+383C><U+3E63><U+653C><U+3E36><U+393C><U+3E63>“AA”<code>嚗&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E31&gt;&lt;U+653C&gt;&lt;U+3E36&gt;獐&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E31&gt;嚗&lt;U+653C&gt;&lt;U+3E35&gt;撱箸&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+653C&gt;&lt;U+3E35&gt;grepl</code><U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E36><U+653C><U+3E35>隞亥圾瘙粹<U+393C><U+3E35><U+613C><U+3E31><U+613C><U+3E62><U+393C><U+3E30>飛<U+653C><U+3E35><U+383C><U+3E35>撓<U+653C><U+3E35><code>?grepl</code><U+653C><U+3E36><U+383C><U+3E39><U+393C><U+3E36><U+623C><U+3E62><U+393C><U+3E61>牧<U+653C><U+3E35><U+393C><U+3E30><U+393C><U+3E36>辣<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>有時候我們希望找出符合某些條件的文字。舉例來說，如果我們要找出<code>tailnum</code>中包含有<code>&quot;AA&quot;</code>，要怎麼做呢？R內建有一個<code>grepl</code>的函數可以解決這個問題。請同學先輸入<code>?grepl</code>打開他的說名文件。</p>
 <pre class="r"><code>?grepl</code></pre>
 </div>
 <div id="stage-27" class="section level2">
 <h2>stage 27</h2>
-<p><code>grepl</code><U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E66>敺<U+613C><U+3E34><U+623C><U+3E63><U+623C><U+3E64><U+653C><U+3E39>ㄐ<U+653C><U+3E36><U+383C><U+3E38>閬飛銝<U+383C><U+3E66>嚗pattern<code>&lt;U+653C&gt;&lt;U+3E33&gt;x</code><U+653C><U+3E35><U+393C><U+3E32>fixed<code>撠勗末&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+383C&gt;&lt;U+3E32&gt;蝚砌&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E66&gt;</code>pattern<code>隞&lt;U+613C&gt;&lt;U+3E33&gt;銵函&lt;U+393C&gt;&lt;U+3E61&gt;嚗&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;芋撘&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+623C&gt;&lt;U+3E65&gt;牧嚗&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E65&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+613C&gt;&lt;U+3E36&gt;</code>“AA”<code>嚗attern撠望&lt;U+393C&gt;&lt;U+3E63&gt;</code>“AA”<code>&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+623C&gt;&lt;U+3E64&gt;憒&lt;U+393C&gt;&lt;U+3E65&gt;fixed=FALSE</code><U+653C><U+3E37><U+383C><U+3E62><U+653C><U+3E36><U+383C><U+3E35><U+623C><U+3E38><U+623C><U+3E63><U+653C><U+3E36><U+393C><U+3E63>蝙<U+653C><U+3E37><U+653C><U+3E33>迤<U+653C><U+3E35><U+383C><U+3E39>”蝷箏<U+623C><U+3E63><U+623C><U+3E63>egularExpression嚗<U+383C><U+3E39>靘<U+393C><U+3E39><U+393C><U+3E30>pattern<code>嚗&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+393C&gt;&lt;U+3E39&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+613C&gt;&lt;U+3E30&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+613C&gt;&lt;U+3E34&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E65&gt;隞賢&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E30&gt;飛摮豢&lt;U+393C&gt;&lt;U+3E63&gt;迤&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E39&gt;”蝷箏&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E39&gt;&lt;U+623C&gt;&lt;U+3E63&gt;閮剖&lt;U+613C&gt;&lt;U+3E65&gt;fixed=TRUE</code>瘥<U+623C><U+3E63>陛<U+653C><U+3E35><U+653C><U+3E33>x<code>&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E39&gt;&lt;U+623C&gt;&lt;U+3E65&gt;蝝&lt;U+623C&gt;&lt;U+3E63&gt;停&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E30&gt;&lt;U+623C&gt;&lt;U+3E30&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+613C&gt;&lt;U+3E64&gt;&lt;U+653C&gt;&lt;U+3E39&gt;ㄐ嚗停&lt;U+653C&gt;&lt;U+3E36&gt;</code>flights$tailnum`<U+653C><U+3E33><U+383C><U+3E32></p>
+<p><code>grepl</code>的參數很多，但是這裡我們只要學三個參數：<code>pattern</code>、<code>x</code>和、<code>fixed</code>就好。第一個參數<code>pattern</code>代表的是，我們要找的模式。舉例來說，如果我們要找<code>&quot;AA&quot;</code>，pattern就會是<code>&quot;AA&quot;</code>。但是如果<code>fixed=FALSE</code>狀態下，R會使用「正則表示式」（RegularExpression）來處理<code>pattern</code>，有時候會有預期外的結果。這部份在同學學會正則表示式之前，都設定<code>fixed=TRUE</code>比較簡單。<code>x</code>則很單純，就是我們要搜尋文字。在這裡，就是<code>flights$tailnum</code>。</p>
 </div>
 <div id="stage-28" class="section level2">
 <h2>stage 28</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38>頛詨<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E38><U+623C><U+3E63>Ⅳ<U+653C><U+3E36>嚗filter(flights,grepl(pattern=&lt;1&gt;,x=&lt;2&gt;,fixed=TRUE))<code>&lt;U+653C&gt;&lt;U+3E39&gt;ㄐ&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E31&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;身摰grepl</code><U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E66>嚗停<U+653C><U+3E35>隞亦敺<U+383C><U+3E38>閬<U+393C><U+3E61><U+613C><U+3E66><U+623C><U+3E30><U+623C><U+3E35><U+393C><U+3E65><U+623C><U+3E63><U+623C><U+3E39>停<U+653C><U+3E36>tailnum銝<U+613C><U+3E64><U+653C><U+3E36>銝<U+653C><U+3E36><U+393C><U+3E63><U+383C><U+3E63><code>&quot;AA&quot;</code><U+653C><U+3E39>見<U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E36><U+613C><U+3E64><U+393C><U+3E61><U+623C><U+3E35><U+393C><U+3E65>filter`<U+653C><U+3E35><U+653C><U+3E35><U+653C><U+3E37><U+653C><U+3E39>見<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E35><U+393C><U+3E65><U+623C><U+3E30><U+623C><U+3E33><U+393C><U+3E36><U+383C><U+3E31>祟<U+653C><U+3E39><U+653C><U+3E33><U+383C><U+3E32>隢<U+393C><U+3E35><U+393C><U+3E30>飛嚗<U+383C><U+3E63>&lt;1&gt;<U+653C><U+3E36><U+383C><U+3E37>府閬‵撖思<U+623C><U+3E62>暻潘<U+623C><U+3E63><U+393C><U+3E66></p>
+<p>我們想輸出的程式碼是：<code>filter(flights,grepl(pattern=&lt;1&gt;,x=&lt;2&gt;,fixed=TRUE))</code>這裡透過適當的設定<code>grepl</code>的參數，就可以獲得我們想要的比對結果，也就是tailnum中是不是有包含<code>&quot;AA&quot;</code>這樣的文字的結果。而<code>filter</code>在利用這樣的結果對資料做篩選。請問同學，&lt;1&gt;應該要填寫什麼？</p>
 <p>“AA”</p>
 </div>
 <div id="stage-29" class="section level2">
 <h2>stage 29</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38>頛詨<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E38><U+623C><U+3E63>Ⅳ<U+653C><U+3E36>嚗filter(flights,grepl(pattern=&lt;1&gt;,x=&lt;2&gt;,fixed=TRUE))`隢<U+393C><U+3E35><U+393C><U+3E30>飛嚗<U+383C><U+3E63>&lt;2&gt;<U+653C><U+3E36><U+383C><U+3E37>府閬‵撖思<U+623C><U+3E62>暻潘<U+623C><U+3E63><U+393C><U+3E66></p>
+<p>我們想輸出的程式碼是：<code>filter(flights,grepl(pattern=&lt;1&gt;,x=&lt;2&gt;,fixed=TRUE))</code>請問同學，&lt;2&gt;應該要填寫什麼？</p>
 <p>flights$tailnum</p>
 </div>
 <div id="stage-30" class="section level2">
 <h2>stage 30</h2>
-<p><U+653C><U+3E35>隢<U+393C><U+3E35><U+393C><U+3E30>飛嚗filter(flights,grepl(pattern=“AA”,x=tailnum,fixed=TRUE))`<U+653C><U+3E36>銝銋<U+383C><U+3E38><U+613C><U+3E62>嚗<U+393C><U+3E66></p>
+<p>在請問同學，<code>filter(flights,grepl(pattern=&quot;AA&quot;,x=tailnum,fixed=TRUE))</code>是不是也成立呢？</p>
 <p>Yes</p>
 </div>
 <div id="stage-31" class="section level2">
 <h2>stage 31</h2>
-<p><U+653C><U+3E36><U+393C><U+3E63>敺<U+613C><U+3E62><U+393C><U+3E30>飛閰西岫<U+653C><U+3E37><U+393C><U+3E63><U+623C><U+3E63>filter(flights,grepl(pattern=“AA”,x=tailnum,fixed=TRUE))`</p>
+<p>最後請同學試試看：<code>filter(flights,grepl(pattern=&quot;AA&quot;,x=tailnum,fixed=TRUE))</code></p>
 <pre class="r"><code>filter(flights, grepl(pattern = &quot;AA&quot;, x = tailnum, fixed = TRUE))</code></pre>
 </div>
 <div id="stage-32" class="section level2">
 <h2>stage 32</h2>
-<p>撠filter<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E62&gt;晶撌桐&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+613C&gt;&lt;U+3E34&gt;&lt;U+623C&gt;&lt;U+3E61&gt;銝&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E62&gt;晶</code>slice<code>&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+383C&gt;&lt;U+3E32&gt;</code>slice<code>敺蝝&lt;U+623C&gt;&lt;U+3E63&gt;slice(flights,1:6)</code>撠梁<U+613C><U+3E64><U+653C><U+3E36><code>flights[1:6,]</code><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>對<code>filter</code>的介紹差不多了。接下來我們介紹<code>slice</code>。<code>slice</code>很單純，<code>slice(flights,1:6)</code>就等價於<code>flights[1:6,]</code>。</p>
 </div>
 <div id="stage-33" class="section level2">
 <h2>stage 33</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38><U+653C><U+3E36>蝺渡<U+623C><U+3E66><U+623C><U+3E63><U+653C><U+3E38><U+383C><U+3E32><U+383C><U+3E32><U+613C><U+3E38><U+653C><U+3E33><U+613C><U+3E62><U+393C><U+3E30>飛<U+653C><U+3E39><U+653C><U+3E35><code>flights</code><U+653C><U+3E37><U+393C><U+3E61>洵10000<U+653C><U+3E35>蝚<U+613C><U+3E63>20000鞈<U+393C><U+3E36><U+383C><U+3E32></p>
+<p>我們直接練習，「用肌肉記憶」。請同學選出<code>flights</code>的第10000到第20000資料。</p>
 <pre class="r"><code>slice(flights, 10000:20000)</code></pre>
 </div>
 <div id="stage-34" class="section level2">
 <h2>stage 34</h2>
-<p><U+653C><U+3E36>銝<U+623C><U+3E65><U+623C><U+3E63><U+383C><U+3E38>毀蝧arrange<code>&lt;U+653C&gt;&lt;U+3E33&gt;arrange</code><U+653C><U+3E36><U+393C><U+3E63><U+383C><U+3E61>ata.frame<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+623C><U+3E63><U+653C><U+3E36><U+393C><U+3E33><U+623C><U+3E65><U+653C><U+3E37><U+393C><U+3E61>xpression<U+653C><U+3E35><U+383C><U+3E31><U+383C><U+3E65><U+623C><U+3E61><U+613C><U+3E62><U+393C><U+3E30>飛閰西岫<U+653C><U+3E37><U+393C><U+3E63><U+623C><U+3E63>arrange(flights,month,day,dep_time)<code>&lt;U+653C&gt;&lt;U+3E33&gt;策&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+383C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E32&gt;QL&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E30&gt;飛嚗&lt;U+383C&gt;&lt;U+3E63&gt;</code>arrange<code>敺&lt;U+613C&gt;&lt;U+3E31&gt;撮SQL&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;ORDERBY</code></p>
+<p>接下來，我們練習<code>arrange</code>。<code>arrange</code>會把data.frame的資料，根據後面的expression做排序。請同學試試看：<code>arrange(flights,month,day,dep_time)</code>。給熟悉SQL的同學，<code>arrange</code>很類似SQL的<code>ORDERBY</code></p>
 <pre class="r"><code>arrange(flights, month, day, dep_time)</code></pre>
 </div>
 <div id="stage-35" class="section level2">
 <h2>stage 35</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38><U+623C><U+3E62>敦閫撖<U+623C><U+3E38><U+623C><U+3E38>憿<U+393C><U+3E61>撓<U+653C><U+3E35><U+653C><U+3E33>arrange<code>&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E35&gt;&lt;U+613C&gt;&lt;U+3E66&gt;&lt;U+623C&gt;&lt;U+3E63&gt;month</code><U+653C><U+3E37><U+393C><U+3E61>潘<U+623C><U+3E63>敺<code>month</code>撟單<U+383C><U+3E39>停瘥day<code>嚗&lt;U+383C&gt;&lt;U+3E63&gt;隞交迨憿&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+383C&gt;&lt;U+3E39&gt;隞交&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+393C&gt;&lt;U+3E63&gt;頛詨&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E39&gt;嚗停&lt;U+653C&gt;&lt;U+3E36&gt;</code>month<code>&lt;U+653C&gt;&lt;U+3E33&gt;day</code><U+653C><U+3E36><U+393C><U+3E63>撠<U+393C><U+3E61><U+623C><U+3E63>像<U+653C><U+3E36><U+383C><U+3E39><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36>葉嚗dep_time`<U+653C><U+3E36><U+393C><U+3E63>撠<U+393C><U+3E61><U+383C><U+3E32></p>
+<p>我們仔細觀察上一題的輸出。<code>arrange</code>會先比較<code>month</code>的值，然後當<code>month</code>平手就比<code>day</code>，以此類推。所以我們會看到輸出的最前面，就是<code>month</code>、<code>day</code>最小的，平手的資料中，<code>dep_time</code>最小的。</p>
 </div>
 <div id="stage-36" class="section level2">
 <h2>stage 36</h2>
-<p>NA</p>
+<p>所以我們能不能根據上面的結果判斷：<code>dep_time</code>的最小值是517呢？（第一列的dep_time）</p>
 <p>No</p>
 </div>
 <div id="stage-37" class="section level2">
 <h2>stage 37</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38>銝蝣箏<U+613C><U+3E65>辣鈭<U+383C><U+3E33><U+393C><U+3E61><U+623C><U+3E63><U+393C><U+3E62><U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+653C><U+3E38><U+653C><U+3E36><U+393C><U+3E63>撠<U+393C><U+3E61>dep_time<code>嚗&lt;U+623C&gt;&lt;U+3E64&gt;隞&lt;U+393C&gt;&lt;U+3E61&gt;day</code><U+653C><U+3E35><U+393C><U+3E32><U+383C><U+3E63><code>month</code>憭芸之嚗<U+383C><U+3E39>隞亥◤<U+653C><U+3E36><U+383C><U+3E65>敺<U+653C><U+3E33><U+383C><U+3E38><U+623C><U+3E65><U+653C><U+3E36><U+653C><U+3E37><U+393C><U+3E63>dep_time<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E63&gt;撠澆&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+613C&gt;&lt;U+3E62&gt;&lt;U+393C&gt;&lt;U+3E30&gt;飛頛詨嚗&lt;U+393C&gt;&lt;U+3E61&gt;</code>min(flights$dep_time)`</p>
+<p>我們是不能確定這件事情的，因為有些資料可能有更小的<code>dep_time</code>，但是他們的<code>day</code>和<code>month</code>太大，所以被排到後面。我們來找找看<code>dep_time</code>的最小值吧。請同學輸入：<code>min(flights$dep_time)</code></p>
 <pre class="r"><code>min(flights$dep_time)</code></pre>
 </div>
 <div id="stage-38" class="section level2">
 <h2>stage 38</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38>釣<U+653C><U+3E36><U+383C><U+3E34>dep_time<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+393C><U+3E63>issingdata<U+653C><U+3E33><U+623C><U+3E30>銝<U+623C><U+3E38>憿<U+393C><U+3E61>撓<U+653C><U+3E35><U+653C><U+3E37><code>NA</code><U+653C><U+3E33><U+383C><U+3E38><U+613C><U+3E36>獐敹賜<code>NA</code><U+653C><U+3E35>嚗<U+613C><U+3E62><U+393C><U+3E30>飛閰西岫<U+653C><U+3E37><U+393C><U+3E63><U+623C><U+3E63>min(flights$dep_time,na.rm=TRUE)`</p>
+<p>我們注意到dep_time的資料有missingdata。導致上一題的輸出為<code>NA</code>。我們要怎麼忽略<code>NA</code>呢？請同學試試看：<code>min(flights$dep_time,na.rm=TRUE)</code></p>
 <pre class="r"><code>min(flights$dep_time, na.rm = TRUE)</code></pre>
 </div>
 <div id="stage-39" class="section level2">
 <h2>stage 39</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38><U+623C><U+3E39>隞交<U+383C><U+3E61><U+613C><U+3E66><U+623C><U+3E63><U+393C><U+3E61><U+613C><U+3E30><U+623C><U+3E61><U+623C><U+3E65>撠憭扳<U+653C><U+3E36><U+383C><U+3E38>憭批撠<U+623C><U+3E63>閬<U+383C><U+3E61><U+623C><U+3E38>desc<code>撠梯&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+623C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E32&gt;&lt;U+653C&gt;&lt;U+3E38&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+623C&gt;&lt;U+3E65&gt;牧嚗arrange(flights,desc(month),desc(day),desc(dep_time))</code>隢岫閰衣<U+393C><U+3E63><U+383C><U+3E32></p>
+<p>我們也可以把比較的順序從由小到大改成由大到小，只要加上<code>desc</code>就行了。舉例來說：<code>arrange(flights,desc(month),desc(day),desc(dep_time))</code>請試試看。</p>
 <pre class="r"><code>arrange(flights, desc(month), desc(day), desc(dep_time))</code></pre>
 </div>
 <div id="stage-40" class="section level2">
 <h2>stage 40</h2>
-<p><U+653C><U+3E36>銝<U+623C><U+3E65><U+383C><U+3E38><U+623C><U+3E65><U+623C><U+3E62>晶<code>select</code><U+653C><U+3E33>虜銝<U+653C><U+3E35><U+623C><U+3E65>之<U+653C><U+3E37><U+393C><U+3E61>ata.frame銝哨<U+623C><U+3E63><U+383C><U+3E38><U+623C><U+3E38>甈∪<U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E30><U+623C><U+3E30>撟暹<U+613C><U+3E63><U+393C><U+3E63><U+383C><U+3E38>閎嚗<U+383C><U+3E63><code>select</code><U+653C><U+3E35>隞亥<U+613C><U+3E65><U+383C><U+3E38><U+383C><U+3E63><U+653C><U+3E36><U+383C><U+3E38><U+393C><U+3E63><U+383C><U+3E38>閎<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E63><U+623C><U+3E64><U+383C><U+3E32>隢<U+393C><U+3E30>飛閰西岫<U+653C><U+3E37><U+393C><U+3E63><U+623C><U+3E63>select(flights,year,month,day)<code>蝯衣&lt;U+383C&gt;&lt;U+3E36&gt;QL&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E30&gt;飛嚗select</code>撠望SQL<U+653C><U+3E37><U+393C><U+3E61>SELECT`<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>接下來我們來介紹<code>select</code>。通常一個很大的data.frame中，我們一次只會對少數幾欄有興趣，<code>select</code>可以讓我們挑出我們有興趣的欄位。請同學試試看：<code>select(flights,year,month,day)</code>給熟SQL的同學，<code>select</code>就是SQL的<code>SELECT</code>。</p>
 <pre class="r"><code>select(flights, year, month, day)</code></pre>
 </div>
 <div id="stage-41" class="section level2">
 <h2>stage 41</h2>
-<p>NA</p>
+<p>我們先檢查<code>flights</code>的欄位名稱。請同學複習一下之前所學的data.frame的操作。</p>
 <pre class="r"><code>colnames(flights)</code></pre>
 </div>
 <div id="stage-42" class="section level2">
 <h2>stage 42</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38><U+623C><U+3E39>隞亦<code>select(flights,year:day)</code>靘<U+653C><U+3E35><U+383C><U+3E66>year<code>&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E32&gt;day</code>銋<U+393C><U+3E36><U+393C><U+3E61><U+613C><U+3E63><U+623C><U+3E64><U+613C><U+3E62><U+393C><U+3E30>飛閰西岫<U+653C><U+3E37><U+393C><U+3E63><U+383C><U+3E32></p>
+<p>我們也可以用<code>select(flights,year:day)</code>來選取<code>year</code>和<code>day</code>之間的欄位。請同學試試看。</p>
 <pre class="r"><code>select(flights, year:day)</code></pre>
 </div>
 <div id="stage-43" class="section level2">
 <h2>stage 43</h2>
-<p>憒<U+393C><U+3E65>閬<U+383C><U+3E66><U+653C><U+3E39><U+653C><U+3E35><U+383C><U+3E66><U+623C><U+3E63><U+383C><U+3E39><U+653C><U+3E36><U+383C><U+3E65>year<code>&lt;U+653C&gt;&lt;U+3E35&gt;</code>day<code>銋&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+613C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E64&gt;&lt;U+623C&gt;&lt;U+3E63&gt;閬蝙&lt;U+653C&gt;&lt;U+3E37&gt;嚗&lt;U+393C&gt;&lt;U+3E61&gt;</code>select(flights,-(year:day))`<U+653C><U+3E33><U+613C><U+3E62><U+393C><U+3E30>飛閰西岫<U+653C><U+3E37><U+393C><U+3E63><U+383C><U+3E32></p>
+<p>如果是要反面選取，剃除掉<code>year</code>到<code>day</code>之間的欄位，只要使用：<code>select(flights,-(year:day))</code>。請同學試試看。</p>
 <pre class="r"><code>select(flights, -(year:day))</code></pre>
 </div>
 <div id="stage-44" class="section level2">
 <h2>stage 44</h2>
-<p><U+653C><U+3E39>ㄐ<U+653C><U+3E35>銝<U+653C><U+3E35><U+623C><U+3E30><U+393C><U+3E35><U+613C><U+3E31><U+613C><U+3E65>之摰嗥毀蝧<U+623C><U+3E63><U+613C><U+3E62><U+393C><U+3E30>飛<U+653C><U+3E39><U+653C><U+3E35><code>flights</code>銝苜dep_time<code>&lt;U+653C&gt;&lt;U+3E37&gt;NA&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+623C&gt;&lt;U+3E63&gt;蒂&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E63&gt;</code>year<code>&lt;U+653C&gt;&lt;U+3E33&gt;month</code><U+653C><U+3E35><U+393C><U+3E32>day<code>&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+613C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E32&gt;隢&lt;U+393C&gt;&lt;U+3E30&gt;飛&lt;U+653C&gt;&lt;U+3E35&gt;閬&lt;U+613C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E61&gt;cript銝剔楊撖恬&lt;U+623C&gt;&lt;U+3E63&gt;蒂銝摰&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E65&gt;撓&lt;U+653C&gt;&lt;U+3E35&gt;</code>submit()`</p>
+<p>這裡出一個小問題讓大家練習：請同學選出<code>flights</code>中<code>dep_time</code>為NA的資料，並只挑出<code>year</code>、<code>month</code>和<code>day</code>這三欄。請同學在視窗開啟的Script中編寫，並且在完成後輸入<code>submit()</code></p>
 <pre class="r"><code>answer03 &lt;- local({
   # 隢filter&lt;e6&gt;&lt;8c&gt;dep_time&lt;e7&gt;NA&lt;e7&gt;&lt;9a&gt;&lt;b3&gt;&lt;96&gt;&lt;99&gt;
   # 雿隞亦is.na
@@ -344,68 +344,68 @@ answer01 &lt;- local({
 </div>
 <div id="stage-45" class="section level2">
 <h2>stage 45</h2>
-<p>銝<U+623C><U+3E38>憿<U+393C><U+3E61><U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E36><U+653C><U+3E37><U+393C><U+3E63><U+393C><U+3E63>ep_time<U+653C><U+3E37>“NA”<U+653C><U+3E36>銝<U+653C><U+3E36><U+393C><U+3E63>撣貊<U+393C><U+3E61>芋撘<U+623C><U+3E65><U+613C><U+3E36><U+623C><U+3E63><U+653C><U+3E38><U+383C><U+3E31><U+393C><U+3E62><U+653C><U+3E36><U+393C><U+3E66><U+623C><U+3E38>憭押<U+383C><U+3E32>撖血<U+383C><U+3E62><U+623C><U+3E38><U+653C><U+3E35><U+383C><U+3E31><U+623C><U+3E33><U+393C><U+3E36><U+383C><U+3E38><U+393C><U+3E65><U+393C><U+3E39><U+623C><U+3E63><U+383C><U+3E38>虜撣賊<U+393C><U+3E63>閬<U+653C><U+3E37><U+393C><U+3E36>撌梯<U+623C><U+3E33><U+393C><U+3E36><U+393C><U+3E61><U+653C><U+3E35>甇<U+613C><U+3E33>蝣綽<U+623C><U+3E63><U+393C><U+3E62>迨撣詨虜閬祟<U+653C><U+3E39><U+653C><U+3E35>鞈<U+393C><U+3E36><U+623C><U+3E65><U+383C><U+3E31><U+393C><U+3E61>閫撖迨<U+653C><U+3E36><U+393C><U+3E39><U+623C><U+3E63>銝<U+653C><U+3E37><U+383C><U+3E36>毀<U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E31>dplyr<U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E36>撠望<U+393C><U+3E63>蔣<U+653C><U+3E39><U+653C><U+3E35><U+653C><U+3E36><U+383C><U+3E38><U+393C><U+3E61>極雿<U+393C><U+3E35><U+383C><U+3E65><U+383C><U+3E32></p>
+<p>上一題的目的是想看看dep_time為“NA”是不是有異常的模式。例如，都聚集在某一天。實務上在做資料分析時，我們常常需要懷疑自己資料的是否正確，因此常常要篩選出資料來做觀察。此時，能不能熟練的運用dplyr的函數就會影響到我們的工作效率。</p>
 </div>
 <div id="stage-46" class="section level2">
 <h2>stage 46</h2>
-<p><U+653C><U+3E36><U+653C><U+3E38><U+393C><U+3E31><U+383C><U+3E38><U+623C><U+3E62>晶<code>distinct</code><U+653C><U+3E33><U+613C><U+3E65>隞交<U+383C><U+3E63>敺<U+623C><U+3E61><U+613C><U+3E34>xpression<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E35><U+393C><U+3E30>葉嚗<U+623C><U+3E38><U+383C><U+3E37><U+613C><U+3E34><U+393C><U+3E61>隞賬<U+383C><U+3E32><U+653C><U+3E36><U+383C><U+3E39>隞匝distinct<code>&lt;U+653C&gt;&lt;U+3E38&gt;&lt;U+653C&gt;&lt;U+3E37&gt;靘&lt;U+393C&gt;&lt;U+3E62&gt;&lt;U+613C&gt;&lt;U+3E64&gt;&lt;U+623C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+613C&gt;&lt;U+3E34&gt;&lt;U+623C&gt;&lt;U+3E30&gt;&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E64&gt;&lt;U+393C&gt;&lt;U+3E35&gt;&lt;U+613C&gt;&lt;U+3E31&gt;策&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+383C&gt;&lt;U+3E36&gt;QL&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E30&gt;飛嚗istinct撠望SQL&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;DISTINCT</code><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>接著我們介紹<code>distinct</code>。它可以挑出後續多個expression的組合中，不重複的部份。所以<code>distinct</code>能用來回答「資料有多少類」等問題。給熟SQL的同學，distinct就是SQL的<code>DISTINCT</code>。</p>
 </div>
 <div id="stage-47" class="section level2">
 <h2>stage 47</h2>
-<p>隢<U+393C><U+3E30>飛閰西岫<U+653C><U+3E37><U+393C><U+3E63><U+623C><U+3E63>distinct(select(flights,year:day))`<U+653C><U+3E33><U+623C><U+3E38>撟湔<U+393C><U+3E63><U+383C><U+3E39>365憭抬<U+623C><U+3E63><U+383C><U+3E63><U+653C><U+3E36>銝瘥予<U+653C><U+3E39><U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E33><U+393C><U+3E36>嚗<U+393C><U+3E66></p>
+<p>請同學試試看：<code>distinct(select(flights,year:day))</code>。一年有365天，是不是每天都有資料呢？</p>
 <pre class="r"><code>distinct(select(flights, year:day))</code></pre>
 </div>
 <div id="stage-48" class="section level2">
 <h2>stage 48</h2>
-<p><U+653C><U+3E37><U+653C><U+3E36><U+383C><U+3E38><U+613C><U+3E36><U+653C><U+3E36>嚗<U+383C><U+3E38><U+653C><U+3E36>憓<U+613C><U+3E63><U+623C><U+3E64><U+393C><U+3E39><U+623C><U+3E63>停<U+653C><U+3E35>隞乩蝙<U+653C><U+3E37><code>mutate</code><U+653C><U+3E39><U+613C><U+3E63><U+623C><U+3E64><U+623C><U+3E61><U+383C><U+3E38><U+623C><U+3E65><U+623C><U+3E65>牧嚗<U+383C><U+3E63>憒<U+393C><U+3E65><U+383C><U+3E38><U+613C><U+3E36>憓<U+623C><U+3E38><U+653C><U+3E35><U+613C><U+3E63><U+623C><U+3E64>gain<code>嚗&lt;U+613C&gt;&lt;U+3E65&gt;&lt;U+653C&gt;&lt;U+3E36&gt;arr_delay&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E65&gt;ep_delay嚗誨銵券&lt;U+613C&gt;&lt;U+3E33&gt;&lt;U+613C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E31&gt;&lt;U+393C&gt;&lt;U+3E35&gt;蝝&lt;U+623C&gt;&lt;U+3E34&gt;&lt;U+383C&gt;&lt;U+3E34&gt;璈敺&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E39&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+613C&gt;&lt;U+3E66&gt;&lt;U+383C&gt;&lt;U+3E65&gt;蝪∠憭&lt;U+623C&gt;&lt;U+3E30&gt;迨&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E39&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E38&gt;隞亦嚗&lt;U+393C&gt;&lt;U+3E61&gt;</code>mutate(flights,gain=arr_delay-dep_delay)`</p>
+<p>當我們要更改，或是新增欄位時，就可以使用<code>mutate</code>這個欄位了。舉例來說，如果我們要新增一個欄位<code>gain</code>，它是拿arr_delay扣掉dep_delay，代表飛機停留在紐約機場待的時間比原本簡短多少。此時，我們可以用：<code>mutate(flights,gain=arr_delay-dep_delay)</code></p>
 <pre class="r"><code>mutate(flights, gain = arr_delay - dep_delay)</code></pre>
 </div>
 <div id="stage-49" class="section level2">
 <h2>stage 49</h2>
-<p><code>mutate</code><U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E61>撠梢<U+613C><U+3E31>撮SQL<U+653C><U+3E37><U+393C><U+3E61>PDATE嚗<U+623C><U+3E64><U+653C><U+3E36>撱<U+613C><U+3E33>瘜<U+623C><U+3E63>隞交憓<U+613C><U+3E63><U+623C><U+3E64><U+623C><U+3E63>蒂銝<code>mutate</code>銝哨<U+623C><U+3E63><U+383C><U+3E63>敺<U+653C><U+3E37><U+393C><U+3E61>xpression<U+653C><U+3E35>隞乩蝙<U+653C><U+3E37><U+653C><U+3E35><U+383C><U+3E39>expression<U+653C><U+3E36><U+383C><U+3E39><U+653C><U+3E36>憓<U+393C><U+3E61><U+613C><U+3E63><U+383C><U+3E32></p>
+<p><code>mutate</code>的功能就類似SQL的UPDATE，但是更廣泛（可以新增欄位）。並且在<code>mutate</code>中，後面的expression可以使用前面expression所新增的欄。</p>
 </div>
 <div id="stage-50" class="section level2">
 <h2>stage 50</h2>
-<p><U+653C><U+3E36><U+393C><U+3E63>敺<U+383C><U+3E38><U+623C><U+3E62>晶<code>summarise</code>嚗<U+613C><U+3E65><U+393C><U+3E63><U+653C><U+3E36><U+393C><U+3E33>策摰<U+393C><U+3E61><U+653C><U+3E36>嚗<U+613C><U+3E38><U+613C><U+3E65><U+653C><U+3E35>銝<U+653C><U+3E37><U+393C><U+3E61>潦<U+383C><U+3E32><U+653C><U+3E38><U+383C><U+3E38><U+623C><U+3E65><U+623C><U+3E65>牧嚗max<code>&lt;U+653C&gt;&lt;U+3E33&gt;min</code><U+653C><U+3E39><U+653C><U+3E35>隞交<U+653C><U+3E39>見<U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E36>嚗<U+623C><U+3E64><code>range</code>撠望<U+393C><U+3E63><U+653C><U+3E35><U+393C><U+3E35><U+613C><U+3E31><U+393C><U+3E62><code>max</code><U+653C><U+3E35><U+393C><U+3E32>min<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;撓&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E39&gt;摨衣1嚗&lt;U+623C&gt;&lt;U+3E64&gt;</code>range`<U+653C><U+3E37><U+393C><U+3E61>撓<U+653C><U+3E35><U+653C><U+3E39>摨衣2<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>最後我們介紹<code>summarise</code>，它會根據給定的函數，計算出單一的值。舉例來說：<code>max</code>、<code>min</code>都可以是這樣的函數，但是<code>range</code>就會出問題。因為<code>max</code>和<code>min</code>的輸出長度為1，但是<code>range</code>的輸出長度為2。</p>
 </div>
 <div id="stage-51" class="section level2">
 <h2>stage 51</h2>
-<p>隢<U+393C><U+3E30>飛頛詨<code>summarise(flights,mean(dep_delay,na.rm=TRUE))</code>靘<U+613C><U+3E38><U+613C><U+3E65>像<U+653C><U+3E35><U+393C><U+3E64><U+393C><U+3E61>炊暺<U+393C><U+3E39><U+393C><U+3E36><U+383C><U+3E32></p>
+<p>請同學輸入<code>summarise(flights,mean(dep_delay,na.rm=TRUE))</code>來計算平均的誤點時間。</p>
 <pre class="r"><code>summarise(flights, mean(dep_delay, na.rm = TRUE))</code></pre>
 </div>
 <div id="stage-52" class="section level2">
 <h2>stage 52</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38><U+623C><U+3E39>隞仿<U+383C><U+3E31>sample_n<code>&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E38&gt;sample_frac</code>靘<U+623C><U+3E65>flights<code>銝剜&lt;U+653C&gt;&lt;U+3E35&gt;鞈&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E62&gt;鞈&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+623C&gt;&lt;U+3E65&gt;之嚗&lt;U+383C&gt;&lt;U+3E63&gt;&lt;U+653C&gt;&lt;U+3E38&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+653C&gt;&lt;U+3E38&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E66&gt;&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+613C&gt;&lt;U+3E34&gt;&lt;U+383C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E62&gt;瘜&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+623C&gt;&lt;U+3E65&gt;牧嚗sample_n(flights,10)</code><U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E65><U+653C><U+3E36><U+393C><U+3E33>葉<U+653C><U+3E36>10蝑<U+623C><U+3E33><U+393C><U+3E36><U+613C><U+3E62><U+393C><U+3E30>飛閰西岫<U+653C><U+3E37><U+393C><U+3E63><U+383C><U+3E32></p>
+<p>我們也可以透過<code>sample_n</code>或<code>sample_frac</code>來從<code>flights</code>中抽出資料。這招在資料很大，而我們的電腦又不夠力的狀況下，很有用。舉例來說，<code>sample_n(flights,10)</code>會從數據中抽10筆資料。請同學試試看。</p>
 <pre class="r"><code>sample_n(flights, 10)</code></pre>
 </div>
 <div id="stage-53" class="section level2">
 <h2>stage 53</h2>
-<p>銋<U+613C><U+3E62><U+393C><U+3E30>飛閰西岫<U+653C><U+3E37><U+393C><U+3E63><U+623C><U+3E63>sample_frac(flights,0.01)`</p>
+<p>也請同學試試看：<code>sample_frac(flights,0.01)</code></p>
 <pre class="r"><code>sample_frac(flights, 0.01)</code></pre>
 </div>
 <div id="stage-54" class="section level2">
 <h2>stage 54</h2>
-<p><U+653C><U+3E37><U+653C><U+3E35><U+393C><U+3E30>飛<U+653C><U+3E39><U+393C><U+3E63>閬<U+383C><U+3E66><U+623C><U+3E65><U+653C><U+3E35><U+393C><U+3E62><U+393C><U+3E61>璈璅<U+613C><U+3E33><U+653C><U+3E36><U+393C><U+3E39><U+623C><U+3E63>隞乩<U+623C><U+3E38><U+383C><U+3E66>嚗replace=TRUE<code>&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+613C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E65&gt;&lt;U+383C&gt;&lt;U+3E37&gt;銝蝑&lt;U+393C&gt;&lt;U+3E39&gt;&lt;U+623C&gt;&lt;U+3E63&gt;隞交&lt;U+383C&gt;&lt;U+3E61&gt;&lt;U+613C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E65&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+613C&gt;&lt;U+3E66&gt;&lt;U+383C&gt;&lt;U+3E65&gt;</code>weight`<U+653C><U+3E39><U+383C><U+3E66><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>當同學需要取後放回的隨機抽樣時，可以下參數：<code>replace=TRUE</code>。當我們希望機率不相等時，可以把機率的比率送到<code>weight</code>這個參數。</p>
 </div>
 <div id="stage-55" class="section level2">
 <h2>stage 55</h2>
-<p><U+653C><U+3E35>韏圈<U+383C><U+3E31><U+623C><U+3E61>蜓閬<U+393C><U+3E61>plyr<U+653C><U+3E35><U+383C><U+3E61>嚗<U+393C><U+3E30>飛<U+653C><U+3E36>銝<U+653C><U+3E36><U+393C><U+3E63>釣<U+653C><U+3E36><U+383C><U+3E34>嚗洵銝<U+653C><U+3E35><U+383C><U+3E66>蝮賣<U+653C><U+3E36><U+383C><U+3E38><U+613C><U+3E36><U+393C><U+3E39><U+393C><U+3E30><U+393C><U+3E61>ata.frame<U+653C><U+3E35>嚗<U+393C><U+3E66></p>
+<p>在走過這些主要的dplyr功能，同學是不是有注意到：第一個參數總是我們要處理的data.frame呢？</p>
 </div>
 <div id="stage-56" class="section level2">
 <h2>stage 56</h2>
-<p>NA</p>
+<p>第二個要點是，我們可以在後面的參數，後續的expression中省略data.frame的變數名稱。</p>
 </div>
 <div id="stage-57" class="section level2">
 <h2>stage 57</h2>
-<p>蝚砌<U+623C><U+3E38><U+613C><U+3E36><U+623C><U+3E62><U+383C><U+3E38><U+383C><U+3E39>瘝<U+393C><U+3E63>撥隤選<U+623C><U+3E63>停<U+653C><U+3E36>瘥活<U+653C><U+3E37><U+653C><U+3E37><U+393C><U+3E34><U+393C><U+3E61>ata.frame<U+653C><U+3E39><U+653C><U+3E36><U+653C><U+3E36><U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E63><U+383C><U+3E38>蒂瘝<U+393C><U+3E63><U+653C><U+3E35><U+383C><U+3E62><U+383C><U+3E65><U+653C><U+3E37><U+393C><U+3E61>flights`<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>第三個要點我們前面沒有強調，就是每次產生的data.frame都是新的，我們並沒有更動原本的<code>flights</code>。</p>
 </div>
 <div id="stage-58" class="section level2">
 <h2>stage 58</h2>
-<p>NA</p>
+<p>有了這些工具之後，我們就可以組合出複雜的邏輯。</p>
 </div>
 <div id="stage-59" class="section level2">
 <h2>stage 59</h2>
-<p><U+653C><U+3E39>ㄐ隢<U+393C><U+3E30>飛<U+653C><U+3E35><U+383C><U+3E31><U+623C><U+3E38>鈭<U+623C><U+3E30>毀蝧<U+613C><U+3E62>摰<U+383C><U+3E38><U+623C><U+3E39><U+623C><U+3E65><U+613C><U+3E64><U+613C><U+3E61><U+623C><U+3E63>蒂頛詨<code>submit()</code>靘炎<U+653C><U+3E36>蝯<U+393C><U+3E65><U+653C><U+3E35>蝚血<U+393C><U+3E30><U+613C><U+3E30><U+393C><U+3E63><U+383C><U+3E32>憒<U+393C><U+3E65><U+393C><U+3E30>飛<U+653C><U+3E35>瑼<U+613C><U+3E31>葉<U+653C><U+3E37><U+393C><U+3E63>鈭Ⅳ嚗<U+613C><U+3E62>蝙<U+653C><U+3E37>Rstudio撌虫<U+623C><U+3E38><U+613C><U+3E37><U+393C><U+3E61>ile-&gt;Reopen</p>
+<p>這裡請同學做一些小練習。請在完成之後存檔，並輸入<code>submit()</code>來檢查結果是否符合預期。如果同學在檔案中看到亂碼，請使用Rstudio左上角的File-&gt;Reopen</p>
 <pre class="r"><code># &lt;e6&gt;&lt;88&gt;&lt;ae&gt;儔gain&lt;e7&gt;arr_delay - dep_delay
 
 # 隢&lt;ae&gt;1 &lt;e6&gt;&lt;9c&gt;遢撟喳&lt;9d&gt;&lt;9a&gt;ain
@@ -445,35 +445,35 @@ stopifnot(length(answer04.3) == 1)
 </div>
 <div id="stage-60" class="section level2">
 <h2>stage 60</h2>
-<p><U+653C><U+3E36>銝<U+623C><U+3E65><U+383C><U+3E38><U+623C><U+3E37><U+393C><U+3E30>飛隞晶R<U+653C><U+3E35>2014撟湧<U+393C><U+3E36><U+613C><U+3E37>撅<U+393C><U+3E61><U+623C><U+3E38>蝔桀神瘜<U+623C><U+3E63>迂雿ipelineoperator<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>接下來我們跟同學介紹R在2014年開始發展的一種寫法，稱作「pipelineoperator」。</p>
 </div>
 <div id="stage-61" class="section level2">
 <h2>stage 61</h2>
-<p><U+653C><U+3E35><U+653C><U+3E35><U+383C><U+3E39><U+383C><U+3E39><U+393C><U+3E61>毀蝧葉嚗<U+393C><U+3E30>飛<U+653C><U+3E35><U+653C><U+3E38><U+653C><U+3E36><U+393C><U+3E63>神<U+653C><U+3E35>憒<U+623C><U+3E63>summarise(filter(flights,…))<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+613C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E63&gt;Ⅳ&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+383C&gt;&lt;U+3E32&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E38&gt;雿輻憭折&lt;U+383C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;摮&lt;U+613C&gt;&lt;U+3E65&gt;嚗&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+623C&gt;&lt;U+3E63&gt;a1&lt;-filter(flights,...)</code><U+653C><U+3E37>敺a2&lt;-summarise(a1,…)<code>&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E30&gt;&lt;U+623C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E39&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E38&gt;虜撣貉&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+623C&gt;&lt;U+3E30&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E33&gt;&lt;U+383C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E33&gt;蝥&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E33&gt;&lt;U+623C&gt;&lt;U+3E64&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E35&gt;filter</code><U+653C><U+3E35><U+383C><U+3E36>summarise`嚗<U+383C><U+3E39></p>
+<p>在剛剛的練習中，同學可能會寫出如：<code>summarise(filter(flights,...))</code>的程式碼。或是使用大量的暫存變數，如：<code>a1&lt;-filter(flights,...)</code>然後<code>a2&lt;-summarise(a1,...)</code>在整理資料的時候，我們常常要對數據做連續的操作（例如先<code>filter</code>再<code>summarise</code>）</p>
 </div>
 <div id="stage-62" class="section level2">
 <h2>stage 62</h2>
-<p><U+653C><U+3E39><U+393C><U+3E39><U+623C><U+3E65><U+623C><U+3E63><U+383C><U+3E38><U+653C><U+3E38><U+653C><U+3E35><U+653C><U+3E38>撱箇<U+613C><U+3E62>之<U+653C><U+3E39><U+383C><U+3E37><U+393C><U+3E61>摮<U+613C><U+3E65>嚗<U+613C><U+3E36>a1<code>嚗a2</code>嚗<U+383C><U+3E38>撖怠銝末霈<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E38><U+623C><U+3E63>Ⅳ嚗<U+613C><U+3E36><U+623C><U+3E63><U+393C><U+3E61><code>summarise(filter(flights,...))</code></p>
+<p>這時後，我們可能只能建立大量的暫存變數，如<code>a1</code>，<code>a2</code>，或者是寫出不好讀的程式碼，如：<code>summarise(filter(flights,...))</code></p>
 </div>
 <div id="stage-63" class="section level2">
 <h2>stage 63</h2>
-<p><U+653C><U+3E38>dplyr銝哨<U+623C><U+3E63><U+623C><U+3E30>鈭agrittr<U+653C><U+3E35>2014撟渡<U+393C><U+3E61><U+653C><U+3E36><U+393C><U+3E38><U+623C><U+3E63>ipelineoperator嚗%&gt;%<code>&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+383C&gt;&lt;U+3E32&gt;</code>%&gt;%<code>&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E39&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;撓&lt;U+653C&gt;&lt;U+3E35&gt;嚗&lt;U+653C&gt;&lt;U+3E35&gt;敺&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;洵銝&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E66&gt;&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+623C&gt;&lt;U+3E39&gt;停&lt;U+653C&gt;&lt;U+3E36&gt;隤迎&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E38&gt;隞&lt;U+613C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E39&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+613C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E63&gt;Ⅳ撖急&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E63&gt;filter(flights,...)%&gt;%summarise(...)</code></p>
+<p>而在dplyr中，導入了magrittr在2014年的發明：pipelineoperator：<code>%&gt;%</code>。<code>%&gt;%</code>會把上一個前面函數的輸出，放到後面函數的第一個參數。也就是說，我們可以把剛剛的程式碼寫成：<code>filter(flights,...)%&gt;%summarise(...)</code></p>
 </div>
 <div id="stage-64" class="section level2">
 <h2>stage 64</h2>
-<p><U+653C><U+3E38>%&gt;%<code>&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E35&gt;隞乩葡&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E39&gt;隞亙祕&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E62&gt;&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E38&gt;停&lt;U+653C&gt;&lt;U+3E35&gt;隞亙神&lt;U+653C&gt;&lt;U+3E35&gt;嚗&lt;U+393C&gt;&lt;U+3E61&gt;</code>filter(flights,…)%&gt;%select(…)%&gt;%mutate(…)%&gt;%summarise<code>瘥&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;撓&lt;U+653C&gt;&lt;U+3E35&gt;嚗&lt;U+653C&gt;&lt;U+3E36&gt;銝&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;洵銝&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E66&gt;嚗&lt;U+623C&gt;&lt;U+3E39&gt;停&lt;U+653C&gt;&lt;U+3E36&gt;閬&lt;U+623C&gt;&lt;U+3E64&gt;&lt;U+393C&gt;&lt;U+3E39&gt;&lt;U+393C&gt;&lt;U+3E30&gt;&lt;U+393C&gt;&lt;U+3E61&gt;ata.frame嚗&lt;U+383C&gt;&lt;U+3E32&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E39&gt;隞仿挾蝔&lt;U+623C&gt;&lt;U+3E63&gt;Ⅳ銝哨&lt;U+623C&gt;&lt;U+3E63&gt;filter</code><U+653C><U+3E37><U+393C><U+3E61>撓<U+653C><U+3E35>撠曹漱蝯圳select<code>&lt;U+653C&gt;&lt;U+3E38&gt;&lt;U+393C&gt;&lt;U+3E39&gt;&lt;U+393C&gt;&lt;U+3E30&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E36&gt;漱蝯圳mutate</code>嚗<U+393C><U+3E63>敺策<code>summarise</code><U+653C><U+3E33><U+393C><U+3E30><U+623C><U+3E64><U+393C><U+3E30>飛敺<U+383C><U+3E32><U+623C><U+3E63>停<U+653C><U+3E35>隞亦<U+393C><U+3E63>dplyr<U+653C><U+3E35>閮剛<U+613C><U+3E38><U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E39><U+383C><U+3E39>銝<U+393C><U+3E61>敹<U+383C><U+3E32></p>
+<p>而<code>%&gt;%</code>是可以串接的，所以實務上，我們就可以寫出：<code>filter(flights,...)%&gt;%select(...)%&gt;%mutate(...)%&gt;%summarise</code>每一個函數的輸出，都是下一個函數的第一個參數（也就是要作處理的data.frame）。所以這段程式碼中，<code>filter</code>的輸出就交給<code>select</code>處理後，再交給<code>mutate</code>，最後給<code>summarise</code>。各位同學從這邊，就可以看出dplyr在設計函數時所下的苦心。</p>
 </div>
 <div id="stage-65" class="section level2">
 <h2>stage 65</h2>
-<p>雿輻<code>%&gt;%</code>撖怎<U+613C><U+3E38><U+623C><U+3E63><U+623C><U+3E63><U+623C><U+3E38>銝<U+653C><U+3E35><U+653C><U+3E35><U+393C><U+3E30>之<U+653C><U+3E39><U+383C><U+3E37><U+393C><U+3E61><U+613C><U+3E65>嚗<U+613C><U+3E36><U+623C><U+3E63>a1<code>&lt;U+653C&gt;&lt;U+3E33&gt;a2</code>蝑<U+623C><U+3E63><U+613C><U+3E38><U+623C><U+3E63>Ⅳ<U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E63>絲靘<U+383C><U+3E36>銋<U+613C><U+3E66>summarise(mutate(select(filter(flights,…),…),…),…)`蝪∪<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E34><U+623C><U+3E61><U+383C><U+3E32></p>
+<p>使用<code>%&gt;%</code>寫程式，不只不用命名大量的變數，如：<code>a1</code>、<code>a2</code>等，程式碼的看起來也比<code>summarise(mutate(select(filter(flights,...),...),...),...)</code>簡單的多了。</p>
 </div>
 <div id="stage-66" class="section level2">
 <h2>stage 66</h2>
-<p>隢<U+393C><U+3E30>飛<U+653C><U+3E35><U+383C><U+3E35><U+383C><U+3E61><U+383C><U+3E39><U+383C><U+3E39><U+383C><U+3E31><U+393C><U+3E61><U+613C><U+3E61><U+613C><U+3E31><U+623C><U+3E63>DataEngineer-05-04.R<U+653C><U+3E35><U+383C><U+3E36><U+613C><U+3E65>銝甈～<U+383C><U+3E32><U+653C><U+3E36><U+383C><U+3E38><U+613C><U+3E64><U+613C><U+3E64><U+613C><U+3E36><U+383C><U+3E36><U+383C><U+3E31><U+623C><U+3E38>甈⊿<U+623C><U+3E38><U+653C><U+3E35>毀蝧<U+383C><U+3E32></p>
+<p>請同學先把剛剛做的檔案：RDataEngineer-05-04.R再讀一次。我們等等要再做一次這一個練習。</p>
 </div>
 <div id="stage-67" class="section level2">
 <h2>stage 67</h2>
-<p>隢<U+393C><U+3E30>飛閰西<U+393C><U+3E31><code>%&gt;%</code>摰<U+383C><U+3E38><U+383C><U+3E39><U+383C><U+3E39><U+393C><U+3E62>RDataEngineer-05-04.R<U+653C><U+3E33><U+383C><U+3E32>隢摰<U+383C><U+3E38><U+623C><U+3E39><U+623C><U+3E65><U+613C><U+3E64><U+613C><U+3E61><U+623C><U+3E63>蒂頛詨<code>submit()</code>靘炎<U+653C><U+3E36>蝯<U+393C><U+3E65><U+653C><U+3E35>蝚血<U+393C><U+3E30><U+613C><U+3E30><U+393C><U+3E63><U+383C><U+3E32>憒<U+393C><U+3E65><U+393C><U+3E30>飛<U+653C><U+3E35>瑼<U+613C><U+3E31>葉<U+653C><U+3E37><U+393C><U+3E63>鈭Ⅳ嚗<U+613C><U+3E62>蝙<U+653C><U+3E37>Rstudio撌虫<U+623C><U+3E38><U+613C><U+3E37><U+393C><U+3E61>ile-&gt;Reopen</p>
+<p>請同學試著用<code>%&gt;%</code>完成剛剛RDataEngineer-05-04.R。請在完成之後存檔，並輸入<code>submit()</code>來檢查結果是否符合預期。如果同學在檔案中看到亂碼，請使用Rstudio左上角的File-&gt;Reopen</p>
 <pre class="r"><code># &lt;e6&gt;&lt;88&gt;&lt;ae&gt;儔gain&lt;e7&gt;arr_delay - dep_delay
 
 # 隢&lt;ae&gt;1 &lt;e6&gt;&lt;9c&gt;遢撟喳&lt;9d&gt;&lt;9a&gt;ain
@@ -513,24 +513,24 @@ stopifnot(length(answer04.3) == 1)
 </div>
 <div id="stage-68" class="section level2">
 <h2>stage 68</h2>
-<p><U+653C><U+3E35><U+383C><U+3E39><U+383C><U+3E39><U+393C><U+3E61>洵銝<U+653C><U+3E35>毀蝧<U+613C><U+3E31><U+623C><U+3E63>nswer04.1嚗<U+623C><U+3E63><U+383C><U+3E38><U+613C><U+3E38><U+613C><U+3E65><U+623C><U+3E61><U+623C><U+3E38><U+653C><U+3E36><U+393C><U+3E63>遢撟喳<U+393C><U+3E64><U+393C><U+3E61>ain嚗rr_delay-dep_delay嚗<U+383C><U+3E32>雿憒<U+393C><U+3E65><U+383C><U+3E38><U+613C><U+3E36><U+613C><U+3E38><U+613C><U+3E65><U+623C><U+3E38><U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E61><U+393C><U+3E63><U+653C><U+3E35><U+383C><U+3E64><U+623C><U+3E61><U+393C><U+3E63>遢撟喳<U+393C><U+3E64><U+393C><U+3E61>ain嚗蒂銝<U+383C><U+3E31><U+613C><U+3E66><U+623C><U+3E63><U+623C><U+3E63><U+613C><U+3E36>獐颲血嚗<U+393C><U+3E66></p>
+<p>剛剛的第一個練習題（answer04.1），我們計算了一月份平均的gain（arr_delay-dep_delay）。但是如果我們要計算一月、二月到十二月份平均的gain，並且做比較，要怎麼辦呢？</p>
 </div>
 <div id="stage-69" class="section level2">
 <h2>stage 69</h2>
-<p><U+653C><U+3E36><U+393C><U+3E66><U+623C><U+3E61><U+393C><U+3E30>飛<U+653C><U+3E35><U+653C><U+3E38><U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E66>嚗lapply<code>&lt;U+653C&gt;&lt;U+3E33&gt;sapply</code><U+653C><U+3E37><U+393C><U+3E34><U+653C><U+3E36>撖怨艘<U+653C><U+3E35><U+393C><U+3E63><U+623C><U+3E65>圾瘙粹<U+393C><U+3E35><U+613C><U+3E31><U+383C><U+3E32></p>
+<p>某些同學可能會心想：<code>lapply</code>、<code>sapply</code>甚至是寫迴圈來解決這個問題。</p>
 </div>
 <div id="stage-70" class="section level2">
 <h2>stage 70</h2>
-<p>dplyr<U+653C><U+3E36><U+383C><U+3E66><U+623C><U+3E65><U+623C><U+3E61>group_by<code>&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+653C&gt;&lt;U+3E36&gt;靘圾瘙粹&lt;U+393C&gt;&lt;U+3E35&gt;&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E65&gt;&lt;U+613C&gt;&lt;U+3E65&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E66&gt;&lt;U+613C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E64&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E30&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+623C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E38&gt;撟&lt;U+623C&gt;&lt;U+3E32&gt;隞賬&lt;U+623C&gt;&lt;U+3E39&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E30&gt;&lt;U+613C&gt;&lt;U+3E65&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E31&gt;group_by</code><U+653C><U+3E38><U+393C><U+3E39><U+393C><U+3E30><U+623C><U+3E65><U+393C><U+3E61>ata.frame嚗<U+383C><U+3E31><U+393C><U+3E61><U+383C><U+3E62><U+623C><U+3E64><U+653C><U+3E36><U+393C><U+3E63><U+393C><U+3E30>郊雿<U+653C><U+3E35>瘥<U+623C><U+3E38>隞質<U+623C><U+3E33><U+393C><U+3E36><U+393C><U+3E39>嚗ata.frame嚗<U+383C><U+3E32></p>
+<p>dplyr提供了<code>group_by</code>這個函數來解決這個問題。它讓我們依照某個欄位，將整個資料切割成若干份。之後，我們對它（經過<code>group_by</code>處理後的data.frame）做的動作都會同步作用在每一份資料（data.frame）。</p>
 </div>
 <div id="stage-71" class="section level2">
 <h2>stage 71</h2>
-<p><U+653C><U+3E38><U+383C><U+3E38><U+623C><U+3E65><U+623C><U+3E65>牧嚗<U+383C><U+3E38>隞亦<code>df&lt;-group_by(flights,month)</code><U+653C><U+3E35><U+383C><U+3E35><code>group_by</code>璅<U+613C><U+3E38><U+613C><U+3E36><U+653C><U+3E36><U+393C><U+3E33>month<code>撠lights&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E31&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+653C&gt;&lt;U+3E33&gt;蒂銝&lt;U+383C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E62&gt;&lt;U+623C&gt;&lt;U+3E64&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E65&gt;&lt;U+613C&gt;&lt;U+3E64&gt;</code>df`霈<U+653C><U+3E33><U+613C><U+3E62><U+393C><U+3E30>飛閰西岫<U+653C><U+3E37><U+393C><U+3E63><U+383C><U+3E32></p>
+<p>舉例來說，我們可以用<code>df&lt;-group_by(flights,month)</code>先用<code>group_by</code>標記要根據<code>month</code>對flights的資料做分割。並且把這個動作的結果存到<code>df</code>變數。請同學試試看。</p>
 <pre class="r"><code>df &lt;- group_by(flights, month)</code></pre>
 </div>
 <div id="stage-72" class="section level2">
 <h2>stage 72</h2>
-<p><U+653C><U+3E36><U+653C><U+3E38><U+393C><U+3E31><U+623C><U+3E63><U+383C><U+3E38><U+383C><U+3E61><U+383C><U+3E39><U+383C><U+3E39>圾蝑answer04.1<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E62&gt;&lt;U+623C&gt;&lt;U+3E64&gt;葉嚗&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E65&gt;filter</code><U+653C><U+3E37><U+393C><U+3E61>隞踝<U+623C><U+3E63><U+383C><U+3E36><U+383C><U+3E31><U+623C><U+3E38>甈～<U+383C><U+3E32>隢<U+393C><U+3E30>飛<U+653C><U+3E37><U+393C><U+3E63><U+393C><U+3E63><U+653C><U+3E39><U+383C><U+3E31><U+623C><U+3E39><U+623C><U+3E65><U+393C><U+3E61><U+623C><U+3E35><U+393C><U+3E65><U+623C><U+3E63>撓<U+653C><U+3E35><code>submit()</code><U+653C><U+3E35><U+653C><U+3E35><U+653C><U+3E33><U+613C><U+3E31><U+623C><U+3E38>撠<U+613C><U+3E38><U+623C><U+3E63><U+383C><U+3E31>耨<U+653C><U+3E36><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>接著，我們把剛剛解答<code>answer04.1</code>的動作中，扣掉<code>filter</code>的部份，再做一次。請同學看看改過之後的結果，輸入<code>submit()</code>即可。這題不用對程式做修改。</p>
 <pre class="r"><code># &lt;e9&gt;銝蝔株&lt;a8&gt;&lt;ae&gt;nswer04.1&lt;e7&gt;&lt;9a&gt;撘&lt;8f&gt;
 # answer04.1 &lt;- local({
 #   retval &lt;-
@@ -551,33 +551,33 @@ answer05 &lt;-
 </div>
 <div id="stage-73" class="section level2">
 <h2>stage 73</h2>
-<p>NA</p>
+<p>讓我們看看結果吧。請同學輸入：<code>answer05</code></p>
 <pre class="r"><code>answer05</code></pre>
 </div>
 <div id="stage-74" class="section level2">
 <h2>stage 74</h2>
-<p><U+653C><U+3E36>銝敺<U+623C><U+3E63><U+613C><U+3E63>停<U+653C><U+3E35>隞亦<U+613C><U+3E65>瘥<U+393C><U+3E63>遢<U+653C><U+3E37><U+393C><U+3E61>ain<U+653C><U+3E37><U+393C><U+3E61>像<U+653C><U+3E35><U+393C><U+3E64>嚗<U+393C><U+3E66></p>
+<p>是不是很輕鬆就可以算出每個月份的gain的平均呢？</p>
 </div>
 <div id="stage-75" class="section level2">
 <h2>stage 75</h2>
-<p><U+653C><U+3E39>ㄐ<U+653C><U+3E36><U+383C><U+3E38>遣霅唬<U+623C><U+3E38><U+653C><U+3E35>祕<U+653C><U+3E35><U+383C><U+3E62><U+623C><U+3E38>撖冑gruop_by<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;楝&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E35&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+383C&gt;&lt;U+3E37&gt;&lt;U+623C&gt;&lt;U+3E30&gt;&lt;U+393C&gt;&lt;U+3E66&gt;&lt;U+613C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E64&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E63&gt;遢嚗&lt;U+383C&gt;&lt;U+3E31&gt;&lt;U+393C&gt;&lt;U+3E61&gt;</code>filter<code>嚗&lt;U+383C&gt;&lt;U+3E63&gt;&lt;U+653C&gt;&lt;U+3E37&gt;摰&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+653C&gt;&lt;U+3E33&gt;蒂撠filter</code><U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E35><U+393C><U+3E65><U+383C><U+3E31><U+393C><U+3E30>車<U+653C><U+3E36><U+393C><U+3E33><U+623C><U+3E64><U+623C><U+3E63><U+393C><U+3E62><U+613C><U+3E64>蒂閫<U+613C><U+3E33>瘙箏<U+393C><U+3E30>車<U+653C><U+3E35><U+393C><U+3E35><U+613C><U+3E31><U+383C><U+3E32><U+653C><U+3E37><U+653C><U+3E36><U+383C><U+3E38>閬<U+383C><U+3E61>filter<code>銋&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E62&gt;&lt;U+623C&gt;&lt;U+3E64&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E37&gt;&lt;U+613C&gt;&lt;U+3E34&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E33&gt;&lt;U+623C&gt;&lt;U+3E64&gt;瘥&lt;U+623C&gt;&lt;U+3E38&gt;蝔桅&lt;U+613C&gt;&lt;U+3E31&gt;嚗&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+613C&gt;&lt;U+3E66&gt;&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E63&gt;遢嚗&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+393C&gt;&lt;U+3E31&gt;撠望&lt;U+383C&gt;&lt;U+3E61&gt;filter</code><U+653C><U+3E36><U+383C><U+3E66><U+383C><U+3E65><U+653C><U+3E36><U+383C><U+3E38>group_by`嚗<U+623C><U+3E65><U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E62><U+623C><U+3E64><U+653C><U+3E38><U+383C><U+3E38><U+623C><U+3E63><U+653C><U+3E35>敺蝑<U+613C><U+3E31><U+383C><U+3E32></p>
+<p>這裡我建議一個實務上撰寫<code>gruop_by</code>的思路。首先，我們針對某個欄位（例如月份）做<code>filter</code>，挑出特定的類別。並對<code>filter</code>的結果做各種操作，回答並解決各種問題。當我們想要把<code>filter</code>之後的動作，重複的操作在每一種類別（例如每一個月份），那我們就把<code>filter</code>換掉改成<code>group_by</code>，而後面的動作照舊，即可得到答案。</p>
 </div>
 <div id="stage-76" class="section level2">
 <h2>stage 76</h2>
-<p>隞乩<U+623C><U+3E38><U+393C><U+3E61>摰孵停<U+653C><U+3E36><U+653C><U+3E39><U+393C><U+3E36>隤脩<U+613C><U+3E38><U+623C><U+3E30>plyr<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E62>晶<U+653C><U+3E33>鈭<U+623C><U+3E38><U+623C><U+3E38><U+653C><U+3E35>玨蝔<U+623C><U+3E63><U+383C><U+3E38><U+613C><U+3E36><U+383C><U+3E31><U+393C><U+3E63>敺<U+623C><U+3E38><U+653C><U+3E35>毀蝧<U+383C><U+3E32></p>
+<p>以上的內容就是這門課程對dplyr的介紹。為了下一個課程，我們要做最後一個練習。</p>
 </div>
 <div id="stage-77" class="section level2">
 <h2>stage 77</h2>
-<p>霈<code>cl_info</code>閮<U+623C><U+3E63><U+393C><U+3E31><U+623C><U+3E65><U+383C><U+3E37>恣<U+653C><U+3E36><U+393C><U+3E63><U+383C><U+3E61>銵<U+623C><U+3E31><U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E38><U+653C><U+3E38><U+653C><U+3E39><U+383C><U+3E61>銵<U+383C><U+3E66>縑<U+653C><U+3E37><U+653C><U+3E35><U+393C><U+3E30><U+623C><U+3E64>冗瘨祥<U+653C><U+3E38>硫甈暹平<U+653C><U+3E35><U+383C><U+3E62><U+613C><U+3E30><U+653C><U+3E33><U+383C><U+3E32><U+653C><U+3E35><U+393C><U+3E30>飛<U+653C><U+3E35>隞乩蝙<U+653C><U+3E37><code>View(cl_info)</code><U+653C><U+3E37><U+393C><U+3E63><U+623C><U+3E38><U+653C><U+3E37><U+393C><U+3E63><U+623C><U+3E33><U+393C><U+3E36><U+383C><U+3E32></p>
+<p>變數<code>cl_info</code>記載著從金管會銀行局的一般銀行及信用合作社消費者貸款業務項目。同學可以使用<code>View(cl_info)</code>看一看資料。</p>
 <pre class="r"><code>View(cl_info)</code></pre>
 </div>
 <div id="stage-78" class="section level2">
 <h2>stage 78</h2>
-<p><U+653C><U+3E39>毀蝧閬<U+623C><U+3E30><U+623C><U+3E33><U+393C><U+3E36><U+383C><U+3E31><U+623C><U+3E38><U+653C><U+3E39><U+613C><U+3E33>銝脩<U+393C><U+3E61><U+653C><U+3E37><U+393C><U+3E30><U+623C><U+3E39><U+623C><U+3E65><U+623C><U+3E63><U+613C><U+3E65>瘥<U+393C><U+3E63>遢<U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E61>銵鞎豢甈暹<U+653C><U+3E39><U+383C><U+3E37>摮<U+393C><U+3E37><U+653C><U+3E36><U+393C><U+3E63><U+393C><U+3E32><U+383C><U+3E38><U+393C><U+3E63><U+393C><U+3E61><U+653C><U+3E35><U+653C><U+3E37><U+653C><U+3E36><U+653C><U+3E35>瘜⊥疵<U+653C><U+3E35><U+383C><U+3E63><U+393C><U+3E63><U+393C><U+3E37><U+383C><U+3E32></p>
+<p>這個練習是要對這個資料做一連串的整理之後，算出每個月份的銀行房貸放款數量。這個數字會和我國的房地產是否泡沫化有關。</p>
 </div>
 <div id="stage-79" class="section level2">
 <h2>stage 79</h2>
-<p>隢摰<U+383C><U+3E38><U+623C><U+3E39><U+623C><U+3E65><U+613C><U+3E64><U+613C><U+3E61><U+623C><U+3E63>蒂頛詨<code>submit()</code>靘炎<U+653C><U+3E36>蝯<U+393C><U+3E65><U+653C><U+3E35>蝚血<U+393C><U+3E30><U+613C><U+3E30><U+393C><U+3E63><U+383C><U+3E32>憒<U+393C><U+3E65><U+393C><U+3E30>飛<U+653C><U+3E35>瑼<U+613C><U+3E31>葉<U+653C><U+3E37><U+393C><U+3E63>鈭Ⅳ嚗<U+613C><U+3E62>蝙<U+653C><U+3E37>Rstudio撌虫<U+623C><U+3E38><U+613C><U+3E37><U+393C><U+3E61>ile-&gt;Reopen</p>
+<p>請在完成之後存檔，並輸入<code>submit()</code>來檢查結果是否符合預期。如果同學在檔案中看到亂碼，請使用Rstudio左上角的File-&gt;Reopen</p>
 <pre class="r"><code>cl_info2 &lt;- local({
   # 隢‵撖思&lt;bd&gt;&lt;9a&gt;&lt;a8&gt;&lt;bc&gt;Ⅳ
   mutate(cl_info, year_month = substring(data_dt, 1, 7)) %&gt;%

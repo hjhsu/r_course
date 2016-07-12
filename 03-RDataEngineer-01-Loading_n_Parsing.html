@@ -120,291 +120,291 @@ $(document).ready(function () {
 
 <div id="stage-1" class="section level2">
 <h2>stage 1</h2>
-<p>NA</p>
+<p>各位同學好，這門課程將會帶大家學習如何辨認外部資料集的編碼，將其正確地載入R環境，並針對其中的字串資料進行處理。</p>
 </div>
 <div id="stage-2" class="section level2">
 <h2>stage 2</h2>
-<p>NA</p>
+<p>外部資料集的格式有千百種，今天只跟大家介紹最常見的CSV檔。</p>
 </div>
 <div id="stage-3" class="section level2">
 <h2>stage 3</h2>
-<p>NA</p>
+<p>CSV檔的格式是以行(Line)為單位。每一行(Line)就是一筆紀錄(Record)。而每一筆紀錄中，是以一個分隔符號來讓使用者或程式分辨欄位。常見的分隔符號有：tab()或逗號(,)。若以逗號做為分隔符號，則學生姓名加上4次小考分數的一筆紀錄，可用CSV表達如下：<code>柯小哲,77,82,87,92</code></p>
 </div>
 <div id="stage-4" class="section level2">
 <h2>stage 4</h2>
-<p>NA</p>
+<p>這個課程中，我們事先從政府的公開資料平台抓取了血清白蛋白(Albumin)檢查比率的資料。這個資料已經存放於<code>hospital_path</code>了。有興趣的同學，可以參考網址：<http: data.gov.tw node 25511>閱讀這個資料集的故事。</p>
 </div>
 <div id="stage-5" class="section level2">
 <h2>stage 5</h2>
-<p>NA</p>
+<p>載入中文資料，最重要的就是要抓對檔案所採用的中文的編碼；目前在R中尚沒有可以直接偵測外部資料編碼的工具，我們在這裡將帶著同學手動測試這個檔案的編碼。</p>
 </div>
 <div id="stage-6" class="section level2">
 <h2>stage 6</h2>
-<p>瑼Ｘ蝺函Ⅳ<U+653C><U+3E37><U+393C><U+3E61>絲<U+653C><U+3E36><U+383C><U+3E39><U+623C><U+3E63>瑼Ｘ閰脫<U+613C><U+3E61><U+613C><U+3E31><U+393C><U+3E63><U+623C><U+3E32><U+393C><U+3E63>OM<U+653C><U+3E33>OM<U+653C><U+3E36>銝蝔桀<U+653C><U+3E37>瑼<U+613C><U+3E31><U+393C><U+3E63><U+653C><U+3E35><U+383C><U+3E39><U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E34>2<U+653C><U+3E35><U+383C><U+3E38><U+393C><U+3E36>3<U+653C><U+3E35><U+623C><U+3E64><U+383C><U+3E35><U+623C><U+3E35><U+623C><U+3E65><U+613C><U+3E38>內瑼<U+613C><U+3E31>楊蝣潛<U+393C><U+3E61>撘windows摨<U+623C><U+3E38>遣蝡<U+393C><U+3E61>葉<U+653C><U+3E36><U+393C><U+3E36><U+613C><U+3E61><U+613C><U+3E31><U+623C><U+3E63><U+393C><U+3E63><U+623C><U+3E65><U+613C><U+3E62><U+393C><U+3E61><U+613C><U+3E39><U+393C><U+3E63><U+393C><U+3E63>葆BOM<U+653C><U+3E33><U+383C><U+3E32>隢<U+393C><U+3E30>飛<U+653C><U+3E35>銵<U+623C><U+3E63>readBin(hospital_path,“raw”,n=3L)`</p>
+<p>檢查編碼的起手式是檢查該檔案有沒有BOM。BOM是一種利用檔案最前面的2個或3個位元組來標示檔案編碼的方式。在windows底下建立的中文檔案，有很高的機會會帶BOM。請同學執行：<code>readBin(hospital_path,&quot;raw&quot;,n=3L)</code></p>
 <pre class="r"><code>readBin(hospital_path,&quot;raw&quot;,n = 3L)</code></pre>
 </div>
 <div id="stage-7" class="section level2">
 <h2>stage 7</h2>
-<p>R銝剔<U+393C><U+3E61>readBin<code>&lt;U+653C&gt;&lt;U+3E36&gt;銝&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;霈&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E66&gt;&lt;U+613C&gt;&lt;U+3E61&gt;&lt;U+613C&gt;&lt;U+3E31&gt;葉&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E64&gt;&lt;U+383C&gt;&lt;U+3E35&gt;&lt;U+623C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E63&gt;誘嚗&lt;U+383C&gt;&lt;U+3E39&gt;隞亙隞交迤蝣箇&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E39&gt;&lt;U+393C&gt;&lt;U+3E30&gt;OM&lt;U+653C&gt;&lt;U+3E33&gt;洵銝&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E66&gt;&lt;U+653C&gt;&lt;U+3E36&gt;瑼&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+393C&gt;&lt;U+3E61&gt;楝敺洵鈭&lt;U+393C&gt;&lt;U+3E30&gt;迂&lt;U+653C&gt;&lt;U+3E37&gt;what&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E66&gt;嚗&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E31&gt;迄R閬&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+623C&gt;&lt;U+3E64&gt;&lt;U+393C&gt;&lt;U+3E39&gt;&lt;U+393C&gt;&lt;U+3E30&gt;&lt;U+613C&gt;&lt;U+3E65&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E36&gt;what=&quot;raw&quot;</code>隞<U+613C><U+3E33>銵刻<U+613C><U+3E65><U+653C><U+3E35><U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36>雿<U+383C><U+3E35><U+393C><U+3E39><U+393C><U+3E30><U+623C><U+3E63><U+623C><U+3E38><U+653C><U+3E36><U+393C><U+3E36><U+613C><U+3E64>洵銝<U+393C><U+3E30>迂<U+653C><U+3E37>n<U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E66>嚗誨銵刻<U+613C><U+3E36>撓<U+653C><U+3E35><U+653C><U+3E37><U+393C><U+3E61>摨艾ㄐ<U+653C><U+3E39><code>n=3</code><U+653C><U+3E36><U+653C><U+3E35><U+393C><U+3E62><U+653C><U+3E39>虜BOM<U+653C><U+3E36><U+393C><U+3E63>憭停<U+653C><U+3E36>3<U+653C><U+3E35><U+623C><U+3E64><U+383C><U+3E35><U+623C><U+3E35><U+383C><U+3E32></p>
+<p>R中的<code>readBin</code>是一個直接讀取檔案中的位元組的指令，所以可以正確的處理BOM。第一個參數是檔案的路徑。第二個名稱為what的參數，是告訴R要如何處理讀入的資料。<code>what=&quot;raw&quot;</code>代表讀入的資料用位元處理，而不是文字。第三個名稱為n的參數，代表要輸入的長度。這裡選<code>n=3</code>是因為通常BOM最多就是3個位元組。</p>
 </div>
 <div id="stage-8" class="section level2">
 <h2>stage 8</h2>
-<p>NA</p>
+<p>參考<https: zh.wikipedia.org wiki 位元組順序記號>請問同學，根據這三個byte，他們的BOM可能是什麼呢？</p>
 <p>Unknown</p>
 </div>
 <div id="stage-9" class="section level2">
 <h2>stage 9</h2>
-<p><U+653C><U+3E37>BOM銝<U+653C><U+3E35><U+653C><U+3E36><U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E39><U+623C><U+3E63><U+383C><U+3E38>憟賜<U+653C><U+3E35><U+393C><U+3E30>車Encoding霈<U+653C><U+3E35>嗾銵岫閰衣<U+393C><U+3E63><U+653C><U+3E36><U+653C><U+3E36>摨<U+653C><U+3E39><U+393C><U+3E36><U+623C><U+3E33><U+393C><U+3E36>雯摰<U+613C><U+3E33>蝔梢<U+613C><U+3E61><U+613C><U+3E31>UTF-8蝺函Ⅳ嚗<U+383C><U+3E38>隞亙<U+383C><U+3E35>岫閰衣<U+393C><U+3E63>TF-8蝺函Ⅳ<U+653C><U+3E33><U+383C><U+3E32>隢<U+393C><U+3E30>飛頛詨嚗readLines(file(hospital_path,encoding=“UTF-8”),n=3)`</p>
+<p>當BOM不能判斷的時候，我們只好用各種Encoding讀個幾行試試看。由於政府公開資料網宣稱這個檔案為UTF-8編碼，我們可以先試試看UTF-8編碼。請同學輸入：<code>readLines(file(hospital_path,encoding=&quot;UTF-8&quot;),n=3)</code></p>
 <pre class="r"><code>readLines(file(hospital_path,encoding = &quot;UTF-8&quot;),n = 3)</code></pre>
 </div>
 <div id="stage-10" class="section level2">
 <h2>stage 10</h2>
-<p>NA</p>
+<p>同學在這邊應該會看到一些警告（warning）訊息，那是因為這份檔案並非UTF-8編碼，所導致的小錯誤。</p>
 </div>
 <div id="stage-11" class="section level2">
 <h2>stage 11</h2>
-<p>蝜<U+613C><U+3E62>葉<U+653C><U+3E36><U+393C><U+3E36><U+613C><U+3E61><U+613C><U+3E31><U+623C><U+3E38><U+653C><U+3E38><U+653C><U+3E36><U+393C><U+3E63>誑BIG5蝺函Ⅳ嚗<U+653C><U+3E37><U+653C><U+3E39>遢瑼<U+613C><U+3E31>蒂<U+653C><U+3E39><U+393C><U+3E64><U+653C><U+3E36><U+383C><U+3E39>摰<U+613C><U+3E33>蝔梁<U+393C><U+3E61>TF-8蝺函Ⅳ嚗暻潭<U+383C><U+3E38>停閰西岫<U+653C><U+3E37><U+393C><U+3E63>IG5蝺函Ⅳ<U+653C><U+3E35><U+653C><U+3E33><U+383C><U+3E32>隢<U+393C><U+3E30><U+623C><U+3E64><U+393C><U+3E30>飛頛詨<code>readLines(file(hospital_path,encoding=&quot;BIG5&quot;),n=3)</code>閰西岫<U+653C><U+3E37><U+393C><U+3E63><U+383C><U+3E32></p>
+<p>繁體中文檔案一般會以BIG5編碼，既然這份檔案並非其所宣稱的UTF-8編碼，那麼我們就試試看BIG5編碼吧。請各位同學輸入<code>readLines(file(hospital_path,encoding=&quot;BIG5&quot;),n=3)</code>試試看。</p>
 <pre class="r"><code>readLines(file(hospital_path,encoding = &quot;BIG5&quot;),n = 3)</code></pre>
 </div>
 <div id="stage-12" class="section level2">
 <h2>stage 12</h2>
-<p>NA</p>
+<p>同學們應該正確地看到了中文資料，那麼請問同學，這個檔案的編碼應該是：</p>
 <p>BIG5</p>
 </div>
 <div id="stage-13" class="section level2">
 <h2>stage 13</h2>
-<p>NA</p>
+<p>像是這類文件宣稱的編碼與實際情形不符的狀況，在實務上是很常見的。</p>
 </div>
 <div id="stage-14" class="section level2">
 <h2>stage 14</h2>
-<p>鋆<U+383C><U+3E35>牧<U+653C><U+3E36><U+393C><U+3E38><U+623C><U+3E63><U+653C><U+3E39><U+383C><U+3E32><U+383C><U+3E38><U+653C><U+3E35>鈭<U+653C><U+3E36><code>file</code>嚗<U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E63>遣蝡<U+623C><U+3E38><U+653C><U+3E35>誨銵冽<U+613C><U+3E61><U+613C><U+3E31><U+393C><U+3E61>隞塚<U+623C><U+3E63>R銋葉<U+653C><U+3E35><U+653C><U+3E35><U+383C><U+3E31>connection<code>&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+623C&gt;&lt;U+3E38&gt;膩&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E63&gt;誘銝剔&lt;U+393C&gt;&lt;U+3E61&gt;readLines</code><U+653C><U+3E35><U+653C><U+3E36>嚗<U+383C><U+3E39><U+393C><U+3E63><U+383C><U+3E31>府<code>connection</code>撠<U+623C><U+3E33><U+393C><U+3E36><U+613C><U+3E31><U+613C><U+3E65><U+653C><U+3E35><U+653C><U+3E33><U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E38><U+613C><U+3E65><U+393C><U+3E39><U+393C><U+3E61><U+393C><U+3E37><U+393C><U+3E36><U+623C><U+3E38>蝙<U+653C><U+3E37><U+653C><U+3E37><U+393C><U+3E61>onnection嚗蒂銝console憿舐內霅血<U+393C><U+3E31><U+613C><U+3E38><U+653C><U+3E33><U+383C><U+3E32><U+653C><U+3E36><U+383C><U+3E39>隞乩<U+623C><U+3E39><U+623C><U+3E65><U+393C><U+3E30>飛<U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E38><U+613C><U+3E65><U+393C><U+3E39><U+393C><U+3E61><U+393C><U+3E63>嚗closingunusedconnection`<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>補充說明，在這邊我們用到了函數<code>file</code>，這個函數會建立一個代表檔案的物件，在R之中叫做<code>connection</code>。而上述指令中的<code>readLines</code>函數，則會透過該<code>connection</code>將資料逐行讀入。R會不定時的關閉不使用的connection，並且在console顯示警告訊息。所以之後同學會不定時的看到：<code>closingunusedconnection</code>。</p>
 </div>
 <div id="stage-15" class="section level2">
 <h2>stage 15</h2>
-<p>NA</p>
+<p>此外，各位也可以注意一下<code>readLines</code>函數的參數<code>n</code>，<code>n</code>代表的是要讀入幾行資料，接觸到一個新的資料檔案，先用<code>readLines</code>看一下資料是個好習慣，實務上會多看幾行，以利瞭解檔案的格式。</p>
 </div>
 <div id="stage-16" class="section level2">
 <h2>stage 16</h2>
-<p>NA</p>
+<p>接著我們開始來講解<code>read.table</code>這個讀取CSV格式檔案最泛用的指令。</p>
 </div>
 <div id="stage-17" class="section level2">
 <h2>stage 17</h2>
-<p>NA</p>
+<p>在R中，<code>read.table</code>的第一個參數和<code>readLines</code>的第一個參數一樣，代表要開啟的檔案。</p>
 </div>
 <div id="stage-18" class="section level2">
 <h2>stage 18</h2>
-<p>蝚砌<U+623C><U+3E61><U+383C><U+3E37><U+613C><U+3E36><U+393C><U+3E61><U+383C><U+3E66>嚗<code>header</code><U+653C><U+3E33>header=TRUE<code>隞&lt;U+613C&gt;&lt;U+3E33&gt;銵冽&lt;U+613C&gt;&lt;U+3E61&gt;&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+393C&gt;&lt;U+3E61&gt;洵銝銵甈&lt;U+623C&gt;&lt;U+3E64&gt;&lt;U+393C&gt;&lt;U+3E30&gt;迂嚗&lt;U+393C&gt;&lt;U+3E64&gt;&lt;U+623C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E36&gt;header=FALSE</code><U+653C><U+3E35><U+383C><U+3E39>誨銵冽<U+613C><U+3E61><U+613C><U+3E31><U+393C><U+3E61>洵銝銵停<U+653C><U+3E36>鞈<U+393C><U+3E36><U+383C><U+3E39><U+383C><U+3E39><U+383C><U+3E38><U+393C><U+3E63>瑼<U+613C><U+3E31><U+393C><U+3E61><U+383C><U+3E39><U+623C><U+3E61><U+613C><U+3E31><U+393C><U+3E61>摰寞嚗[1]“YEARYY,HOSPID,HOSPNAME…”[2]“100Q1,0501010019,銝<U+623C><U+3E62>蜇<U+653C><U+3E39><U+653C><U+3E39><U+653C><U+3E36>撅勗<U+383C><U+3E38><U+653C><U+3E39><U+393C><U+3E39>身瘞閮箇<U+393C><U+3E39><U+393C><U+3E63><U+383C><U+3E62><U+393C><U+3E39><U+393C><U+3E35>…”<code>&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+613C&gt;&lt;U+3E62&gt;&lt;U+393C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E30&gt;飛嚗header</code><U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E66><U+653C><U+3E36><U+383C><U+3E37>府閬策<U+653C><U+3E35>銝<U+653C><U+3E35>嚗<U+393C><U+3E66></p>
+<p>第二個重要的參數，是<code>header</code>。<code>header=TRUE</code>代表檔案的第一行是欄位名稱，而非資料。<code>header=FALSE</code>則代表檔案的第一行就是資料。剛剛我們看到檔案的前五行的內容是：<code>[1]&quot;YEARYY,HOSPID,HOSPNAME...&quot;[2]&quot;100Q1,0501010019,三軍總醫院松山分院附設民眾診療服務處...&quot;</code>。請問同學，<code>header</code>的參數應該要給哪一個呢？</p>
 <p>TRUE</p>
 </div>
 <div id="stage-19" class="section level2">
 <h2>stage 19</h2>
-<p>蝚砌<U+623C><U+3E38><U+383C><U+3E37><U+613C><U+3E36><U+393C><U+3E61><U+383C><U+3E66><U+653C><U+3E36><code>sep</code>嚗誨銵典<U+393C><U+3E30><U+613C><U+3E31><U+613C><U+3E63><U+623C><U+3E64><U+393C><U+3E36><U+393C><U+3E61><U+383C><U+3E38><U+393C><U+3E61>泵<U+653C><U+3E38><U+393C><U+3E39><U+653C><U+3E36><U+393C><U+3E33><U+623C><U+3E39><U+383C><U+3E39><U+383C><U+3E38><U+393C><U+3E63><U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E39><U+623C><U+3E61><U+613C><U+3E31><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+623C><U+3E63>[1]“YEARYY,HOSPID,HOSPNAME…”[2]“100Q1,0501010019,銝<U+623C><U+3E62>蜇<U+653C><U+3E39><U+653C><U+3E39><U+653C><U+3E36>撅勗<U+383C><U+3E38><U+653C><U+3E39><U+393C><U+3E39>身瘞閮箇<U+393C><U+3E39><U+393C><U+3E63><U+383C><U+3E62><U+393C><U+3E39><U+393C><U+3E35>…”[3]“100Q1,3501013040,摰汙<U+653C><U+3E38><U+653C><U+3E35><U+393C><U+3E30>那<U+653C><U+3E36><U+383C><U+3E39>`<U+653C><U+3E33><U+613C><U+3E62><U+393C><U+3E35><U+393C><U+3E30>飛嚗遢瑼<U+613C><U+3E31><U+613C><U+3E63><U+623C><U+3E64><U+393C><U+3E61><U+383C><U+3E38><U+393C><U+3E61>泵<U+653C><U+3E38><U+393C><U+3E39>隞暻澆嚗<U+393C><U+3E66></p>
+<p>第三個重要的參數是<code>sep</code>，這代表各行欄位間的分隔符號。根據之前我們看到的前五行的資料：<code>[1]&quot;YEARYY,HOSPID,HOSPNAME...&quot;[2]&quot;100Q1,0501010019,三軍總醫院松山分院附設民眾診療服務處...&quot;[3]&quot;100Q1,3501013040,安禾聯合診所</code>。請問同學，這份檔案個欄位的分隔符號是什麼呢？</p>
 <p>,</p>
 </div>
 <div id="stage-20" class="section level2">
 <h2>stage 20</h2>
-<p>NA</p>
+<p>依照以上問答題的答案，請同學利用<code>read.table</code>，用<code>read.table</code>和<code>file</code>兩個函數的組合，藉由適當的設定<code>sep</code>以及<code>header</code>和<code>encoding</code>等參數將<code>hospital_path</code>的內容存到<code>hospital</code></p>
 <pre class="r"><code>hospital&lt;-read.table(file(hospital_path,encoding = &quot;BIG5&quot;),header = TRUE,sep = &quot;,&quot;)</code></pre>
 </div>
 <div id="stage-21" class="section level2">
 <h2>stage 21</h2>
-<p>NA</p>
+<p>此外，在R中，<code>read.table</code>的第一個參數也可以直接輸入檔案的路徑。以下哪一個是正確的路徑？</p>
 <p>hospital_path</p>
 </div>
 <div id="stage-22" class="section level2">
 <h2>stage 22</h2>
-<p><U+653C><U+3E35>file<U+653C><U+3E35><U+383C><U+3E66><U+653C><U+3E37>摮葡<U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E39><U+383C><U+3E66><U+623C><U+3E38><U+623C><U+3E63><U+393C><U+3E30>飛<U+653C><U+3E35>隞亥<U+393C><U+3E37>閮剖<U+613C><U+3E65>read.table<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E66&gt;fileEncoding靘脰&lt;U+613C&gt;&lt;U+3E31&gt;圾蝣潦&lt;U+383C&gt;&lt;U+3E32&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E30&gt;飛閰西岫&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E63&gt;read.table(hospital_path,fileEncoding=&quot;BIG5&quot;,sep=&quot;,&quot;,header=TRUE,nrows=5)</code><U+653C><U+3E33><U+383C><U+3E32><U+653C><U+3E39><U+383C><U+3E32><U+383C><U+3E38>身摰nrows`<U+653C><U+3E35><U+383C><U+3E66><U+653C><U+3E37>5嚗<U+613C><U+3E65><U+653C><U+3E35><U+383C><U+3E66><U+623C><U+3E33><U+393C><U+3E36><U+393C><U+3E61><U+383C><U+3E39><U+623C><U+3E61><U+613C><U+3E31><U+623C><U+3E31>內甇文<U+383C><U+3E61><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>在file參數為字串的前提下，同學可以藉由設定<code>read.table</code>的參數fileEncoding來進行解碼。同學試試看<code>read.table(hospital_path,fileEncoding=&quot;BIG5&quot;,sep=&quot;,&quot;,header=TRUE,nrows=5)</code>。這邊我們設定<code>nrows</code>參數為5，讀取資料的前五行展示此功能。</p>
 <pre class="r"><code>read.table(hospital_path,fileEncoding=&quot;BIG5&quot;,sep=&quot;,&quot;,header=TRUE,nrows=5)</code></pre>
 </div>
 <div id="stage-23" class="section level2">
 <h2>stage 23</h2>
-<p>NA</p>
+<p>在實務上，數據來源常常都是隱含某些規則的文字檔案。例如：伺服器依據工程師擬定的規則所產生的資料。這個規則可能是工程師自己訂的，也可能是符合眾人智慧所訂定的規範。</p>
 </div>
 <div id="stage-24" class="section level2">
 <h2>stage 24</h2>
-<p>NA</p>
+<p>但是不管是工程師自己的想法，或是眾人的智慧，R都能從文字中萃取出資訊。一般而言，這樣的技術就稱作Parsing。同學在這一堂課中所學到的<code>read.table</code>，其實就是一種Parsing的功能。</p>
 </div>
 <div id="stage-25" class="section level2">
 <h2>stage 25</h2>
-<p>NA</p>
+<p>我們可能希望從欄位YEARYY中擷取出資料的年份。我們先看看名稱為YEARYY這欄，請同學自hospital中選出YEARYY欄位。（同學可以使用<code>[[</code>、或<code>$</code>搭配名稱或是欄位順序）</p>
 <pre class="r"><code>hospital$YEARYY</code></pre>
 </div>
 <div id="stage-26" class="section level2">
 <h2>stage 26</h2>
-<p><U+653C><U+3E36><U+393C><U+3E63><U+393C><U+3E39><U+623C><U+3E63><U+613C><U+3E37>撖憭芸之<U+653C><U+3E39><U+383C><U+3E37><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+653C><U+3E38><U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E30><U+653C><U+3E33><U+653C><U+3E38>撣嗡<U+623C><U+3E65>之<U+653C><U+3E39><U+383C><U+3E37><U+393C><U+3E61><U+623C><U+3E32>嚗<U+393C><U+3E30><U+393C><U+3E39><U+623C><U+3E39><U+623C><U+3E30><U+383C><U+3E38><U+623C><U+3E32><U+393C><U+3E63><U+383C><U+3E34>儔<U+653C><U+3E33><U+393C><U+3E62><U+653C><U+3E36><U+383C><U+3E38><U+653C><U+3E35><U+393C><U+3E30><U+393C><U+3E39><U+393C><U+3E39><U+393C><U+3E30><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+383C><U+3E37><U+653C><U+3E36><U+393C><U+3E63><U+393C><U+3E39><U+393C><U+3E61>ㄐ<U+653C><U+3E36><U+383C><U+3E38>遣霅啣<U+393C><U+3E30>飛嚗隞亦<code>head</code><U+653C><U+3E39><U+653C><U+3E36>蝭拚<U+653C><U+3E35>鞈<U+393C><U+3E36><U+393C><U+3E61><U+383C><U+3E39><U+383C><U+3E64>6<U+653C><U+3E35><U+383C><U+3E38><U+383C><U+3E31><U+613C><U+3E37>撖<U+383C><U+3E32></p>
+<p>有時候，觀察到太大量的資料可能會對R、電腦帶來大量的負荷，同時也對我們沒有意義。因為我們能同時處理的資料量是有限的。這裡我建議同學，可以用<code>head</code>這個函數篩選出資料的前6列做觀察。</p>
 </div>
 <div id="stage-27" class="section level2">
 <h2>stage 27</h2>
-<p>NA</p>
+<p>請問同學，<code>hospital</code>中的YEARYY欄位的型態為何？</p>
 <p>factor</p>
 </div>
 <div id="stage-28" class="section level2">
 <h2>stage 28</h2>
-<p>NA</p>
+<p>從Levels上的資訊顯示，年份的資訊，可能是在前兩個數字，或是前三個數字。如果通通都是兩個數字的話，我們可以透過<code>substring</code>函數直接擷取字串中的段落即可。請同學輸入：<code>?substring</code>先看看substring函數的說明文件。</p>
 <pre class="r"><code>?substring</code></pre>
 </div>
 <div id="stage-29" class="section level2">
 <h2>stage 29</h2>
-<p>NA</p>
+<p>請問下列哪一個「不是」<code>substring</code>的參數？</p>
 <p>x</p>
 </div>
 <div id="stage-30" class="section level2">
 <h2>stage 30</h2>
-<p>NA</p>
+<p>R的<code>substring</code>函數會把<code>text</code>參數所代表的字串，依照字符的位置，擷取出中間的段落。舉例來說，<code>substring(&quot;abc&quot;,1,2)</code>就會擷取出“abc”中第1個字母到第2個字母的段落，也就是“ab”。而<code>substring</code>也是向量式的函數。請同學輸入<code>substring(head(hospital$YEARYY),1,3)</code>看看前6筆數據經過R的<code>substring</code>函數處理之後的結果。</p>
 <pre class="r"><code>substring(head(hospital$YEARYY),1,3)</code></pre>
 </div>
 <div id="stage-31" class="section level2">
 <h2>stage 31</h2>
-<p>NA</p>
+<p>這樣的作法，有時候就夠了，可惜在現在的狀況不適合。因為年度可能是2位數也可能是3位數。</p>
 </div>
 <div id="stage-32" class="section level2">
 <h2>stage 32</h2>
-<p>NA</p>
+<p>另外一種想法，是拿<code>&quot;Q&quot;</code>當做定位點。我們如果利用<code>&quot;Q&quot;</code>把字串分割成兩部份，第一部份就是我們需要的年份了。在R中，我們可以運用函數<code>strsplit</code>達到這個目的。請同學打開<code>strsplit</code>的說明文件。</p>
 <pre class="r"><code>?strsplit</code></pre>
 </div>
 <div id="stage-33" class="section level2">
 <h2>stage 33</h2>
-<p>NA</p>
+<p>請問同學，下列哪一個「不是」<code>strsplit</code>的參數？</p>
 <p>str</p>
 </div>
 <div id="stage-34" class="section level2">
 <h2>stage 34</h2>
-<p><U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E33>牧<U+653C><U+3E36><U+393C><U+3E38><U+393C><U+3E36>辣嚗strsplit<code>&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+653C&gt;&lt;U+3E37&gt;</code>split<code>&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E66&gt;靘&lt;U+383C&gt;&lt;U+3E38&gt;</code>x<code>&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+613C&gt;&lt;U+3E64&gt;葡嚗蒂銝&lt;U+393C&gt;&lt;U+3E62&gt;銝&lt;U+653C&gt;&lt;U+3E35&gt;list</code><U+653C><U+3E33><U+653C><U+3E35><U+393C><U+3E62><code>x</code><U+653C><U+3E37><U+393C><U+3E61>摨血<U+653C><U+3E38>頞<U+383C><U+3E31><U+383C><U+3E65>1嚗strsplit<code>&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E63&gt;</code>split<code>&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E38&gt;瘥&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+653C&gt;&lt;U+3E35&gt;x</code><U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E35><U+623C><U+3E34><U+383C><U+3E38><U+653C><U+3E35>靘<U+393C><U+3E61><U+623C><U+3E35><U+393C><U+3E65><U+623C><U+3E63>洵銝<U+653C><U+3E35><U+383C><U+3E35><U+623C><U+3E34><U+653C><U+3E38><U+653C><U+3E35><U+383C><U+3E38><U+653C><U+3E35>畾蛛<U+623C><U+3E63><U+623C><U+3E64>蝚砌<U+623C><U+3E61><U+383C><U+3E35><U+623C><U+3E34><U+653C><U+3E38><U+653C><U+3E35><U+653C><U+3E35><U+383C><U+3E38>銝畾萸<U+383C><U+3E39>隞充<U+653C><U+3E37><code>list</code><U+653C><U+3E39><U+623C><U+3E35><U+613C><U+3E37><U+623C><U+3E65><U+393C><U+3E39><U+393C><U+3E30><U+623C><U+3E64><code>strsplit</code>銝虫<U+623C><U+3E38><U+653C><U+3E35><U+383C><U+3E66>actor<U+653C><U+3E35><U+383C><U+3E66>嚗<U+653C><U+3E36><U+653C><U+3E35><U+383C><U+3E66><U+613C><U+3E64>葡<U+653C><U+3E35><U+393C><U+3E30><U+383C><U+3E37><U+383C><U+3E32><U+653C><U+3E35><U+393C><U+3E62>迨隢<U+393C><U+3E30>飛<U+653C><U+3E37>嚗yearyy&lt;-as.character(hospital$YEARYY)<code>&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+613C&gt;&lt;U+3E64&gt;</code>yearyy`<U+653C><U+3E39><U+613C><U+3E65><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>根據說明文件，<code>strsplit</code>會利用<code>split</code>參數來切割<code>x</code>這個字串，並且回傳一個<code>list</code>。這是因為<code>x</code>的長度可能超過1，而<code>strsplit</code>會用<code>split</code>去切割每一個<code>x</code>的元素。而切割出來的結果，第一個元素可能切出兩段，但是第二個元素可能只切出一段。所以R用<code>list</code>這個結構來處理。但是<code>strsplit</code>並不接受factor參數，只接受字串向量。因此請同學用：<code>yearyy&lt;-as.character(hospital$YEARYY)</code>把資料存到<code>yearyy</code>這個變數。</p>
 <pre class="r"><code>yearyy&lt;-as.character(hospital$YEARYY)</code></pre>
 </div>
 <div id="stage-35" class="section level2">
 <h2>stage 35</h2>
-<p>NA</p>
+<p>接著請同學輸入：<code>tmp&lt;-strsplit(yearyy,&quot;Q&quot;)</code>，把切割的結果儲存到<code>tmp</code>這個變數。</p>
 <pre class="r"><code>tmp&lt;-strsplit(yearyy,&quot;Q&quot;)</code></pre>
 </div>
 <div id="stage-36" class="section level2">
 <h2>stage 36</h2>
-<p>NA</p>
+<p>請同學輸入：<code>head(tmp)</code>看看結果</p>
 <pre class="r"><code>head(tmp)</code></pre>
 </div>
 <div id="stage-37" class="section level2">
 <h2>stage 37</h2>
-<p>NA</p>
+<p>同學應該會看到裝著許多字串向量的list。這樣，甚至是更複雜的結構，是我們在處理文字資料時常常遇到的。</p>
 </div>
 <div id="stage-38" class="section level2">
 <h2>stage 38</h2>
-<p>NA</p>
+<p>由於我們要的是在<code>&quot;Q&quot;</code>之前的文字，而在經過<code>strsplit</code>處理後，這些文字會在每個list元素的第一個。請同學先拿用<code>[[</code>拿出tmp的第一個字串向量元素，然後用<code>[</code>拿出這個字串向量的第一個值。這就會是第一筆資料的年度。</p>
 <pre class="r"><code>tmp[[1]][1]</code></pre>
 </div>
 <div id="stage-39" class="section level2">
 <h2>stage 39</h2>
-<p>NA</p>
+<p>同樣的要領，如果我們要拿出第二筆資料的年度，就只是把上一題<code>tmp[[1]][1]</code>的語法改成<code>tmp[[2]][1]</code>。</p>
 </div>
 <div id="stage-40" class="section level2">
 <h2>stage 40</h2>
-<p>NA</p>
+<p>請問同學，<code>tmp</code>中總共有多少筆資料呢？</p>
 <pre class="r"><code>length(tmp)</code></pre>
 </div>
 <div id="stage-41" class="section level2">
 <h2>stage 41</h2>
-<p>NA</p>
+<p>顯然一個一個處理是不可行的。R當然有設計針對這種狀況的解答。首先我們看看<code>tmp[[1]][1]</code>、<code>tmp[[2]][1]</code>、<code>tmp[[3]][1]</code>有什麼共通性？一種觀點是，我們需要對<code>tmp</code>的每一個元素進行<code>[1]</code>的操作。</p>
 </div>
 <div id="stage-42" class="section level2">
 <h2>stage 42</h2>
-<p>NA</p>
+<p>這樣的需求，在parsing時是非常常見的。所以R提供了<code>lapply</code>這個函數。請同學先打開<code>lapply</code>的說明文件。</p>
 <pre class="r"><code>?lapply</code></pre>
 </div>
 <div id="stage-43" class="section level2">
 <h2>stage 43</h2>
-<p>NA</p>
+<p>R的<code>lapply</code>是同學接觸的第一個比較進階的函數。請問同學，下列哪一個不是<code>lapply</code>的參數？</p>
 <p>Y</p>
 </div>
 <div id="stage-44" class="section level2">
 <h2>stage 44</h2>
-<p>NA</p>
+<p>R的<code>lapply</code>的第一個參數<code>X</code>，通常是一個vector。第二個參數<code>FUN</code>，則是代表一種「動作」。而<code>lapply</code>會對每一個<code>X</code>的元素進行<code>FUN</code>所定義的動作，並且把結果彙整回R。</p>
 </div>
 <div id="stage-45" class="section level2">
 <h2>stage 45</h2>
-<p>NA</p>
+<p>我們想要對<code>tmp</code>的每一個元素進行<code>[1]</code>的操作。根據上述的解釋，所以<code>lapply</code>的<code>X</code>參數，應該要填何？</p>
 <p>tmp</p>
 </div>
 <div id="stage-46" class="section level2">
 <h2>stage 46</h2>
-<p>NA</p>
+<p>而<code>lapply</code>的<code>FUN</code>參數，也就是對每個<code>X</code>的元素所進行的動作，應該是以下哪一個動作呢？</p>
 <p>[1]</p>
 </div>
 <div id="stage-47" class="section level2">
 <h2>stage 47</h2>
-<p>NA</p>
+<p>這裡再解釋一遍給還無法理解的同學。回到最前面，我們希望產生的結果會等價於：<code>c(tmp[[1]][1],tmp[[2]][1],tmp[[3]][1],...)</code>而第一個<code>[[1]]</code>、<code>[[2]]</code>、<code>[[3]]</code>是變動的，代表著從<code>tmp</code>中拿出第一個元素、第二個元素和第三個元素等等。而<code>[1]</code>是不變的動作。</p>
 </div>
 <div id="stage-48" class="section level2">
 <h2>stage 48</h2>
-<p>NA</p>
+<p>因此<code>lapply</code>的第一個參數<code>X</code>放的是<code>tmp</code>，光這個動作就代表著：<code>c(FUN(tmp[[1]]),FUN(tmp[[2]]),FUN(tmp[[3]]),...)</code>而在此時此刻我們希望<code>FUN</code>就是作出<code>[1]</code>的動作。但是，<code>lapply(tmp,[1])</code>這種語法是不合法的。</p>
 </div>
 <div id="stage-49" class="section level2">
 <h2>stage 49</h2>
-<p>NA</p>
+<p>在R裡面，所有的動作都是函數，所以<code>[1]</code>在R中，其實是一個名叫<code>[</code>的函數。</p>
 </div>
 <div id="stage-50" class="section level2">
 <h2>stage 50</h2>
-<p>NA</p>
+<p>又因為這個函數比較特別，所以我們得使用<code>lapply(tmp,&quot;[&quot;,1)</code>這個語法來取出<code>tmp</code>中每個元素（字串向量）的第一個欄位。請同學試試看。</p>
 <pre class="r"><code>lapply(tmp,&quot;[&quot;,1)</code></pre>
 </div>
 <div id="stage-51" class="section level2">
 <h2>stage 51</h2>
-<p>NA</p>
+<p>如果我們要取出<code>tmp</code>中每個元素（字串向量）的第二個欄位，就是用：<code>lapply(tmp,&quot;[&quot;,2)</code>請同學試試看。</p>
 <pre class="r"><code>lapply(tmp,&quot;[&quot;,2)</code></pre>
 </div>
 <div id="stage-52" class="section level2">
 <h2>stage 52</h2>
-<p>NA</p>
+<p>到目前為止，同學應該可以理解<code>X</code>和<code>FUN</code>這兩個參數在<code>lapply</code>中扮演的角色。但是最後一個<code>...</code>的參數是什麼意思呢？這是因為<code>lapply</code>並不清楚<code>FUN</code>需要什麼參數，所以使用者可以在指定<code>X</code>和<code>FUN</code>之後，放入任意的參數，而這些參數並不是由<code>lapply</code>所使用，而是由<code>FUN</code>所使用。</p>
 </div>
 <div id="stage-53" class="section level2">
 <h2>stage 53</h2>
-<p>NA</p>
+<p>所以<code>lapply(tmp,&quot;[&quot;,1)</code>的第三個參數<code>1</code>就會透過<code>lapply</code>轉交給<code>[</code>，因此R知道要從<code>tmp</code>的每個元素中拿出第<strong>1</strong>個元素。</p>
 </div>
 <div id="stage-54" class="section level2">
 <h2>stage 54</h2>
-<p>NA</p>
+<p>同理，<code>lapply(tmp,&quot;[&quot;,2)</code>的第三個參數<code>2</code>透過<code>lapply</code>轉交給<code>[</code>，因此R知道要從<code>tmp</code>的每個元素中拿出第<strong>2</strong>個元素。</p>
 </div>
 <div id="stage-55" class="section level2">
 <h2>stage 55</h2>
-<p>NA</p>
+<p>接著，請教同學<code>lapply(tmp,&quot;[&quot;,1)</code>的輸出結果是什麼型態？</p>
 <p>list</p>
 </div>
 <div id="stage-56" class="section level2">
 <h2>stage 56</h2>
-<p>list<U+653C><U+3E35><U+393C><U+3E65><U+383C><U+3E35><U+623C><U+3E30>敺<U+623C><U+3E61><U+393C><U+3E61><U+393C><U+3E39><U+393C><U+3E30><U+383C><U+3E32>瘥<U+623C><U+3E63>獄<U+653C><U+3E37><U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E38><U+623C><U+3E38><U+393C><U+3E63>憭<U+623C><U+3E30>撓<U+653C><U+3E35>頧<U+383C><U+3E66>摮葡<U+653C><U+3E35><U+393C><U+3E30><U+383C><U+3E37><U+623C><U+3E38>蝔桀<U+383C><U+3E31><U+623C><U+3E33><U+653C><U+3E39><U+383C><U+3E31>unlist<code>&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E61&gt;lapply</code><U+653C><U+3E36><U+383C><U+3E39>頛詨<U+653C><U+3E37><U+393C><U+3E61>list<code>&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E62&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E32&gt;隢&lt;U+393C&gt;&lt;U+3E30&gt;飛閰西岫&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E35&gt;撓&lt;U+653C&gt;&lt;U+3E35&gt;嚗tmp2&lt;-lapply(tmp,&quot;[&quot;,1)</code>撠<U+623C><U+3E35><U+393C><U+3E65>摮<code>tmp2</code><U+653C><U+3E39><U+613C><U+3E65><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>list型態對於後續的處理還是比較麻煩的。我們希望能夠將輸出轉換為字串向量。一種做法是透過<code>unlist</code>把<code>lapply</code>所輸出的<code>list</code>拆開。請同學試試看先輸入：<code>tmp2&lt;-lapply(tmp,&quot;[&quot;,1)</code>將結果儲存到<code>tmp2</code>這個變數。</p>
 <pre class="r"><code>tmp2&lt;-lapply(tmp,&quot;[&quot;,1)</code></pre>
 </div>
 <div id="stage-57" class="section level2">
 <h2>stage 57</h2>
-<p>NA</p>
+<p>接著，我們可以使用<code>unlist(tmp2)</code>，就可以取得字串向量了。請同學試試看。</p>
 <pre class="r"><code>unlist(tmp2)</code></pre>
 </div>
 <div id="stage-58" class="section level2">
 <h2>stage 58</h2>
-<p>NA</p>
+<p>另外一種方式是使用<code>sapply</code>這個函數。<code>sapply</code>和<code>lapply</code>幾乎一樣，差別只在於<code>sapply</code>最後會嘗試重新整理輸出的格式，從list轉成array。請同學試試<code>sapply(tmp,&quot;[&quot;,1)</code></p>
 <pre class="r"><code>sapply(tmp,&quot;[&quot;,1)</code></pre>
 </div>
 <div id="stage-59" class="section level2">
 <h2>stage 59</h2>
-<p>NA</p>
+<p>以上示範的技巧在實務很常見。當我們想要從文字中擷取出資訊時，都可以優先考慮運用<code>substring</code>或<code>strsplit</code>來擷取資訊。而當R把資訊放成非結構化的list物件中，我們可以運用<code>lapply</code>或<code>sapply</code>做資料的整理。</p>
 </div>
 <div id="stage-60" class="section level2">
 <h2>stage 60</h2>
-<p>NA</p>
+<p>事實上，如果同學能夠撰寫R的函數，就可以適當的和<code>lapply</code>與<code>sapply</code>作組合，更有效率的整理資料。</p>
 </div>
 <div id="stage-61" class="section level2">
 <h2>stage 61</h2>
-<p>NA</p>
+<p>我們在這門課程中展示了，以及如何從檔案中讀取CSV的資料並加以處理。</p>
 </div>
 <div id="stage-62" class="section level2">
 <h2>stage 62</h2>
-<p>憒<U+393C><U+3E65><U+613C><U+3E36>蝙<U+653C><U+3E37>R霈<U+653C><U+3E35><U+383C><U+3E66>ML<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+623C><U+3E63>隞乩蝙<U+653C><U+3E37>憟辣XML<U+653C><U+3E33><U+613C><U+3E36><U+393C><U+3E65><U+613C><U+3E36><U+613C><U+3E65><U+653C><U+3E35><U+383C><U+3E66>SON嚗<U+383C><U+3E63><U+653C><U+3E35>隞乩蝙<U+653C><U+3E37>rjsonlite<U+653C><U+3E33>閬<U+623C><U+3E33><U+393C><U+3E36>撘<U+653C><U+3E35><U+653C><U+3E39><U+393C><U+3E36>撘<U+623C><U+3E63><U+383C><U+3E38><U+623C><U+3E65>捆<U+653C><U+3E36><U+393C><U+3E38><U+653C><U+3E35>R<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E35>辣靘<U+383C><U+3E36>霈<U+653C><U+3E35><U+383C><U+3E66>府鞈<U+393C><U+3E36>撘停<U+653C><U+3E36>R<U+653C><U+3E36>OpenSource<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E38><U+383C><U+3E61><U+623C><U+3E63><U+383C><U+3E31></p>
+<p>如果要使用R讀取XML的資料，可以使用套件XML。如果要讀取JSON，可以使用rjsonlite。只要資料格式是公開格式，我們很容易找到R的套件來讀取該資料格式。這就是R是OpenSource的威力！</p>
 </div>
 <div id="stage-63" class="section level2">
 <h2>stage 63</h2>
-<p><U+653C><U+3E35><U+383C><U+3E66><U+393C><U+3E39>隤脩<U+613C><U+3E38>摰對<U+623C><U+3E63><U+383C><U+3E39>隞交<U+383C><U+3E38>ㄐ<U+653C><U+3E35>雓<U+613C><U+3E65><U+653C><U+3E35><U+383C><U+3E66>SV<U+653C><U+3E37><U+393C><U+3E61>撘<U+383C><U+3E37>府<U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E63>瘜<U+653C><U+3E37><U+393C><U+3E61>摰嫣<U+623C><U+3E61>靘<U+393C><U+3E63><U+393C><U+3E39><U+393C><U+3E36><U+623C><U+3E63><U+393C><U+3E63><U+383C><U+3E36>蝷曄黎<U+653C><U+3E37><U+393C><U+3E61>隞之憭批<U+393C><U+3E30><U+623C><U+3E64><U+393C><U+3E36>神<U+653C><U+3E35>隞<U+393C><U+3E32><U+613C><U+3E65>鞈<U+393C><U+3E36><U+653C><U+3E39><U+393C><U+3E37><U+393C><U+3E61><U+383C><U+3E34>隤脩<U+613C><U+3E38><U+393C><U+3E30>飛憒<U+393C><U+3E65><U+623C><U+3E65><U+393C><U+3E63><U+623C><U+3E65><U+393C><U+3E63><U+653C><U+3E38><U+393C><U+3E39><U+393C><U+3E30><U+393C><U+3E66><U+623C><U+3E61>耦<U+653C><U+3E36><U+383C><U+3E35><U+623C><U+3E33><U+393C><U+3E36><U+393C><U+3E61>玨蝔<U+623C><U+3E63>迭餈<a href="https://github.com/wush978/DataScienceAndR/issues&gt;閮梢&lt;U+613C" class="uri">https://github.com/wush978/DataScienceAndR/issues&gt;閮梢&lt;U+613C</a><U+3E31><U+383C><U+3E32></p>
+<p>受限於課程內容，所以我們這裡只講讀取CSV的方式。這應該是最泛用的內容了。未來有時間，會再找社群的其他大大合作開寫其他和讀資料相關的課程。同學如果很期待看到處理某些形態資料的課程，歡迎到<https: github.com wush978 DataScienceAndR issues>許願。</p>
 </div>
 <div id="stage-64" class="section level2">
 <h2>stage 64</h2>
-<p><U+653C><U+3E36><U+393C><U+3E63>敺<U+623C><U+3E63><U+383C><U+3E32>閬<U+613C><U+3E62><U+393C><U+3E30>飛<U+653C><U+3E35><U+653C><U+3E37><U+653C><U+3E39>活<U+653C><U+3E36><U+383C><U+3E39>摮貊<U+393C><U+3E61>摰對<U+623C><U+3E63><U+383C><U+3E31><U+623C><U+3E38><U+653C><U+3E35><U+623C><U+3E30>毀蝧<U+613C><U+3E62><U+393C><U+3E30>飛<U+653C><U+3E35>摰<U+383C><U+3E38><U+623C><U+3E39><U+623C><U+3E65><U+613C><U+3E64><U+613C><U+3E61><U+623C><U+3E63>蒂頛詨<code>submit()</code>靘炎<U+653C><U+3E36>蝯<U+393C><U+3E65><U+653C><U+3E35>蝚血<U+393C><U+3E30><U+613C><U+3E30><U+393C><U+3E63><U+613C><U+3E36><U+393C><U+3E65><U+393C><U+3E30>飛<U+653C><U+3E35>瑼<U+613C><U+3E31>葉<U+653C><U+3E37><U+393C><U+3E63>鈭Ⅳ嚗<U+613C><U+3E62>蝙<U+653C><U+3E37>Rstudio撌虫<U+623C><U+3E38><U+613C><U+3E37><U+393C><U+3E61>ile-&gt;ReopenWithEncoding…-&gt;<U+653C><U+3E39><U+653C><U+3E35><U+383C><U+3E66><U+623C><U+3E63>TF-8</p>
+<p>最後，還是要請同學利用這次所學的內容，做一個小練習。請同學在完成之後存檔，並輸入<code>submit()</code>來檢查結果是否符合預期。如果同學在檔案中看到亂碼，請使用Rstudio左上角的File-&gt;ReopenWithEncoding…-&gt;選取：UTF-8</p>
 <pre class="r"><code># &lt;e9&gt;敺&lt;9e&gt; &lt;http://data.gov.tw/node/7769&gt; 銝&lt;bc&gt;&lt;9a&gt;絲&lt;e7&gt;&lt;9b&gt;鞈&lt;96&gt;&lt;99&gt;
 # &lt;e7&gt;&lt;e6&gt;&lt;e9&gt;遢&lt;e6&gt;&lt;96&gt;辣銝行&lt;b2&gt;&lt;9c&gt;敺芯遙雿歇&lt;e7&gt;&lt;e7&gt;&lt;9a&gt;虜閬撘&lt;8f&gt;
 # &lt;e6&gt;&lt;89&gt;隞交&lt;88&gt;&lt;bf&gt;&lt;a0&gt;&lt;a6&gt;&lt;e7&gt;&lt;e9&gt;&lt;ab&gt;&lt;89&gt;摮貊&lt;9a&gt;&lt;8a&gt;撌&lt;a7&gt;

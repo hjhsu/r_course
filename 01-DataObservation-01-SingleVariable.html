@@ -120,402 +120,402 @@ $(document).ready(function () {
 
 <div id="stage-1" class="section level2">
 <h2>stage 1</h2>
-<p>NA</p>
+<p>這個課程的目是讓同學理解，如何依據數據的型態，在一個維度上適當的呈現數據。</p>
 </div>
 <div id="stage-2" class="section level2">
 <h2>stage 2</h2>
-<p>NA</p>
+<p>請同學先打開<code>plot</code>的說明。</p>
 <pre class="r"><code>?plot</code></pre>
 </div>
 <div id="stage-3" class="section level2">
 <h2>stage 3</h2>
-<p><code>plot</code>銝餉<U+613C><U+3E36><U+393C><U+3E63><U+653C><U+3E35><U+383C><U+3E66>嚗x<code>&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E32&gt;y</code><U+653C><U+3E33><U+393C><U+3E30>飛<U+653C><U+3E35><U+653C><U+3E38><U+653C><U+3E36><U+393C><U+3E63><U+613C><U+3E61>嚗x<code>隞&lt;U+613C&gt;&lt;U+3E33&gt;銵肝摨扳&lt;U+613C&gt;&lt;U+3E38&gt;&lt;U+393C&gt;&lt;U+3E61&gt;潘&lt;U+623C&gt;&lt;U+3E63&gt;y</code>隞<U+613C><U+3E33>銵肘摨扳<U+613C><U+3E38><U+393C><U+3E61>潦<U+383C><U+3E32>銝<U+653C><U+3E38>靘牧<U+653C><U+3E39>撠<U+393C><U+3E61><U+623C><U+3E63><U+623C><U+3E64>銋<U+623C><U+3E38><U+653C><U+3E37><U+653C><U+3E33>plot<code>&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+393C&gt;&lt;U+3E33&gt;x</code><U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E65><U+383C><U+3E35><U+623C><U+3E38><U+393C><U+3E30>y`<U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E65><U+383C><U+3E35><U+623C><U+3E38><U+393C><U+3E30><U+623C><U+3E63><U+383C><U+3E63><U+653C><U+3E38><U+393C><U+3E63><U+623C><U+3E38><U+393C><U+3E30><U+613C><U+3E31><U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E36><U+653C><U+3E33><U+383C><U+3E32></p>
+<p><code>plot</code>主要有兩個參數：<code>x</code>和<code>y</code>。同學可能會認為，<code>x</code>代表x座標的值，<code>y</code>代表y座標的值。一般來說這是對的，但是也不盡然。<code>plot</code>是個會依據<code>x</code>的型態不同、<code>y</code>的型態不同，而有不同行為的函數。</p>
 </div>
 <div id="stage-4" class="section level2">
 <h2>stage 4</h2>
-<p>擐<U+383C><U+3E35><U+623C><U+3E63><U+383C><U+3E38>R<U+653C><U+3E37><U+393C><U+3E61>撱箇<U+393C><U+3E61>nfert鞈<U+393C><U+3E36><U+393C><U+3E62>蝭<U+623C><U+3E65><U+653C><U+3E37>撟渡<U+613C><U+3E30>弦瘚<U+653C><U+3E38><U+383C><U+3E38><U+623C><U+3E38><U+613C><U+3E64><U+393C><U+3E37><U+623C><U+3E39><U+393C><U+3E36><U+393C><U+3E37><U+623C><U+3E66><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+393C><U+3E39><U+653C><U+3E39><U+393C><U+3E62><U+613C><U+3E62><U+393C><U+3E30>飛頛詨嚗?infert`<U+653C><U+3E35><U+383C><U+3E35><U+393C><U+3E63><U+393C><U+3E63><U+623C><U+3E33><U+393C><U+3E36><U+623C><U+3E30><U+613C><U+3E66><U+613C><U+3E63><U+623C><U+3E64><U+393C><U+3E61>牧<U+653C><U+3E36><U+393C><U+3E38><U+383C><U+3E32></p>
+<p>首先，我們拿R的內建的infert資料集為範例。這是當年研究流產與不孕症之間關係的資料集。請同學輸入：<code>?infert</code>先看看資料對每個欄位的說明。</p>
 <pre class="r"><code>?infert</code></pre>
 </div>
 <div id="stage-5" class="section level2">
 <h2>stage 5</h2>
-<p>infert敺洵銝甈<U+383C><U+3E34>(education)隞<U+613C><U+3E33>銵刻府<U+653C><U+3E35><U+393C><U+3E30>岫憟喟<U+393C><U+3E61><U+393C><U+3E35>蝔漲嚗洵鈭<U+613C><U+3E63><U+383C><U+3E34>(age)隞<U+613C><U+3E33>銵典僑朣∴<U+623C><U+3E63>洵銝<U+613C><U+3E63><U+383C><U+3E34>(parity)隞<U+613C><U+3E33>銵典歇蝬<U+393C><U+3E34><U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E64>戊<U+653C><U+3E36>嚗<U+623C><U+3E36><U+653C><U+3E37><U+383C><U+3E62>瘜<U+623C><U+3E63><U+623C><U+3E63>洵<U+653C><U+3E35><U+393C><U+3E62><U+613C><U+3E63><U+383C><U+3E34>(induced)隞<U+613C><U+3E33>銵其犖撌交<U+623C><U+3E35><U+653C><U+3E37><U+393C><U+3E61>活<U+653C><U+3E36>嚗洵鈭<U+613C><U+3E63><U+383C><U+3E34>(case)隞<U+613C><U+3E33>銵冽撖阡<U+613C><U+3E39><U+623C><U+3E35><U+383C><U+3E38>撠蝯<U+623C><U+3E63><U+623C><U+3E39>停<U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E63>銝<U+613C><U+3E64><U+623C><U+3E63><U+623C><U+3E63>洵<U+653C><U+3E35>甈<U+383C><U+3E34>(spontaneous)隞<U+613C><U+3E33>銵刻<U+653C><U+3E37>瘚<U+653C><U+3E37><U+393C><U+3E61>活<U+653C><U+3E36>嚗洵銝<U+613C><U+3E63><U+383C><U+3E38>洵<U+653C><U+3E35>甈<U+383C><U+3E39><U+653C><U+3E38><U+383C><U+3E38>祕撽身閮<U+653C><U+3E39><U+393C><U+3E37><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+383C><U+3E32></p>
+<p>infert得第一欄(education)代表該名婦女的教育程度；第二欄(age)代表年齡；第三欄(parity)代表已經生產的子女數（經產狀況）；第四欄(induced)代表人工流產的次數；第五欄(case)代表是實驗組或是對照組（也就是有無不孕）；第六欄(spontaneous)代表自然流產的次數；第七欄與第八欄則是與實驗設計相關的資料。</p>
 </div>
 <div id="stage-6" class="section level2">
 <h2>stage 6</h2>
-<p><U+653C><U+3E36><U+653C><U+3E38><U+393C><U+3E31><U+383C><U+3E38><U+623C><U+3E65>擃<U+393C><U+3E63><U+393C><U+3E63><U+623C><U+3E33><U+393C><U+3E36><U+613C><U+3E62><U+393C><U+3E30>飛頛詨嚗View(infert)`靘<U+393C><U+3E63><U+393C><U+3E63>祕<U+653C><U+3E39><U+393C><U+3E61><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+393C><U+3E61>潦ㄐ瘥<U+613C><U+3E64><U+623C><U+3E33><U+393C><U+3E36>隞<U+613C><U+3E33>銵其<U+623C><U+3E38><U+653C><U+3E35><U+393C><U+3E30>岫憟喋<U+383C><U+3E32></p>
+<p>接著我們來具體看看資料。請同學輸入：<code>View(infert)</code>來看看實際的資料的值。這裡每筆資料都代表一名婦女。</p>
 <pre class="r"><code>View(infert)</code></pre>
 </div>
 <div id="stage-7" class="section level2">
 <h2>stage 7</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38><U+613C><U+3E64><U+613C><U+3E64><U+383C><U+3E35><code>infert$spontaneous</code><U+653C><U+3E35><U+383C><U+3E31>牧<U+653C><U+3E36><U+393C><U+3E38><U+613C><U+3E62><U+393C><U+3E30>飛<U+653C><U+3E35><U+383C><U+3E35><U+383C><U+3E61>infert$spontaneous<code>摮</code>spon`霈銝准<U+383C><U+3E32></p>
+<p>我們等等先拿<code>infert$spontaneous</code>做說明。請同學先把<code>infert$spontaneous</code>存到<code>spon</code>變數中。</p>
 <pre class="r"><code>spon &lt;- infert$spontaneous</code></pre>
 </div>
 <div id="stage-8" class="section level2">
 <h2>stage 8</h2>
-<p>隢<U+393C><U+3E35><U+393C><U+3E30>飛嚗spon`<U+653C><U+3E36>隞暻澆<U+393C><U+3E65><U+383C><U+3E35><U+623C><U+3E63><U+393C><U+3E66></p>
+<p>請問同學，<code>spon</code>是什麼型態？</p>
 <pre class="r"><code>class(spon)</code></pre>
 </div>
 <div id="stage-9" class="section level2">
 <h2>stage 9</h2>
-<p><U+653C><U+3E35>R銝哨<U+623C><U+3E63>plot`<U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E63>瘜<U+653C><U+3E37><U+393C><U+3E61>鼓<U+653C><U+3E35><U+393C><U+3E63><U+383C><U+3E63>誘<U+653C><U+3E33><U+383C><U+3E38><U+383C><U+3E35><U+613C><U+3E62><U+393C><U+3E30>飛頛詨嚗lot(spon)<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>在R中，<code>plot</code>是最泛用的繪圖指令。我們先請同學輸入：plot(spon)。</p>
 <pre class="r"><code>plot(spon)</code></pre>
 </div>
 <div id="stage-10" class="section level2">
 <h2>stage 10</h2>
-<p><U+653C><U+3E37><code>plot</code><U+653C><U+3E36><U+653C><U+3E35>銝<U+653C><U+3E35><U+653C><U+3E35>澆<U+393C><U+3E30><U+383C><U+3E37><U+383C><U+3E38><U+653C><U+3E36><U+653C><U+3E35><U+393C><U+3E30><U+383C><U+3E37><U+393C><U+3E39><U+623C><U+3E63><U+393C><U+3E63><U+383C><U+3E61>府<U+653C><U+3E35><U+393C><U+3E30><U+383C><U+3E37><U+393C><U+3E61>潛<U+653C><U+3E36><U+383C><U+3E38>頠詨漣璅<U+623C><U+3E63><U+623C><U+3E30><U+383C><U+3E37><U+393C><U+3E61>x<code>頠詨漣璅&lt;U+383C&gt;&lt;U+3E39&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E34&gt;&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+613C&gt;&lt;U+3E30&gt;&lt;U+623C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+623C&gt;&lt;U+3E65&gt;牧嚗撐&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+393C&gt;&lt;U+3E61&gt;洵銝蝑&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E61&gt;漣璅嚗&lt;U+393C&gt;&lt;U+3E61&gt;(1,spon[1])&lt;U+653C&gt;&lt;U+3E33&gt;洵鈭&lt;U+613C&gt;&lt;U+3E64&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E61&gt;漣璅嚗&lt;U+393C&gt;&lt;U+3E61&gt;(2,spon[2])隞交迨憿&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+383C&gt;&lt;U+3E32&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E30&gt;飛&lt;U+653C&gt;&lt;U+3E35&gt;隞交&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E35&gt;&lt;U+623C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E39&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E61&gt;infert</code>鞈<U+393C><U+3E36><U+623C><U+3E65><U+393C><U+3E63><U+393C><U+3E63>撌阡<U+383C><U+3E32><U+393C><U+3E61><U+623C><U+3E62><U+623C><U+3E63>頠詨漣璅1隞<U+613C><U+3E33>銵冽蝚砌<U+623C><U+3E38>蝑岫憟喟<U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+623C><U+3E63>頠詨漣璅<code>2.0</code>嚗誨銵典旦<U+653C><U+3E38><U+653C><U+3E37>瘚<U+653C><U+3E39><U+383C><U+3E31>甈～<U+383C><U+3E32></p>
+<p>當<code>plot</code>收到一個數值向量或整數向量時，會把該向量的值當成y軸座標，而對應的<code>x</code>軸座標則為數據的順序。舉例來說，這張圖上的第一筆數據的座標是：(1,spon[1])、第二筆數據的座標是：(2,spon[2])以此類推。同學可以搭配之前打開的<code>infert</code>資料來看。最左邊的點，x軸座標是1代表是第一筆婦女的資料，y軸座標是<code>2.0</code>，代表她自然流產過兩次。</p>
 </div>
 <div id="stage-11" class="section level2">
 <h2>stage 11</h2>
-<p><U+653C><U+3E39>撐<code>plot(spon)</code><U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E35><U+393C><U+3E65><U+623C><U+3E63>隞亥<U+613C><U+3E65><U+383C><U+3E38><U+613C><U+3E37>撖spon`<U+653C><U+3E36><U+653C><U+3E35><U+653C><U+3E35><U+393C><U+3E32><U+623C><U+3E33><U+393C><U+3E36><U+393C><U+3E61><U+613C><U+3E30><U+623C><U+3E61><U+393C><U+3E63><U+653C><U+3E39><U+393C><U+3E37>扼<U+653C><U+3E36><U+653C><U+3E36><U+653C><U+3E35><U+393C><U+3E63>耦銝行<U+623C><U+3E32><U+393C><U+3E63><U+393C><U+3E63><U+653C><U+3E37><U+653C><U+3E35><U+653C><U+3E37><U+393C><U+3E61>隅<U+653C><U+3E35>嚗<U+383C><U+3E39>隞乓<U+623C><U+3E32><U+393C><U+3E63><U+613C><U+3E64><U+393C><U+3E33>＊蝷箏<U+653C><U+3E38><U+393C><U+3E63><U+653C><U+3E35><U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E37><U+623C><U+3E66><U+613C><U+3E62>之摰嗉<U+613C><U+3E38><U+623C><U+3E38>撐<U+653C><U+3E35><U+393C><U+3E63><U+393C><U+3E61>敺蛛<U+623C><U+3E63><U+393C><U+3E61><U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E33><U+393C><U+3E64><U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E38><U+623C><U+3E38>撣<U+623C><U+3E63>蒂瘝<U+393C><U+3E63>黎<U+653C><U+3E38><U+383C><U+3E31><U+393C><U+3E61>鞊～停<U+653C><U+3E36><U+653C><U+3E33><U+623C><U+3E32><U+393C><U+3E63><U+613C><U+3E64><U+393C><U+3E33><U+393C><U+3E61>噩<U+653C><U+3E37><U+383C><U+3E62><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>這張<code>plot(spon)</code>的結果，可以讓我們觀察<code>spon</code>是否和資料的順序有相關性。由於整個圖形並沒有看出特別的趨勢，所以「沒有證據」顯示兩者有特別的關係。請大家記下這張圖的特徵：數據均勻的上下散布，並沒有群聚的現象。這就是「沒有證據」的徵狀。</p>
 </div>
 <div id="stage-12" class="section level2">
 <h2>stage 12</h2>
-<p><U+653C><U+3E36><U+653C><U+3E38><U+393C><U+3E31><U+623C><U+3E63><U+383C><U+3E38><U+613C><U+3E62><U+393C><U+3E30>飛<U+653C><U+3E35><U+383C><U+3E35>撓<U+653C><U+3E35>嚗<U+393C><U+3E61><code>spon&lt;-factor(spon)</code>嚗<U+623C><U+3E64><U+383C><U+3E66><U+623C><U+3E38>銝<U+383C><U+3E62><U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E33>耦<U+653C><U+3E36><U+383C><U+3E35><U+383C><U+3E32></p>
+<p>接著，我們請同學先輸入：<code>spon&lt;-factor(spon)</code>，轉換一下數據形態。</p>
 <pre class="r"><code>spon &lt;- factor(spon)</code></pre>
 </div>
 <div id="stage-13" class="section level2">
 <h2>stage 13</h2>
-<p>NA</p>
+<p>我們再輸入一次：<code>plot(spon)</code></p>
 <pre class="r"><code>plot(spon)</code></pre>
 </div>
 <div id="stage-14" class="section level2">
 <h2>stage 14</h2>
-<p><U+653C><U+3E37><code>plot</code><U+653C><U+3E36><U+653C><U+3E35>銝<U+653C><U+3E35><U+613C><U+3E31><U+653C><U+3E35><U+393C><U+3E30><U+383C><U+3E37><U+383C><U+3E38><U+613C><U+3E64>葡<U+653C><U+3E35><U+393C><U+3E30><U+383C><U+3E37><U+393C><U+3E39><U+623C><U+3E63><U+393C><U+3E63><U+623C><U+3E65><U+623C><U+3E61><U+653C><U+3E35>銝<U+393C><U+3E30><U+613C><U+3E31><U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E33><U+383C><U+3E32><U+653C><U+3E35><U+393C><U+3E62><U+653C><U+3E39>車<U+653C><U+3E37><U+383C><U+3E62>瘜<U+623C><U+3E38><U+623C><U+3E63>銝<U+653C><U+3E39><U+383C><U+3E31><U+393C><U+3E30><U+393C><U+3E30><U+393C><U+3E61>瘜<U+383C><U+3E61><U+653C><U+3E36><U+393C><U+3E33><U+623C><U+3E64><U+383C><U+3E66><U+383C><U+3E38>摨扳<U+613C><U+3E38><U+393C><U+3E39>(<U+653C><U+3E36><U+653C><U+3E35><U+623C><U+3E63>)<U+653C><U+3E33><U+383C><U+3E32><U+653C><U+3E38><U+383C><U+3E38><U+623C><U+3E65><U+623C><U+3E65>牧嚗<U+393C><U+3E63>葉敺椰<U+653C><U+3E39><U+383C><U+3E32>靘洵銝<U+653C><U+3E35><U+653C><U+3E38><U+653C><U+3E37><U+393C><U+3E61>ar嚗頠貊<U+393C><U+3E61>牧<U+653C><U+3E36><U+393C><U+3E38><U+393C><U+3E36><U+613C><U+3E64>嚗0<code>嚗頠&lt;U+623C&gt;&lt;U+3E38&gt;摨扳&lt;U+613C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E34&gt;&lt;U+383C&gt;&lt;U+3E34&gt;140嚗誨銵灼spon</code>銝剜<U+393C><U+3E63><U+383C><U+3E39>140<U+653C><U+3E35>0`<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>當<code>plot</code>收到一個類別向量或字串向量時，會依序畫出不同類別的個數。因為這種狀況下，R不知道合理的方法把數據轉換成y座標(數值)。舉例來說，圖中從左邊數來第一個灰色的bar，x軸的說明文字是：<code>0</code>，y軸座標約140，代表<code>spon</code>中有140個<code>0</code>。</p>
 </div>
 <div id="stage-15" class="section level2">
 <h2>stage 15</h2>
-<p>NA</p>
+<p>請問同學，<code>spon</code>中大約有多少個<code>1</code>?</p>
 <p>70</p>
 </div>
 <div id="stage-16" class="section level2">
 <h2>stage 16</h2>
-<p>NA</p>
+<p>請同學輸入：<code>table(spon)</code>。這個函數會計算一個向量中各種值的個數。</p>
 <pre class="r"><code>table(spon)</code></pre>
 </div>
 <div id="stage-17" class="section level2">
 <h2>stage 17</h2>
-<p>R<U+653C><U+3E36><U+393C><U+3E63><U+393C><U+3E31>迄<U+653C><U+3E35><U+393C><U+3E30><U+623C><U+3E64><U+393C><U+3E30>飛嚗spon<code>銝剖&lt;U+383C&gt;&lt;U+3E39&gt;末&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E39&gt;71&lt;U+653C&gt;&lt;U+3E35&gt;1</code><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>R會告訴各位同學，<code>spon</code>中剛好有71個<code>1</code>。</p>
 </div>
 <div id="stage-18" class="section level2">
 <h2>stage 18</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38><U+623C><U+3E39><code>spon</code>靘<U+613C><U+3E34><U+623C><U+3E66><U+623C><U+3E38>銝<U+383C><U+3E38><U+613C><U+3E64>絞閮飛<U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E35>潛頂蝯晞<U+653C><U+3E36><U+393C><U+3E33>?infert<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;牧&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E63&gt;spon</code><U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E63><U+653C><U+3E37>0<U+653C><U+3E36><U+393C><U+3E39>誨銵刻府<U+653C><U+3E35><U+393C><U+3E30>岫憟單<U+623C><U+3E32><U+393C><U+3E63><U+653C><U+3E37>瘚<U+653C><U+3E39><U+383C><U+3E31><U+623C><U+3E63>潛1<U+653C><U+3E36><U+393C><U+3E39>誨銵刻府<U+653C><U+3E35><U+393C><U+3E30>岫憟唾<U+653C><U+3E37>瘚<U+653C><U+3E39><U+383C><U+3E31><U+623C><U+3E38>甈∴<U+623C><U+3E63>潛2<U+653C><U+3E36><U+393C><U+3E39>誨銵刻府<U+653C><U+3E35><U+393C><U+3E30>岫憟<U+623C><U+3E33><U+653C><U+3E38><U+653C><U+3E37>瘚<U+653C><U+3E39><U+383C><U+3E31>甈∩誑銝<U+613C><U+3E62><U+393C><U+3E35><U+393C><U+3E30>飛嚗spon`瘥<U+623C><U+3E63><U+653C><U+3E35><U+393C><U+3E30><U+393C><U+3E30>撠箏漲(<U+653C><U+3E39>A)<U+653C><U+3E33><U+613C><U+3E30><U+623C><U+3E61>偕摨<U+613C><U+3E36>(<U+653C><U+3E39>B)<U+653C><U+3E33><U+383C><U+3E64><U+653C><U+3E39><U+393C><U+3E36>偕摨<U+613C><U+3E36>(<U+653C><U+3E39>C)<U+653C><U+3E33><U+383C><U+3E31><U+653C><U+3E39><U+383C><U+3E32>瘥<U+623C><U+3E65>偕摨<U+613C><U+3E36>(<U+653C><U+3E39>D)嚗<U+393C><U+3E66></p>
+<p>我們也拿<code>spon</code>來複習一下初等統計學的數值系統。根據<code>?infert</code>的說明，<code>spon</code>的值為0時代表該名婦女沒有自然流產過，值為1時代表該名婦女自然流產過一次，值為2時代表該名婦女自然流產過兩次以上。請問同學，<code>spon</code>比較適合名目尺度(選A)、順序尺度(選B)、區間尺度(選C)、還是比例尺度(選D)？</p>
 <p>B</p>
 </div>
 <div id="stage-19" class="section level2">
 <h2>stage 19</h2>
-<p>隞亥<U+653C><U+3E37>瘚<U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E33>spon`<U+653C><U+3E37>靘<U+623C><U+3E63><U+383C><U+3E38><U+623C><U+3E39><U+613C><U+3E61>蝚砌<U+623C><U+3E61>撐<U+653C><U+3E37><U+393C><U+3E61>璇<U+393C><U+3E63><U+393C><U+3E36>(<U+653C><U+3E36><U+383C><U+3E61><U+653C><U+3E36><U+393C><U+3E33><U+653C><U+3E36><U+383C><U+3E38><U+613C><U+3E30><U+623C><U+3E61>偕摨<U+613C><U+3E36>)嚗瘥<U+623C><U+3E63>捆<U+653C><U+3E36><U+393C><U+3E38>圾霈<U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E32>鈭祕銝<U+623C><U+3E63>絞閮飛摰嗅<U+653C><U+3E37><U+393C><U+3E63><U+393C><U+3E30>撠箏漲<U+653C><U+3E38><U+383C><U+3E38><U+613C><U+3E30><U+623C><U+3E61>偕摨衣<U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+393C><U+3E39><U+623C><U+3E63><U+623C><U+3E39><U+653C><U+3E38><U+653C><U+3E37><U+393C><U+3E63><U+393C><U+3E30>車憿<U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E33><U+613C><U+3E30><U+623C><U+3E61>偕摨行<U+383C><U+3E37>府<U+653C><U+3E35><U+653C><U+3E36><U+383C><U+3E38><U+383C><U+3E33>璇<U+393C><U+3E61><U+383C><U+3E65><U+383C><U+3E38><U+613C><U+3E30><U+623C><U+3E61><U+393C><U+3E39><U+623C><U+3E63><U+623C><U+3E65>憿<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E30><U+623C><U+3E61><U+383C><U+3E31><U+383C><U+3E65><U+623C><U+3E61><U+383C><U+3E32></p>
+<p>以自然流產數據<code>spon</code>為例，我也認為第二張的長條圖(把數據當成順序尺度)，是比較容易解讀的。事實上，統計學家在看名目尺度與順序尺度的資料時，也只能看各種類別的個數。而順序尺度應該在成像長條的排列順序時，依照類別的順序做排序。</p>
 </div>
 <div id="stage-20" class="section level2">
 <h2>stage 20</h2>
-<p><U+653C><U+3E39>撐<U+653C><U+3E35><U+393C><U+3E63><U+653C><U+3E36><U+653C><U+3E35><U+393C><U+3E31>迄<U+653C><U+3E36><U+383C><U+3E38><U+623C><U+3E63>spon`<U+653C><U+3E35><U+653C><U+3E36><U+393C><U+3E63><U+383C><U+3E39>3蝔桀潘<U+623C><U+3E63><U+383C><U+3E63>0甈⊥<U+623C><U+3E35><U+653C><U+3E33><U+393C><U+3E61>岫憟單<U+653C><U+3E39><U+383C><U+3E37><U+613C><U+3E66><U+383C><U+3E63>1甈⊥<U+623C><U+3E35><U+653C><U+3E33><U+393C><U+3E32><U+623C><U+3E36><U+383C><U+3E31><U+383C><U+3E65>2甈⊥<U+623C><U+3E35><U+653C><U+3E33><U+383C><U+3E64><U+653C><U+3E37><U+393C><U+3E61>活<U+653C><U+3E36><U+653C><U+3E39><U+383C><U+3E32><U+613C><U+3E36><U+613C><U+3E34><U+383C><U+3E32></p>
+<p>這張圖直接告訴我們：<code>spon</code>只有3種值，而「0次流產」的婦女數量比「1次流產」和「超過2次流產」的次數還要多。</p>
 </div>
 <div id="stage-21" class="section level2">
 <h2>stage 21</h2>
-<p><U+653C><U+3E35>憭<U+623C><U+3E38>蝔桀虜<U+653C><U+3E37><U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E63>耦<U+653C><U+3E36><U+653C><U+3E35><U+393C><U+3E63><U+613C><U+3E34><U+393C><U+3E63><U+613C><U+3E62><U+393C><U+3E30>飛頛詨嚗pie(table(spon))`</p>
+<p>另外一種常用的圖形是圓餅圖。請同學輸入：<code>pie(table(spon))</code></p>
 <pre class="r"><code>pie(table(spon))</code></pre>
 </div>
 <div id="stage-22" class="section level2">
 <h2>stage 22</h2>
-<p><U+653C><U+3E35><U+393C><U+3E63><U+613C><U+3E34><U+393C><U+3E63><U+653C><U+3E37><U+653C><U+3E39>蝛<U+383C><U+3E38><U+613C><U+3E37>漲嚗<U+393C><U+3E31>迄<U+653C><U+3E36><U+383C><U+3E38><U+653C><U+3E36><U+393C><U+3E33><U+383C><U+3E38><U+623C><U+3E64><U+393C><U+3E61><U+613C><U+3E66><U+383C><U+3E65><U+653C><U+3E35><U+393C><U+3E63>葉<U+653C><U+3E35>隞交<U+393C><U+3E38>＊<U+653C><U+3E37><U+393C><U+3E63>嚗<U+383C><U+3E63>“0”憿<U+653C><U+3E37><U+393C><U+3E61>雿<U+623C><U+3E61>擃<U+653C><U+3E36><U+393C><U+3E33><U+393C><U+3E61><U+623C><U+3E38><U+653C><U+3E35><U+383C><U+3E64><U+623C><U+3E62><U+653C><U+3E39>璇<U+393C><U+3E63><U+613C><U+3E66><U+623C><U+3E63><U+653C><U+3E37><U+653C><U+3E36><U+653C><U+3E37><U+393C><U+3E63>靘<U+393C><U+3E61><U+383C><U+3E32>R<U+653C><U+3E37><U+393C><U+3E61>pie<code>&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+393C&gt;&lt;U+3E63&gt;閬&lt;U+393C&gt;&lt;U+3E30&gt;&lt;U+613C&gt;&lt;U+3E64&gt;&lt;U+383C&gt;&lt;U+3E38&gt;瘥&lt;U+383C&gt;&lt;U+3E65&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E39&gt;隞交&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+393C&gt;&lt;U+3E63&gt;閬&lt;U+383C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E37&gt;</code>table<code>閮&lt;U+613C&gt;&lt;U+3E65&gt;&lt;U+613C&gt;&lt;U+3E66&gt;&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;嚗&lt;U+383C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E61&gt;</code>table<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E65&gt;&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E31&gt;策</code>pie`雿輻<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>圓餅圖利用面積與角度，告訴我們數據分佈的比率。由圖中可以明顯看出，“0”類別的個數佔了整體數據的一半。這點是長條圖比較難直接看出來的。R的<code>pie</code>函數是需要名字與個數比率的，所以我們需要先利用<code>table</code>計算每個類別的個數，再把<code>table</code>的結果傳遞給<code>pie</code>使用。</p>
 </div>
 <div id="stage-23" class="section level2">
 <h2>stage 23</h2>
-<p>NA</p>
+<p>請同學把<code>infert$age</code>存到變數<code>age</code></p>
 <pre class="r"><code>age &lt;- infert$age</code></pre>
 </div>
 <div id="stage-24" class="section level2">
 <h2>stage 24</h2>
-<p>NA</p>
+<p>請問<code>age</code>的型態是？</p>
 <pre class="r"><code>class(age)</code></pre>
 </div>
 <div id="stage-25" class="section level2">
 <h2>stage 25</h2>
-<p>NA</p>
+<p>請同學輸入<code>plot(age)</code></p>
 <pre class="r"><code>plot(age)</code></pre>
 </div>
 <div id="stage-26" class="section level2">
 <h2>stage 26</h2>
-<p><U+653C><U+3E39>撐<code>plot(age)</code><U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E35><U+393C><U+3E65><U+623C><U+3E63>隞亥<U+613C><U+3E65><U+383C><U+3E38><U+613C><U+3E37>撖age`<U+653C><U+3E36><U+653C><U+3E35><U+653C><U+3E35><U+393C><U+3E32><U+623C><U+3E33><U+393C><U+3E36><U+393C><U+3E61><U+613C><U+3E30><U+623C><U+3E61><U+393C><U+3E63><U+653C><U+3E39><U+393C><U+3E37>扼<U+653C><U+3E36><U+653C><U+3E36><U+653C><U+3E35><U+393C><U+3E63>耦銝行<U+623C><U+3E32><U+393C><U+3E63><U+393C><U+3E63><U+653C><U+3E37><U+653C><U+3E35><U+653C><U+3E37><U+393C><U+3E61>隅<U+653C><U+3E35>嚗<U+383C><U+3E39>隞乓<U+623C><U+3E32><U+393C><U+3E63><U+613C><U+3E64><U+393C><U+3E33>＊蝷箏<U+653C><U+3E38><U+393C><U+3E63><U+653C><U+3E35><U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E37><U+623C><U+3E66><U+613C><U+3E62>之摰嗉<U+613C><U+3E38><U+623C><U+3E38>撐<U+653C><U+3E35><U+393C><U+3E63><U+393C><U+3E61>敺蛛<U+623C><U+3E63><U+393C><U+3E61><U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E33><U+393C><U+3E64><U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E38><U+623C><U+3E38>撣<U+623C><U+3E63>蒂瘝<U+393C><U+3E63>黎<U+653C><U+3E38><U+383C><U+3E31><U+393C><U+3E61>鞊～停<U+653C><U+3E36><U+653C><U+3E33><U+623C><U+3E32><U+393C><U+3E63><U+613C><U+3E64><U+393C><U+3E33><U+393C><U+3E61>噩<U+653C><U+3E37><U+383C><U+3E62><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>這張<code>plot(age)</code>的結果，可以讓我們觀察<code>age</code>是否和資料的順序有相關性。由於整個圖形並沒有看出特別的趨勢，所以「沒有證據」顯示兩者有特別的關係。請大家記下這張圖的特徵：數據均勻的上下散布，並沒有群聚的現象。這就是「沒有證據」的徵狀。</p>
 </div>
 <div id="stage-27" class="section level2">
 <h2>stage 27</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38>鈭<U+653C><U+3E36>雿<U+393C><U+3E63><U+623C><U+3E63><U+623C><U+3E39>隞亦<U+653C><U+3E36><U+383C><U+3E61><U+623C><U+3E37><U+393C><U+3E63><U+613C><U+3E62><U+393C><U+3E30>飛頛詨嚗plot(age,type=“l”)`</p>
+<p>我們除了畫散佈圖，也可以畫折線圖。請同學輸入：<code>plot(age,type=&quot;l&quot;)</code></p>
 <pre class="r"><code>plot(age, type = &quot;l&quot;)</code></pre>
 </div>
 <div id="stage-28" class="section level2">
 <h2>stage 28</h2>
-<p><U+653C><U+3E39><U+383C><U+3E31><U+383C><U+3E61><U+623C><U+3E37><U+393C><U+3E63><U+623C><U+3E63><U+383C><U+3E38>隞亦<U+393C><U+3E63><U+653C><U+3E36>擃<U+653C><U+3E36><U+393C><U+3E33><U+393C><U+3E63>望<U+393C><U+3E63>扼<U+653C><U+3E35><U+653C><U+3E36><U+393C><U+3E33><U+393C><U+3E63><U+623C><U+3E38><U+653C><U+3E35><U+623C><U+3E38><U+393C><U+3E34><U+393C><U+3E38>＊<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E38>郭撜啜<U+613C><U+3E36><U+393C><U+3E65><U+383C><U+3E38><U+393C><U+3E31>蝜潛<U+623C><U+3E61><U+653C><U+3E37><U+613C><U+3E30><U+653C><U+3E36><U+393C><U+3E33><U+623C><U+3E63><U+393C><U+3E63><U+653C><U+3E37><U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E33>葉<U+653C><U+3E35>撖行<U+393C><U+3E63>迂憭<U+623C><U+3E35><U+613C><U+3E66><U+623C><U+3E30><U+623C><U+3E35><U+393C><U+3E30><U+623C><U+3E63><U+383C><U+3E38>皜祇<U+623C><U+3E38><U+623C><U+3E38><U+393C><U+3E38>＊<U+653C><U+3E37><U+393C><U+3E61>隅<U+653C><U+3E35>嚗<U+653C><U+3E38><U+653C><U+3E35><U+393C><U+3E32><U+623C><U+3E33><U+393C><U+3E36><U+393C><U+3E39><U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E39><U+393C><U+3E62><U+393C><U+3E63><U+393C><U+3E37><U+383C><U+3E32></p>
+<p>透過折線圖，我們可以看到整體數據有個週期性。整個數據有一個不甚明顯的三個波峰。如果我們繼續鑽研這個數據，會發現數據中其實有許多組比對組合，我推測這三個不明顯的趨勢，可能和資料的收集有關。</p>
 </div>
 <div id="stage-29" class="section level2">
 <h2>stage 29</h2>
-<p><U+653C><U+3E35><U+383C><U+3E38><U+393C><U+3E65><U+393C><U+3E39><U+623C><U+3E63><U+383C><U+3E38>虜撣貊<U+653C><U+3E37><U+653C><U+3E36><U+653C><U+3E35><U+393C><U+3E63><U+623C><U+3E65><U+613C><U+3E37><U+653C><U+3E37><U+393C><U+3E63><U+383C><U+3E64><U+653C><U+3E39><U+393C><U+3E36>偕摨行<U+383C><U+3E38><U+613C><U+3E66><U+623C><U+3E65>偕摨衣<U+393C><U+3E61><U+653C><U+3E36><U+393C><U+3E33><U+383C><U+3E38><U+623C><U+3E64><U+613C><U+3E62><U+393C><U+3E30>飛頛詨嚗x&lt;-hist(age)<code>靘鼓鋆窯age</code><U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E36><U+653C><U+3E35><U+393C><U+3E63><U+623C><U+3E63><U+613C><U+3E37>撖age`<U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E38><U+623C><U+3E64><U+383C><U+3E32></p>
+<p>分析時，我們常常用直方圖來觀看區間尺度或比例尺度的數據分佈。請同學輸入：<code>x&lt;-hist(age)</code>來繪製<code>age</code>的直方圖，觀察<code>age</code>的分佈。</p>
 <pre class="r"><code>x &lt;- hist(age)</code></pre>
 </div>
 <div id="stage-30" class="section level2">
 <h2>stage 30</h2>
-<p><U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E33><U+653C><U+3E39><U+383C><U+3E32><U+393C><U+3E61><U+653C><U+3E36><U+653C><U+3E35><U+393C><U+3E63><U+623C><U+3E63><U+383C><U+3E38><U+393C><U+3E63><U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E38>僑朣∪惜<U+653C><U+3E37><U+393C><U+3E61>見<U+653C><U+3E36><U+653C><U+3E36><U+653C><U+3E37><U+653C><U+3E35>擃<U+393C><U+3E62><U+653C><U+3E35><U+393C><U+3E63>葉<U+653C><U+3E35>隞亙<U+393C><U+3E31>迄<U+653C><U+3E36><U+383C><U+3E38><U+623C><U+3E63><U+393C><U+3E63>擃陸雿25~30甇脖<U+623C><U+3E39><U+393C><U+3E36><U+623C><U+3E63><U+623C><U+3E64>銝行<U+623C><U+3E32>齒瘜<U+623C><U+3E38><U+613C><U+3E35><U+393C><U+3E61><U+393C><U+3E31>迄<U+653C><U+3E36><U+383C><U+3E38><U+393C><U+3E63><U+393C><U+3E61><U+613C><U+3E66><U+393C><U+3E63><U+383C><U+3E39><U+383C><U+3E39><U+393C><U+3E61>ssignment<U+653C><U+3E36><U+393C><U+3E63><U+383C><U+3E61>憒<U+623C><U+3E64>鼓鋆賜<U+653C><U+3E36><U+653C><U+3E35><U+393C><U+3E63><U+393C><U+3E36><U+653C><U+3E37><U+393C><U+3E61>敦蝭摮霈<code>x</code>銝准<U+613C><U+3E62><U+393C><U+3E30>飛頛詨嚗x`靘＊蝷箇鼓<U+653C><U+3E35><U+393C><U+3E63><U+393C><U+3E61>敦蝭</p>
+<p>根據右邊的直方圖，我們看到有三個年齡層的樣本數特別高。雖然圖中可以告訴我們，最高峰位於25~30歲之間，但是並沒辦法清楚的告訴我們圖的範圍。剛剛的assignment會把R如何繪製直方圖的細節存至變數<code>x</code>中。請同學輸入：<code>x</code>來顯示繪圖的細節</p>
 <pre class="r"><code>x</code></pre>
 </div>
 <div id="stage-31" class="section level2">
 <h2>stage 31</h2>
-<p><code>x</code><U+653C><U+3E36>鞈芯<U+623C><U+3E38>銝<U+653C><U+3E35>ist嚗<U+613C><U+3E65><U+393C><U+3E30>“breaks”<U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E38><U+623C><U+3E62><U+613C><U+3E38><U+623C><U+3E63><U+623C><U+3E61><U+653C><U+3E36><U+653C><U+3E35><U+393C><U+3E63><U+393C><U+3E61><U+383C><U+3E38>暺<U+613C><U+3E62><code>$breaks</code>(銋停<U+653C><U+3E36><code>x$breaks</code>)<U+653C><U+3E37><U+393C><U+3E61>潘<U+623C><U+3E63><U+393C><U+3E62><U+613C><U+3E64><U+623C><U+3E63>見<U+653C><U+3E36><U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E63>擃<U+393C><U+3E61>僑朣∪惜<U+653C><U+3E37>嚗<U+383C><U+3E64></p>
+<p><code>x</code>本質上是一個list，而它名為“breaks”的切點記載了直方圖的切割點。請由<code>$breaks</code>(也就是<code>x$breaks</code>)的值，回答：「樣本數最高的年齡層為：」</p>
 <p>(26,28]</p>
 </div>
 <div id="stage-32" class="section level2">
 <h2>stage 32</h2>
-<p><U+653C><U+3E39>ㄐ撟怠<U+393C><U+3E30>飛銴<U+623C><U+3E66><U+623C><U+3E63><U+393C><U+3E61>(26,28]<U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E34>隤迎<U+623C><U+3E63>ge&gt;26銝<U+393C><U+3E34>age&lt;=28<U+653C><U+3E33>x<span class="math">\(counts`&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E39&gt;&lt;U+613C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+393C&gt;&lt;U+3E31&gt;&lt;U+613C&gt;&lt;U+3E66&gt;&lt;U+383C&gt;&lt;U+3E62&gt;撅斤&lt;U+623C&gt;&lt;U+3E34&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E33&gt;x\)</span>counts<code>嚗&lt;U+383C&gt;&lt;U+3E63&gt;(26,28]&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E39&gt;45蝑&lt;U+613C&gt;&lt;U+3E62&gt;&lt;U+393C&gt;&lt;U+3E30&gt;飛頛詨嚗sum(age&gt;26&amp;age&lt;=28)</code>靘<U+613C><U+3E39><U+613C><U+3E64><U+383C><U+3E32></p>
+<p>這裡幫同學複習：(26,28]的意思是說，age&gt;26且age&lt;=28。<code>x$counts</code>則記載著每個層級的個數。根據<code>x$counts</code>，(26,28]的資料共有45筆。請同學輸入：<code>sum(age&gt;26&amp;age&lt;=28)</code>來驗證。</p>
 <pre class="r"><code>sum(age &gt; 26 &amp; age &lt;= 28)</code></pre>
 </div>
 <div id="stage-33" class="section level2">
 <h2>stage 33</h2>
-<p>敺hist<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E65&gt;&lt;U+653C&gt;&lt;U+3E37&gt;嚗&lt;U+393C&gt;&lt;U+3E30&gt;飛&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E32&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+653C&gt;&lt;U+3E37&gt;</code>hist(age)<code>&lt;U+653C&gt;&lt;U+3E36&gt;鞈芯&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E63&gt;停&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E61&gt;age</code><U+653C><U+3E39><U+383C><U+3E31>x$breaks<code>&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+393C&gt;&lt;U+3E30&gt;銝畾萎&lt;U+623C&gt;&lt;U+3E38&gt;畾蛛&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+613C&gt;&lt;U+3E65&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+613C&gt;&lt;U+3E30&gt;&lt;U+623C&gt;&lt;U+3E61&gt;偕摨衣&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E33&gt;&lt;U+623C&gt;&lt;U+3E39&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E36&gt;憿撮&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E38&gt;鼓</code>spon`<U+653C><U+3E37><U+393C><U+3E61>撘<U+383C><U+3E31><U+393C><U+3E31><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>從<code>hist</code>的結果出發，同學有沒有發現<code>hist(age)</code>本質上，就是把<code>age</code>透過<code>x$breaks</code>切成一段一段，變成順序尺度的數據之後，再用類似剛剛我們繪<code>spon</code>的方式做呈現。</p>
 </div>
 <div id="stage-34" class="section level2">
 <h2>stage 34</h2>
-<p><U+653C><U+3E37>鈭銝<U+623C><U+3E65><U+393C><U+3E61><U+393C><U+3E37>嚗<U+383C><U+3E38><U+383C><U+3E35>圾<U+653C><U+3E39><U+383C><U+3E37>cut<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E61&gt;&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+613C&gt;&lt;U+3E62&gt;&lt;U+393C&gt;&lt;U+3E30&gt;飛頛詨嚗?cut</code></p>
+<p>為了接下來的關卡，我們先解釋<code>cut</code>的功能。請同學輸入：<code>?cut</code></p>
 <pre class="r"><code>?cut</code></pre>
 </div>
 <div id="stage-35" class="section level2">
 <h2>stage 35</h2>
-<p><code>cut</code><U+653C><U+3E39><U+383C><U+3E37><U+613C><U+3E36><U+393C><U+3E61><U+383C><U+3E66><U+653C><U+3E36><U+393C><U+3E63>x<code>&lt;U+653C&gt;&lt;U+3E38&gt;&lt;U+383C&gt;&lt;U+3E38&gt;breaks</code><U+653C><U+3E33>cut<code>&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E61&gt;breaks</code><U+653C><U+3E37><U+653C><U+3E36><U+383C><U+3E38><U+383C><U+3E38>暺<U+623C><U+3E63><U+623C><U+3E30><U+653C><U+3E35>祕<U+653C><U+3E36>蝺<U+393C><U+3E61><U+653C><U+3E35><U+383C><U+3E38><U+653C><U+3E36><U+383C><U+3E38>撟脣<U+383C><U+3E64>畾萸<U+623C><U+3E33><U+393C><U+3E36>停<U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E65><U+393C><U+3E33><U+383C><U+3E64>畾萇<U+393C><U+3E61><U+623C><U+3E64>蔭嚗◤<U+653C><U+3E35><U+383C><U+3E38><U+613C><U+3E31>銝<U+393C><U+3E30><U+393C><U+3E61><U+613C><U+3E31><U+653C><U+3E33><U+383C><U+3E32></p>
+<p><code>cut</code>重要的參數有<code>x</code>與<code>breaks</code>。<code>cut</code>會把<code>breaks</code>當成分割點，將整個實數線分割成若干區段。而資料就會依據區段的位置，被分類為不同的類別。</p>
 </div>
 <div id="stage-36" class="section level2">
 <h2>stage 36</h2>
-<p>隢<U+393C><U+3E30>飛頛詨<code>cut(1:10,2:4)</code>閰西岫<U+653C><U+3E37><U+393C><U+3E63><U+383C><U+3E32></p>
+<p>請同學輸入<code>cut(1:10,2:4)</code>試試看。</p>
 <pre class="r"><code>cut(1:10, 2:4)</code></pre>
 </div>
 <div id="stage-37" class="section level2">
 <h2>stage 37</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38>隞亦<U+393C><U+3E63>嚗cut`<U+653C><U+3E37><U+393C><U+3E61>撓<U+653C><U+3E35><U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E38>車<U+653C><U+3E35><U+653C><U+3E38>嚗A<U+653C><U+3E33><U+383C><U+3E31>(2,3]<U+653C><U+3E36><U+383C><U+3E38><U+393C><U+3E36>(3,4]<U+653C><U+3E33><U+383C><U+3E32>(2,3]銵函內<U+653C><U+3E35><U+383C><U+3E65><U+653C><U+3E37><U+393C><U+3E61>摮憭扳2撠蝑3嚗<U+383C><U+3E63>(3,4]<U+653C><U+3E35><U+383C><U+3E39>”蝷箏之<U+653C><U+3E36>3撠蝑4嚗A<U+653C><U+3E35><U+383C><U+3E39>”蝷箔<U+623C><U+3E38><U+653C><U+3E35><U+383C><U+3E39>蝔桃<U+383C><U+3E62>瘜<U+623C><U+3E39><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>我們可以看到，<code>cut</code>的輸出有三種可能：NA、(2,3]或(3,4]。(2,3]表示原本的數字是大於2小於等於3，(3,4]則表示大於3小於等於4，NA則表示不在前兩種狀況之內。</p>
 </div>
 <div id="stage-38" class="section level2">
 <h2>stage 38</h2>
-<p>隢<U+393C><U+3E30>飛頛詨嚗plot(cut(age,breaks=x$breaks))`<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>請同學輸入：<code>plot(cut(age,breaks=x$breaks))</code>。</p>
 <pre class="r"><code>plot(cut(age, breaks = x$breaks))</code></pre>
 </div>
 <div id="stage-39" class="section level2">
 <h2>stage 39</h2>
-<p>NA</p>
+<p>我們會看到一張圖，以<code>plot(spon)</code>的格式顯示<code>hist(age)</code>的內容。</p>
 </div>
 <div id="stage-40" class="section level2">
 <h2>stage 40</h2>
-<p><U+653C><U+3E39>車<U+653C><U+3E36><U+383C><U+3E61><U+383C><U+3E64>暺偕摨艾<U+613C><U+3E66><U+623C><U+3E65>偕摨衣<U+393C><U+3E61><U+653C><U+3E36><U+393C><U+3E33><U+383C><U+3E38><U+383C><U+3E39><U+623C><U+3E65><U+613C><U+3E65><U+383C><U+3E38><U+613C><U+3E30><U+623C><U+3E61>偕摨衣<U+393C><U+3E61><U+383C><U+3E61>撌改<U+623C><U+3E63>撖血<U+383C><U+3E62><U+383C><U+3E38><U+393C><U+3E65><U+623C><U+3E38><U+393C><U+3E64>虜撣貊<U+653C><U+3E33><U+613C><U+3E36><U+623C><U+3E64><U+653C><U+3E35><U+383C><U+3E66><U+393C><U+3E36><U+653C><U+3E35><U+383C><U+3E38><U+623C><U+3E62><U+623C><U+3E63>誑<U+653C><U+3E35><U+383C><U+3E66><U+383C><U+3E38><U+623C><U+3E62><U+393C><U+3E61>嚗撖血<U+383C><U+3E62><U+623C><U+3E38><U+623C><U+3E39><U+623C><U+3E32><U+393C><U+3E63><U+613C><U+3E38><U+623C><U+3E61><U+613C><U+3E64><U+613C><U+3E31><U+623C><U+3E63><U+623C><U+3E38><U+653C><U+3E35><U+383C><U+3E38>閬<U+613C><U+3E36>隞<U+383C><U+3E62>瘜<U+613C><U+3E65><U+383C><U+3E32></p>
+<p>這種把區點尺度、比例尺度的數據切片後變成順序尺度的技巧，在實務分析上非常常用。如何選取切點，以及切點的個數，在實務上也沒有標準答案，一切都要視其他狀況而定。</p>
 </div>
 <div id="stage-41" class="section level2">
 <h2>stage 41</h2>
-<p><U+653C><U+3E38><U+383C><U+3E38><U+623C><U+3E65><U+623C><U+3E65>牧嚗<U+383C><U+3E38><U+653C><U+3E35><U+383C><U+3E31>摨鞈澆<U+383C><U+3E38><U+393C><U+3E65><U+393C><U+3E39><U+623C><U+3E63><U+653C><U+3E36>瘜<U+613C><U+3E36><U+393C><U+3E63><U+383C><U+3E61><U+613C><U+3E38><U+613C><U+3E31><U+383C><U+3E31><U+383C><U+3E38><U+613C><U+3E31><U+393C><U+3E65>(靘<U+613C><U+3E36><U+623C><U+3E38><U+653C><U+3E37><U+653C><U+3E38>隞乩<U+623C><U+3E38><U+393C><U+3E61><U+613C><U+3E38><U+613C><U+3E31><U+623C><U+3E38><U+653C><U+3E35><U+653C><U+3E39><U+393C><U+3E36><U+383C><U+3E62><U+653C><U+3E36><U+383C><U+3E62><U+613C><U+3E38><U+623C><U+3E63><U+653C><U+3E35><U+383C><U+3E34>誑銝<U+393C><U+3E61><U+383C><U+3E62><U+613C><U+3E38><U+393C><U+3E63>憭<U+623C><U+3E33><U+613C><U+3E36><U+393C><U+3E63>閬摰<U+383C><U+3E38>)嚗迨<U+653C><U+3E36><U+393C><U+3E39><U+623C><U+3E33><U+613C><U+3E36><U+393C><U+3E63><U+623C><U+3E65><U+653C><U+3E37><U+653C><U+3E35><U+653C><U+3E35><U+393C><U+3E31>迄<U+653C><U+3E36><U+383C><U+3E38><U+393C><U+3E30><U+393C><U+3E30><U+393C><U+3E61><U+383C><U+3E38><U+623C><U+3E62><U+383C><U+3E32></p>
+<p>舉例來說，我在做政府採購分析時，由於法規會把標案做分類(例如一百萬以下的標案不用公開招標，兩億以上的招標有更多法規需要遵守)，此時法規會很自然地告訴我們合理的切點。</p>
 </div>
 <div id="stage-42" class="section level2">
 <h2>stage 42</h2>
-<p><U+653C><U+3E38>hist<code>&lt;U+653C&gt;&lt;U+3E35&gt;</code>age`<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E65><U+613C><U+3E64><U+623C><U+3E63><U+383C><U+3E39><U+653C><U+3E36><U+383C><U+3E61>末銝<U+623C><U+3E38><U+393C><U+3E35><U+623C><U+3E39><U+623C><U+3E65><U+623C><U+3E63><U+613C><U+3E64><U+623C><U+3E37><U+383C><U+3E38><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>而<code>hist</code>在<code>age</code>的例子，則是抓好上下界之後，等距切割。</p>
 </div>
 <div id="stage-43" class="section level2">
 <h2>stage 43</h2>
-<p><U+653C><U+3E35>憭<U+623C><U+3E38>蝔桀<U+383C><U+3E31><U+623C><U+3E33><U+623C><U+3E63><U+653C><U+3E39><U+383C><U+3E31>quantile`<U+653C><U+3E35><U+653C><U+3E36><U+653C><U+3E35><U+383C><U+3E31><U+383C><U+3E38><U+653C><U+3E33>見瘥<U+383C><U+3E38><U+383C><U+3E39>葉<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+653C><U+3E36><U+393C><U+3E63><U+393C><U+3E64>虜<U+653C><U+3E36>餈<U+623C><U+3E63><U+653C><U+3E35><U+383C><U+3E31>脤<U+393C><U+3E61><U+383C><U+3E65><U+653C><U+3E35><U+383C><U+3E38><U+393C><U+3E65><U+393C><U+3E39><U+393C><U+3E63>末<U+653C><U+3E38><U+393C><U+3E39><U+383C><U+3E32></p>
+<p>另外一種做法，是透過<code>quantile</code>函數做切割。這樣每個切片中的資料個數會非常接近，在做進階分析時有好處。</p>
 </div>
 <div id="stage-44" class="section level2">
 <h2>stage 44</h2>
-<p>NA</p>
+<p>請同學輸入：<code>infert$education</code>，這筆數據本身就是把比例尺度切片後得到順序尺度的結果。</p>
 <pre class="r"><code>infert$education</code></pre>
 </div>
 <div id="stage-45" class="section level2">
 <h2>stage 45</h2>
-<p><U+653C><U+3E35>R銋葉嚗<U+393C><U+3E39><U+393C><U+3E30><U+383C><U+3E64><U+653C><U+3E39><U+393C><U+3E36>偕摨西<U+383C><U+3E38><U+613C><U+3E66><U+623C><U+3E65>偕摨衣<U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+623C><U+3E63><U+383C><U+3E32><U+393C><U+3E63>隞<U+393C><U+3E61>瘜<U+613C><U+3E62><U+393C><U+3E30>飛頛詨嚗lot(density(age))<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>在R之中，處理區間尺度與比例尺度的資料，還有其他的方法。請同學輸入：plot(density(age))。</p>
 <pre class="r"><code>plot(density(age))</code></pre>
 </div>
 <div id="stage-46" class="section level2">
 <h2>stage 46</h2>
-<p><U+653C><U+3E39>車<U+653C><U+3E35><U+383C><U+3E31><U+623C><U+3E33><U+393C><U+3E63><U+623C><U+3E65>銝<U+653C><U+3E35>像皛<U+393C><U+3E61>蝺<U+623C><U+3E63><U+393C><U+3E62>R銝行<U+623C><U+3E32><U+393C><U+3E63><U+383C><U+3E35><U+383C><U+3E61>age<code>&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E31&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+383C&gt;&lt;U+3E39&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+653C&gt;&lt;U+3E37&gt;銝蝔桀&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E31&gt;kerneldensityestimation</code><U+653C><U+3E37><U+393C><U+3E61>絞閮瘜<U+623C><U+3E65>摯閮age`<U+653C><U+3E39><U+613C><U+3E64><U+653C><U+3E36><U+393C><U+3E33><U+393C><U+3E61>robabilitydensityfunction<U+653C><U+3E33><U+653C><U+3E36><U+653C><U+3E35>撖血<U+383C><U+3E62><U+623C><U+3E38><U+623C><U+3E63><U+393C><U+3E32>璇<U+383C><U+3E38><U+383C><U+3E35><U+393C><U+3E63><U+393C><U+3E36>銝璅<U+613C><U+3E33><U+653C><U+3E36><U+653C><U+3E36>靘<U+393C><U+3E63><U+653C><U+3E36><U+393C><U+3E33><U+393C><U+3E61><U+383C><U+3E38><U+623C><U+3E64><U+383C><U+3E32></p>
+<p>這種做法會得到一個平滑的曲線，因為R並沒有先把<code>age</code>做切片，而是用一種叫做<code>kerneldensityestimation</code>的統計方法來估計<code>age</code>這筆數據的probabilitydensityfunction。這個函數在實務上，和長條分配圖一樣是拿來看數據的分佈。</p>
 </div>
 <div id="stage-47" class="section level2">
 <h2>stage 47</h2>
-<p><U+653C><U+3E36><U+383C><U+3E39>隞交<U+383C><U+3E38><U+623C><U+3E39>隞亙<U+623C><U+3E65><U+393C><U+3E63>葉靘<U+613C><U+3E37>撖<U+623C><U+3E63><U+393C><U+3E63><U+613C><U+3E34><U+623C><U+3E30><U+623C><U+3E30>陸嚗<U+653C><U+3E36><U+393C><U+3E33><U+653C><U+3E35><U+653C><U+3E39><U+383C><U+3E32><U+383C><U+3E38>椰<U+653C><U+3E39><U+383C><U+3E32><U+393C><U+3E61>偏撌湔<U+393C><U+3E63><U+623C><U+3E32><U+393C><U+3E63><U+383C><U+3E62><U+623C><U+3E65><U+623C><U+3E65>嚗<U+393C><U+3E63><U+623C><U+3E32><U+393C><U+3E63><U+393C><U+3E38>＊<U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E34><U+653C><U+3E37>撣詨潘<U+623C><U+3E63><U+393C><U+3E66></p>
+<p>所以我們也可以從這個圖中來觀察：有多少個尖峰？數據在右邊或左邊的尾巴有沒有拉得很長？有沒有明顯的異常值？</p>
 </div>
 <div id="stage-48" class="section level2">
 <h2>stage 48</h2>
-<p>NA</p>
+<p>請問同學，圖中的曲線，共有幾個尖峰？</p>
 <p>2</p>
 </div>
 <div id="stage-49" class="section level2">
 <h2>stage 49</h2>
-<p>隢<U+393C><U+3E35><U+393C><U+3E30>飛嚗<U+393C><U+3E63>葉<U+653C><U+3E37><U+393C><U+3E61>蝺<U+623C><U+3E63>A:撌血<U+383C><U+3E31><U+623C><U+3E63><U+623C><U+3E30><U+653C><U+3E37><U+653C><U+3E35>撠<U+393C><U+3E61>age<code>嚗:&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E31&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E30&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+653C&gt;&lt;U+3E35&gt;憭抒&lt;U+393C&gt;&lt;U+3E61&gt;age</code>嚗<U+383C><U+3E38><U+393C><U+3E36>C:銝<U+383C><U+3E31><U+623C><U+3E63><U+623C><U+3E32><U+393C><U+3E63><U+623C><U+3E38>膩<U+653C><U+3E35>蝔桃<U+383C><U+3E62>瘜<U+623C><U+3E63><U+623C><U+3E63><U+393C><U+3E66></p>
+<p>請問同學，圖中的曲線，是A:左偏（少數特別小的<code>age</code>）、B:右偏（少數特別大的<code>age</code>）或C:不偏（沒有上述兩種狀況）？</p>
 <p>C</p>
 </div>
 <div id="stage-50" class="section level2">
 <h2>stage 50</h2>
-<p>隢<U+393C><U+3E35><U+393C><U+3E30>飛嚗蝺<U+393C><U+3E63><U+623C><U+3E32><U+393C><U+3E63><U+653C><U+3E36><U+393C><U+3E66><U+653C><U+3E36><U+653C><U+3E36><U+393C><U+3E63><U+613C><U+3E35>芰<U+393C><U+3E61><U+623C><U+3E30>陸嚗<U+393C><U+3E66></p>
+<p>請問同學，這個曲線有沒有在某個地方有奇怪的尖峰？</p>
 <p>No</p>
 </div>
 <div id="stage-51" class="section level2">
 <h2>stage 51</h2>
-<p><U+653C><U+3E39>絞閮瘜葉嚗<U+623C><U+3E65><U+383C><U+3E37><U+613C><U+3E36><U+393C><U+3E61><U+383C><U+3E66><U+653C><U+3E36>嚗bw<code>&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+383C&gt;&lt;U+3E35&gt;&lt;U+613C&gt;&lt;U+3E62&gt;&lt;U+393C&gt;&lt;U+3E30&gt;飛靘&lt;U+653C&gt;&lt;U+3E35&gt;銝&lt;U+393C&gt;&lt;U+3E30&gt;bw</code><U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E35><U+393C><U+3E65><U+383C><U+3E32>隢<U+393C><U+3E30>飛<U+653C><U+3E35><U+383C><U+3E35>撓<U+653C><U+3E35>嚗plot(density(age,bw=0.1))`</p>
+<p>這個統計方法中，很重要的參數是：<code>bw</code>。我們先請同學來畫出不同<code>bw</code>的結果。請同學先輸入：<code>plot(density(age,bw=0.1))</code></p>
 <pre class="r"><code>plot(density(age, bw = 0.1))</code></pre>
 </div>
 <div id="stage-52" class="section level2">
 <h2>stage 52</h2>
-<p><U+653C><U+3E35><code>bw</code><U+653C><U+3E37><U+653C><U+3E35>撠<U+393C><U+3E61><U+383C><U+3E62><U+653C><U+3E36><U+383C><U+3E35><U+623C><U+3E63><U+383C><U+3E38><U+393C><U+3E63><U+393C><U+3E63>銝<U+653C><U+3E35><U+623C><U+3E65><U+383C><U+3E36><U+623C><U+3E63><U+623C><U+3E38><U+623C><U+3E65>餈璇<U+393C><U+3E63><U+393C><U+3E61><U+623C><U+3E35><U+393C><U+3E65><U+653C><U+3E35><U+393C><U+3E62><U+653C><U+3E39><U+613C><U+3E64><U+653C><U+3E36><U+393C><U+3E33><U+653C><U+3E36><U+653C><U+3E36>鞈<U+393C><U+3E36><U+623C><U+3E63><U+383C><U+3E63><U+653C><U+3E36><U+383C><U+3E39>隞亦<code>bw</code>撠1敺<U+613C><U+3E34><U+393C><U+3E39><U+623C><U+3E63>停<U+653C><U+3E36><U+393C><U+3E63><U+393C><U+3E63>銝<U+653C><U+3E35><U+393C><U+3E61><U+623C><U+3E30>陸嚗<U+623C><U+3E61><U+623C><U+3E30>陸<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E62>漲<U+653C><U+3E35><U+383C><U+3E39><U+393C><U+3E32>祝摨行<U+393C><U+3E63><U+393C><U+3E37><U+383C><U+3E38><U+623C><U+3E65><U+623C><U+3E65>牧嚗<U+623C><U+3E64>25<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E30>陸嚗<U+623C><U+3E62><U+393C><U+3E61>蝛<U+623C><U+3E66><U+613C><U+3E30>餈<U+623C><U+3E63><U+393C><U+3E61><code>sum(age==25)/length(age)</code>嚗<U+623C><U+3E39>停<U+653C><U+3E36><code>age</code><U+653C><U+3E37>25<U+653C><U+3E37><U+393C><U+3E61>見<U+653C><U+3E36><U+653C><U+3E36>瘥<U+383C><U+3E65><U+383C><U+3E39>隞亥<U+623C><U+3E36><U+623C><U+3E30><U+393C><U+3E61>bw`嚗<U+623C><U+3E30>陸<U+653C><U+3E37><U+393C><U+3E61>祝摨西<U+623C><U+3E36><U+623C><U+3E30><U+623C><U+3E63><U+623C><U+3E30>陸撠梯<U+613C><U+3E36><U+623C><U+3E36><U+613C><U+3E62><U+383C><U+3E32></p>
+<p>在<code>bw</code>特別小的狀態，我們會看到一個很醜，而且很接近長條圖的結果。這是因為這筆數據是整數資料，所以當<code>bw</code>小於1很多時，就會看到一個個的尖峰，而這些尖峰的高度則和寬度有關。舉例來說，位在25的尖峰，他的面積必須接近：<code>sum(age==25)/length(age)</code>，也就是<code>age</code>為25的樣本數比率。所以越小的<code>bw</code>，尖峰的寬度越小，尖峰就要越高。</p>
 </div>
 <div id="stage-53" class="section level2">
 <h2>stage 53</h2>
-<p>隢<U+393C><U+3E30>飛頛詨嚗plot(density(age,bw=1))`</p>
+<p>請同學輸入：<code>plot(density(age,bw=1))</code></p>
 <pre class="r"><code>plot(density(age, bw = 1))</code></pre>
 </div>
 <div id="stage-54" class="section level2">
 <h2>stage 54</h2>
-<p><U+653C><U+3E36><U+383C><U+3E38>隞亦<U+393C><U+3E63><U+653C><U+3E36>擃<U+393C><U+3E61>蝺<U+613C><U+3E65><U+623C><U+3E65>像皛迂憭<U+623C><U+3E64><U+653C><U+3E35><U+393C><U+3E32>plot(density(age))<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E65&gt;瘥&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+393C&gt;&lt;U+3E63&gt;耦銝&lt;U+383C&gt;&lt;U+3E61&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E35&gt;銝&lt;U+653C&gt;&lt;U+3E35&gt;陸&lt;U+653C&gt;&lt;U+3E33&gt;&lt;U+393C&gt;&lt;U+3E30&gt;飛&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E37&gt;府&lt;U+653C&gt;&lt;U+3E35&gt;隞亙停&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+613C&gt;&lt;U+3E64&gt;釣&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+383C&gt;&lt;U+3E34&gt;嚗bw</code><U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E66><U+653C><U+3E36><U+393C><U+3E63>蔣<U+653C><U+3E39><U+653C><U+3E35>蝯<U+393C><U+3E65><U+393C><U+3E61><U+383C><U+3E62>邪<U+653C><U+3E37>鞈迎<U+623C><U+3E63><U+623C><U+3E65><U+613C><U+3E36><U+383C><U+3E32>撜啁<U+393C><U+3E61><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>我們可以看到整體的曲線變得平滑許多。但是和<code>plot(density(age))</code>的結果相比，圖形上只剩下兩個峰。同學應該可以就這個例子注意到，<code>bw</code>的參數會影響到結果的拓樸特質，例如峰的個數。</p>
 </div>
 <div id="stage-55" class="section level2">
 <h2>stage 55</h2>
-<p><U+653C><U+3E39><U+653C><U+3E36><U+383C><U+3E38><U+383C><U+3E37>府憒<U+623C><U+3E64><U+383C><U+3E63><code>bw</code><U+653C><U+3E37><U+393C><U+3E61>澆嚗<U+393C><U+3E35><U+613C><U+3E31>歇蝬<U+393C><U+3E63>迂憭絞閮飛摰嗅<U+383C><U+3E31><U+383C><U+3E31><U+653C><U+3E39><U+393C><U+3E37><U+613C><U+3E30>弦嚗蒂銝歇蝬<U+393C><U+3E63>迂憭<U+393C><U+3E61>摮貉<U+613C><U+3E31><U+613C><U+3E62><U+393C><U+3E36><U+653C><U+3E36>閮<U+393C><U+3E35><U+613C><U+3E31><U+653C><U+3E37><U+393C><U+3E61>density<code>&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E36&gt;辣銝剛&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+393C&gt;&lt;U+3E38&gt;&lt;U+623C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+613C&gt;&lt;U+3E30&gt;身&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;bw</code><U+653C><U+3E36><U+653C><U+3E38><U+383C><U+3E37>甇瑕<U+653C><U+3E35><U+383C><U+3E63>２嚗<U+383C><U+3E63><U+653C><U+3E36><U+383C><U+3E39>隞交<U+653C><U+3E37><code>bw.nrd0</code><U+653C><U+3E35><U+653C><U+3E36><U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E38><U+613C><U+3E65><U+623C><U+3E35><U+393C><U+3E65>絞閮<U+393C><U+3E36>銝哨<U+623C><U+3E63><U+613C><U+3E66><U+623C><U+3E63><U+653C><U+3E38><U+653C><U+3E37><U+393C><U+3E61>瘜<code>bw.SJ</code><U+653C><U+3E35><U+653C><U+3E36><U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E38><U+613C><U+3E65><U+623C><U+3E35><U+393C><U+3E65><U+383C><U+3E32>隢<U+393C><U+3E30>飛頛詨嚗plot(density(age,bw=“SJ”))<code>嚗蝙&lt;U+653C&gt;&lt;U+3E37&gt;銝餅&lt;U+623C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+653C&gt;&lt;U+3E38&gt;&lt;U+653C&gt;&lt;U+3E39&gt;</code>bw`<U+653C><U+3E37><U+393C><U+3E61>瘜<U+623C><U+3E65>鼓<U+653C><U+3E35><U+393C><U+3E63><U+383C><U+3E32></p>
+<p>那我們應該如何挑選<code>bw</code>的值呢？這個問題已經有許多統計學家做過相關研究，並且已經有許多學術論文在探討這個問題。而R的<code>density</code>函數的文件中載明了，預設的<code>bw</code>是考量到歷史包袱，所以採用<code>bw.nrd0</code>函數的計算結果。而統計文獻中，比較推薦的方法是<code>bw.SJ</code>函數的計算結果。請同學輸入：<code>plot(density(age,bw=&quot;SJ&quot;))</code>，使用主流的推薦選<code>bw</code>的方法來繪圖。</p>
 <pre class="r"><code>plot(density(age, bw = &quot;SJ&quot;))</code></pre>
 </div>
 <div id="stage-56" class="section level2">
 <h2>stage 56</h2>
-<p>憒<U+393C><U+3E65><U+653C><U+3E37><code>nr.SJ</code><U+653C><U+3E36>瘜<U+383C><U+3E39><U+653C><U+3E39><U+653C><U+3E35>靘<U+393C><U+3E61>bw`<U+653C><U+3E35><U+383C><U+3E66>嚗<U+623C><U+3E65><U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E35><U+393C><U+3E65><U+653C><U+3E35><U+653C><U+3E36><U+393C><U+3E63><U+653C><U+3E35>陸<U+653C><U+3E35>潛<U+393C><U+3E61><U+383C><U+3E32></p>
+<p>如果採用<code>nr.SJ</code>方法所選出來的<code>bw</code>參數，得到的結果是只有兩個峰值的。</p>
 </div>
 <div id="stage-57" class="section level2">
 <h2>stage 57</h2>
-<p><U+653C><U+3E39>ㄐ蝮賜<U+623C><U+3E35><U+623C><U+3E38>銝<U+623C><U+3E38>膩<U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E38><U+613C><U+3E62>策<U+653C><U+3E35><U+393C><U+3E30>飛<U+653C><U+3E33><U+383C><U+3E38><U+623C><U+3E62>晶鈭<U+623C><U+3E38>蝔桃絞閮瘜<U+623C><U+3E65><U+623C><U+3E65><U+623C><U+3E38>蝑<U+653C><U+3E35>澆<U+393C><U+3E30><U+383C><U+3E37>葉嚗<U+613C><U+3E37>撖<U+653C><U+3E36><U+393C><U+3E33><U+383C><U+3E38><U+623C><U+3E64><U+393C><U+3E61>瘜<U+383C><U+3E32><U+653C><U+3E39>ㄐ閬撥隤選<U+623C><U+3E63><U+383C><U+3E38><U+393C><U+3E61><U+653C><U+3E37><U+393C><U+3E61>虜<U+653C><U+3E36>閬<U+613C><U+3E37>撖<U+653C><U+3E36><U+393C><U+3E33><U+653C><U+3E35><U+653C><U+3E35>撜啜<U+653C><U+3E35><U+653C><U+3E36><U+393C><U+3E63><U+623C><U+3E30><U+653C><U+3E35>潛<U+653C><U+3E35>憭扳<U+383C><U+3E38><U+653C><U+3E35>撠<U+623C><U+3E63>誑<U+653C><U+3E35><U+383C><U+3E66><U+623C><U+3E38><U+623C><U+3E30>虜<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E30>陸<U+653C><U+3E33><U+383C><U+3E32><U+653C><U+3E36><U+393C><U+3E63>敺<U+383C><U+3E38>陛<U+653C><U+3E35><U+653C><U+3E36>閮<U+623C><U+3E63><U+393C><U+3E63><U+623C><U+3E61>鼓<U+653C><U+3E35><U+393C><U+3E63><U+393C><U+3E61><U+383C><U+3E66>嚗<U+653C><U+3E36><U+393C><U+3E63>蔣<U+653C><U+3E39><U+653C><U+3E35><U+653C><U+3E36><U+383C><U+3E38><U+623C><U+3E30><U+623C><U+3E38>膩<U+653C><U+3E35><U+393C><U+3E35><U+613C><U+3E31><U+393C><U+3E61><U+613C><U+3E64><U+613C><U+3E31><U+623C><U+3E39><U+623C><U+3E62>晶鈭憒<U+623C><U+3E64>祕雿<U+393C><U+3E36>銝<U+393C><U+3E61><U+383C><U+3E34><U+653C><U+3E36>瘜<U+623C><U+3E63><U+613C><U+3E65><U+383C><U+3E38>隞亦<U+653C><U+3E36>蝡撌其犖<U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E38><U+383C><U+3E36>銝<U+383C><U+3E32></p>
+<p>這裡總結一下上述的討論給同學。我們介紹了一種統計方法來從一筆數值向量中，觀察數據分佈的方法。這裡要強調，我們的目的通常是要觀察數據是否單峰、是否有少數值特別大或特別小，以及不尋常的尖峰。最後我們簡單探討，有些繪圖的參數，是會影響到我們對上述問題的答案。也介紹了R如何實作文獻上的方法，讓我們可以直接站在巨人的肩膀上。</p>
 </div>
 <div id="stage-58" class="section level2">
 <h2>stage 58</h2>
-<p>NA</p>
+<p>接下來，我們請同學輸入<code>sunspot.year</code>。這是1700年至1988年，每年的太陽黑子數量。</p>
 <pre class="r"><code>sunspot.year</code></pre>
 </div>
 <div id="stage-59" class="section level2">
 <h2>stage 59</h2>
-<p>NA</p>
+<p>請問同學，<code>sunspot.year</code>的資料型態是？</p>
 <pre class="r"><code>class(sunspot.year)</code></pre>
 </div>
 <div id="stage-60" class="section level2">
 <h2>stage 60</h2>
-<p>“ts”<U+653C><U+3E35><U+393C><U+3E65><U+383C><U+3E35>R撠<U+393C><U+3E36><U+653C><U+3E37>靘<U+393C><U+3E39><U+393C><U+3E30><U+393C><U+3E39><U+393C><U+3E36><U+623C><U+3E61><U+383C><U+3E38><U+393C><U+3E61><U+393C><U+3E65><U+383C><U+3E35><U+613C><U+3E62><U+393C><U+3E30>飛頛詨嚗plot(sunspot.year)`</p>
+<p>“ts”型態是R專門用來處理時間序列的型態。請同學輸入：<code>plot(sunspot.year)</code></p>
 <pre class="r"><code>plot(sunspot.year)</code></pre>
 </div>
 <div id="stage-61" class="section level2">
 <h2>stage 61</h2>
-<p>R<U+653C><U+3E35>蝜芾ˊ<U+653C><U+3E36><U+393C><U+3E39><U+393C><U+3E36><U+623C><U+3E61><U+383C><U+3E38><U+393C><U+3E61><U+393C><U+3E63>耦<U+653C><U+3E36><U+393C><U+3E39><U+623C><U+3E63><U+393C><U+3E63>蝺挾靘<U+623C><U+3E61><U+623C><U+3E30><U+653C><U+3E36><U+393C><U+3E33>策<U+653C><U+3E39><U+613C><U+3E33><U+653C><U+3E36>韏瑚<U+623C><U+3E65><U+383C><U+3E31>車<U+653C><U+3E35><U+393C><U+3E63><U+623C><U+3E63><U+383C><U+3E38>隞亙<U+653C><U+3E36>鞈<U+393C><U+3E36><U+393C><U+3E61>潸<U+383C><U+3E38><U+613C><U+3E30><U+623C><U+3E61><U+623C><U+3E63><U+393C><U+3E39><U+393C><U+3E36><U+623C><U+3E63><U+383C><U+3E39><U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E39><U+393C><U+3E37>批撥銝撥<U+653C><U+3E33><U+653C><U+3E38><U+623C><U+3E63><U+383C><U+3E38><U+613C><U+3E61><U+653C><U+3E39>撐<U+653C><U+3E35><U+393C><U+3E63>云撖<U+623C><U+3E61><U+623C><U+3E63><U+623C><U+3E33><U+393C><U+3E36>云憭<U+623C><U+3E63><U+383C><U+3E66><U+613C><U+3E65><U+383C><U+3E38><U+623C><U+3E38>捆<U+653C><U+3E36><U+393C><U+3E38><U+393C><U+3E63>憭芷暺<U+613C><U+3E64><U+393C><U+3E61>望<U+393C><U+3E63>扼<U+383C><U+3E32>隢<U+393C><U+3E30>飛頛詨嚗x&lt;-tail(sunspot.year,100)`嚗<U+653C><U+3E36><U+653C><U+3E35><U+383C><U+3E66><U+653C><U+3E36><U+393C><U+3E63>敺<U+393C><U+3E61><U+383C><U+3E34>100蝑<U+653C><U+3E36><U+393C><U+3E33><U+383C><U+3E32></p>
+<p>R在繪製時間序列的圖形時，會用線段依序將數據給連接起來。透過這種圖，我們可以判斷資料的值與順序（時間）的相關性強不強。然而，我認為這張圖太密了，資料太多，反而讓我們不容易看出太陽黑子的週期性。請同學輸入：<code>x&lt;-tail(sunspot.year,100)</code>，直接取出最後的100筆數據。</p>
 <pre class="r"><code>x &lt;- tail(sunspot.year, 100)</code></pre>
 </div>
 <div id="stage-62" class="section level2">
 <h2>stage 62</h2>
-<p>NA</p>
+<p>請同學先檢查<code>x</code>的型態。經過<code>tail</code>函數處理後，<code>x</code>變成數值向量了。</p>
 <pre class="r"><code>class(x)</code></pre>
 </div>
 <div id="stage-63" class="section level2">
 <h2>stage 63</h2>
-<p>NA</p>
+<p>請同學還是先輸入：<code>plot(x)</code></p>
 <pre class="r"><code>plot(x)</code></pre>
 </div>
 <div id="stage-64" class="section level2">
 <h2>stage 64</h2>
-<p>NA</p>
+<p>接著再請同學輸入：<code>lines(x)</code></p>
 <pre class="r"><code>lines(x)</code></pre>
 </div>
 <div id="stage-65" class="section level2">
 <h2>stage 65</h2>
-<p><U+653C><U+3E35><U+393C><U+3E30>飛瘜冽<U+383C><U+3E34>嚗活<U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E63>葉<U+653C><U+3E35><U+393C><U+3E30><U+393C><U+3E39><U+393C><U+3E63><U+383C><U+3E61><U+623C><U+3E37><U+623C><U+3E63><U+623C><U+3E39><U+393C><U+3E63><U+623C><U+3E33><U+393C><U+3E36><U+623C><U+3E62><U+623C><U+3E38><U+383C><U+3E38><U+623C><U+3E39>皜<U+613C><U+3E35><U+653C><U+3E37><U+393C><U+3E63><U+653C><U+3E35><U+393C><U+3E63><U+623C><U+3E38><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+383C><U+3E32></p>
+<p>同學注意到，這次的圖中同時有折線，也有資料點。而且我們也更清楚地看到圖上的資料。</p>
 </div>
 <div id="stage-66" class="section level2">
 <h2>stage 66</h2>
-<p>R銋葉嚗<U+393C><U+3E63><U+393C><U+3E64>虜憭耨憌曉<U+393C><U+3E63><U+393C><U+3E61><U+653C><U+3E36>嚗<U+623C><U+3E65><U+613C><U+3E36><U+383C><U+3E39><U+383C><U+3E39><U+393C><U+3E30>飛雿輻<U+653C><U+3E37><U+393C><U+3E61>lines<code>撠望&lt;U+653C&gt;&lt;U+3E35&gt;銝&lt;U+653C&gt;&lt;U+3E33&gt;</code>lines<code>&lt;U+653C&gt;&lt;U+3E36&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E35&gt;銝&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+653C&gt;&lt;U+3E35&gt;澆&lt;U+393C&gt;&lt;U+3E30&gt;&lt;U+383C&gt;&lt;U+3E37&gt;&lt;U+623C&gt;&lt;U+3E65&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E63&gt;撠望&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+613C&gt;&lt;U+3E31&gt;撮</code>plot(x,type=“l”)<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E65&gt;lines</code><U+653C><U+3E39><U+613C><U+3E31><U+653C><U+3E36>銝<U+393C><U+3E63><U+383C><U+3E33>plot<code>&lt;U+653C&gt;&lt;U+3E33&gt;韏瑟&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E63&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+383C&gt;&lt;U+3E65&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+383C&gt;&lt;U+3E31&gt;耨憌整&lt;U+393C&gt;&lt;U+3E62&gt;迨嚗R銝剔迂&lt;U+653C&gt;&lt;U+3E35&gt;</code>plot<code>&lt;U+653C&gt;&lt;U+3E33&gt;hist</code><U+653C><U+3E39>車<U+653C><U+3E36><U+393C><U+3E63>韏瑟<U+653C><U+3E35><U+393C><U+3E63><U+393C><U+3E61><U+653C><U+3E36><U+653C><U+3E37><U+653C><U+3E33><U+613C><U+3E62><U+393C><U+3E61>鼓<U+653C><U+3E35><U+393C><U+3E63><U+653C><U+3E36><U+653C><U+3E33><U+623C><U+3E63><U+383C><U+3E63><code>lines</code><U+653C><U+3E36><U+383C><U+3E38><code>points</code>蝑<U+383C><U+3E31>耨憌曄<U+393C><U+3E61><U+653C><U+3E36>嚗迂<U+653C><U+3E37><U+653C><U+3E33><U+623C><U+3E64><U+393C><U+3E61>鼓<U+653C><U+3E35><U+393C><U+3E63><U+653C><U+3E36><U+653C><U+3E33><U+383C><U+3E32></p>
+<p>R之中，有非常多修飾圖的函數，例如剛剛同學使用的<code>lines</code>就是其一。當<code>lines</code>收到單一的數值向量後，就會有類似<code>plot(x,type=&quot;l&quot;)</code>的效果。而<code>lines</code>這類函數不會像<code>plot</code>「另起新圖」，而是在原本的圖上做修飾。因此，在R中稱呼<code>plot</code>、<code>hist</code>這種會「另起新圖」的函數為「高階繪圖函數」，而<code>lines</code>或是<code>points</code>等做修飾的函數，稱為「低階繪圖函數」。</p>
 </div>
 <div id="stage-67" class="section level2">
 <h2>stage 67</h2>
-<p>隢<U+393C><U+3E30>飛頛詨嚗lines(x,lty=3,lwd=3,col=2)`<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>請同學輸入：<code>lines(x,lty=3,lwd=3,col=2)</code>。</p>
 <pre class="r"><code>lines(x, lty = 3, lwd = 3, col = 2)</code></pre>
 </div>
 <div id="stage-68" class="section level2">
 <h2>stage 68</h2>
-<p><U+653C><U+3E39>ㄐ<U+653C><U+3E37><U+393C><U+3E61>ty<U+653C><U+3E35><U+383C><U+3E66>霈<U+383C><U+3E38>隞交<U+383C><U+3E61><U+623C><U+3E37>挾敺蝺<U+653C><U+3E36><U+383C><U+3E38><U+393C><U+3E39><U+623C><U+3E37>wd<U+653C><U+3E35><U+383C><U+3E66>霈<U+383C><U+3E38>矽<U+653C><U+3E36>蝺挾<U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E34>蝎敦<U+653C><U+3E33>ol霈<U+623C><U+3E37>挾霈<U+383C><U+3E38><U+623C><U+3E34><U+653C><U+3E33><U+653C><U+3E36><U+393C><U+3E63>之<U+653C><U+3E39><U+383C><U+3E37><U+393C><U+3E61><U+623C><U+3E64><U+393C><U+3E61>鼓<U+653C><U+3E35><U+393C><U+3E63><U+653C><U+3E36>嚗<U+613C><U+3E65><U+383C><U+3E38>隞亙<U+623C><U+3E30><U+393C><U+3E63>耦<U+653C><U+3E35><U+383C><U+3E31>敦<U+653C><U+3E38><U+653C><U+3E37><U+393C><U+3E61>矽<U+653C><U+3E36><U+393C><U+3E35><U+383C><U+3E32><U+653C><U+3E37><U+653C><U+3E38>誑<U+653C><U+3E37>隞<U+613C><U+3E33><U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E35><U+383C><U+3E35><U+623C><U+3E65><U+393C><U+3E63><U+623C><U+3E63><U+653C><U+3E39><U+613C><U+3E30>身<U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E63>耦<U+653C><U+3E35><U+653C><U+3E38>銝<U+613C><U+3E34>移蝺颱<U+623C><U+3E61><U+383C><U+3E32></p>
+<p>這裡的lty參數讓我們可以把線段從直線改成虛線、lwd參數讓我們調整線段的粗細、col讓線段變成紅色。R有大量的低階繪圖函數，讓我們可以對圖形做細膩的調教。然而以現代的眼光來看，R預設的圖形可能不夠精緻了。</p>
 </div>
 <div id="stage-69" class="section level2">
 <h2>stage 69</h2>
-<p>R蝷曄黎<U+653C><U+3E37><U+393C><U+3E61>蝙<U+653C><U+3E37><U+653C><U+3E38><U+383C><U+3E39><U+383C><U+3E66><U+623C><U+3E65><U+393C><U+3E64>虜憭<U+393C><U+3E61>鼓<U+653C><U+3E35><U+393C><U+3E63><U+613C><U+3E35>辣嚗閬<U+383C><U+3E66><U+623C><U+3E65>憟賜<U+393C><U+3E61><U+613C><U+3E30>身閬死<U+653C><U+3E36><U+393C><U+3E35><U+393C><U+3E65><U+383C><U+3E32>靘<U+613C><U+3E36><U+623C><U+3E39><U+623C><U+3E65><U+393C><U+3E63><U+623C><U+3E62>敦隞晶<U+653C><U+3E37><U+393C><U+3E61>ggplot2`<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>R社群的使用者則提供非常多的繪圖套件，想要提供更好的預設視覺效果。例如之後會仔細介紹的<code>ggplot2</code>。</p>
 </div>
 <div id="stage-70" class="section level2">
 <h2>stage 70</h2>
-<p>NA</p>
+<p>接下來我們介紹，要如何輸出R的圖片。</p>
 </div>
 <div id="stage-71" class="section level2">
 <h2>stage 71</h2>
-<p>頛詨<U+653C><U+3E35><U+393C><U+3E63><U+383C><U+3E39><U+393C><U+3E63>蝪∪<U+653C><U+3E37><U+393C><U+3E61>撘<U+623C><U+3E63>停<U+653C><U+3E36><U+653C><U+3E35><U+383C><U+3E35>鈭<U+383C><U+3E62><U+623C><U+3E63><U+393C><U+3E61>onsole<U+653C><U+3E37><U+653C><U+3E35><U+393C><U+3E63><U+623C><U+3E63>敺<code>savePlot</code>撠<U+393C><U+3E63>蝯血<U+613C><U+3E65><U+393C><U+3E61>撘<U+383C><U+3E66><U+653C><U+3E35>摮蝯血<U+613C><U+3E65><U+393C><U+3E61><U+613C><U+3E61><U+393C><U+3E30><U+383C><U+3E38><U+383C><U+3E35>撓<U+653C><U+3E35><code>dst&lt;-tempfile(fileext=&quot;.png&quot;)</code>靘<U+653C><U+3E37><U+393C><U+3E34><U+623C><U+3E38><U+653C><U+3E35>璈<U+393C><U+3E61><U+383C><U+3E34><U+653C><U+3E36>摮<U+613C><U+3E61><U+613C><U+3E31><U+393C><U+3E30>迂<U+653C><U+3E33><U+383C><U+3E32></p>
+<p>輸出圖片最簡單的方式，就是先用互動式的console畫圖，然後用<code>savePlot</code>將圖用給定的格式儲存到給定的檔名。我們先輸入<code>dst&lt;-tempfile(fileext=&quot;.png&quot;)</code>來產生一個隨機的暫存檔案名稱。</p>
 <pre class="r"><code>dst &lt;- tempfile(fileext = &quot;.png&quot;)</code></pre>
 </div>
 <div id="stage-72" class="section level2">
 <h2>stage 72</h2>
-<p><U+653C><U+3E36><U+653C><U+3E38><U+393C><U+3E31><U+613C><U+3E62>撓<U+653C><U+3E35>嚗savePlot(dst,type=“png”)<code>嚗撠望&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E61&gt;&lt;U+383C&gt;&lt;U+3E38&gt;&lt;U+613C&gt;&lt;U+3E36&gt;&lt;U+613C&gt;&lt;U+3E61&gt;&lt;U+623C&gt;&lt;U+3E38&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E39&gt;撓&lt;U+653C&gt;&lt;U+3E35&gt;&lt;U+653C&gt;&lt;U+3E38&gt;瑼&lt;U+613C&gt;&lt;U+3E31&gt;&lt;U+383C&gt;&lt;U+3E32&gt;&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+653C&gt;&lt;U+3E38&gt;Rstudio&lt;U+653C&gt;&lt;U+3E37&gt;憓葉</code>savePlot`<U+653C><U+3E35><U+653C><U+3E36>銝<U+623C><U+3E38>摰雿輻<U+653C><U+3E33><U+383C><U+3E39>隞交<U+383C><U+3E38><U+383C><U+3E32>停銝葆<U+653C><U+3E38><U+393C><U+3E31><U+393C><U+3E30>飛蝺渡<U+623C><U+3E66><U+383C><U+3E32></p>
+<p>接著請輸入：<code>savePlot(dst,type=&quot;png&quot;)</code>，R就會把我們視窗上看到的圖片輸出至檔案。然而在Rstudio環境中<code>savePlot</code>函數不一定能使用。所以我們這邊就不帶著同學練習。</p>
 </div>
 <div id="stage-73" class="section level2">
 <h2>stage 73</h2>
-<p><U+653C><U+3E35>銝蝔桀<U+383C><U+3E31><U+623C><U+3E33><U+653C><U+3E39><U+383C><U+3E31>身摰鼓<U+653C><U+3E35><U+393C><U+3E63><U+623C><U+3E63><U+393C><U+3E33><U+623C><U+3E63>R銝剔迂<U+653C><U+3E37><code>device</code>嚗<U+653C><U+3E39><U+613C><U+3E30>身<U+653C><U+3E37><U+393C><U+3E61>鼓<U+653C><U+3E35><U+393C><U+3E63><U+623C><U+3E63><U+393C><U+3E33><U+653C><U+3E36><U+383C><U+3E61><U+393C><U+3E63><U+393C><U+3E31><U+653C><U+3E35>雿輻<U+653C><U+3E38><U+653C><U+3E35><U+383C><U+3E39><U+383C><U+3E38>隞交<U+653C><U+3E36>蝜芸<U+393C><U+3E63><U+623C><U+3E63><U+393C><U+3E33><U+653C><U+3E33><U+383C><U+3E61><U+393C><U+3E63>誑<U+653C><U+3E37>摰撘鼓鋆賢瑼<U+613C><U+3E31>葉<U+653C><U+3E33><U+383C><U+3E38><U+623C><U+3E65><U+623C><U+3E65>牧嚗<U+383C><U+3E63><code>png</code><U+653C><U+3E35><U+653C><U+3E36>撠望<U+393C><U+3E63><U+613C><U+3E65>撱箇<U+613C><U+3E62><U+623C><U+3E38><U+653C><U+3E35>鼓<U+653C><U+3E35><U+393C><U+3E63><U+623C><U+3E63><U+393C><U+3E33><U+613C><U+3E62><U+393C><U+3E30>飛頛詨嚗png(dst)<code>&lt;U+653C&gt;&lt;U+3E39&gt;&lt;U+393C&gt;&lt;U+3E36&gt;&lt;U+393C&gt;&lt;U+3E35&gt;png</code><U+653C><U+3E37><U+393C><U+3E61>鼓<U+653C><U+3E35><U+393C><U+3E63><U+623C><U+3E63><U+393C><U+3E33><U+383C><U+3E32></p>
+<p>另一種做法是透過設定繪圖引擎（在R中稱為<code>device</code>）。R預設的繪圖引擎是把圖呈現在使用者面前。而我們可以更改繪圖引擎為「把圖以特定格式繪製到檔案中」。舉例來說，<code>png</code>函數就會讓R建立一個繪圖引擎。請同學輸入：<code>png(dst)</code>開啟<code>png</code>的繪圖引擎。</p>
 <pre class="r"><code>png(dst)</code></pre>
 </div>
 <div id="stage-74" class="section level2">
 <h2>stage 74</h2>
-<p>隢<U+393C><U+3E30>飛頛詨嚗lot(x)<U+653C><U+3E33><U+393C><U+3E30>飛<U+653C><U+3E36><U+383C><U+3E37>府<U+653C><U+3E35>隞交釣<U+653C><U+3E36><U+383C><U+3E34>嚗<U+653C><U+3E39><U+383C><U+3E32><U+393C><U+3E61><U+393C><U+3E63><U+383C><U+3E33><U+623C><U+3E32><U+393C><U+3E63><U+383C><U+3E66><U+383C><U+3E37><U+383C><U+3E32></p>
+<p>請同學輸入：plot(x)。同學應該可以注意到，右邊的圖像沒有反應。</p>
 <pre class="r"><code>plot(x)</code></pre>
 </div>
 <div id="stage-75" class="section level2">
 <h2>stage 75</h2>
-<p><U+653C><U+3E36><U+393C><U+3E63>敺<U+613C><U+3E62><U+393C><U+3E30>飛頛詨嚗dev.off()`嚗<U+393C><U+3E37><U+393C><U+3E36>ng<U+653C><U+3E37><U+393C><U+3E61>鼓<U+653C><U+3E35><U+393C><U+3E63><U+623C><U+3E63><U+393C><U+3E33><U+623C><U+3E63><U+613C><U+3E65><U+653C><U+3E36><U+383C><U+3E61><U+393C><U+3E63><U+383C><U+3E39><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36>神<U+653C><U+3E35>瑼<U+613C><U+3E31><U+383C><U+3E32></p>
+<p>最後請同學輸入：<code>dev.off()</code>，關閉png的繪圖引擎，讓R把圖片的資料寫入檔案。</p>
 <pre class="r"><code>try(dev.off(), silent = TRUE)</code></pre>
 </div>
 <div id="stage-76" class="section level2">
 <h2>stage 76</h2>
-<p><U+653C><U+3E36><U+393C><U+3E63>敺<U+623C><U+3E63>蝙<U+653C><U+3E37>rstudio<U+653C><U+3E37><U+393C><U+3E61><U+393C><U+3E30>飛蝑<U+613C><U+3E64>隞亥撓<U+653C><U+3E35>嚗library(rstudioapi)<code>敺蝙&lt;U+653C&gt;&lt;U+3E37&gt;</code>viewer(dst)<code>&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+393C&gt;&lt;U+3E63&gt;&lt;U+383C&gt;&lt;U+3E39&gt;&lt;U+383C&gt;&lt;U+3E32&gt;瘝&lt;U+393C&gt;&lt;U+3E63&gt;蝙&lt;U+653C&gt;&lt;U+3E37&gt;rstudio&lt;U+653C&gt;&lt;U+3E37&gt;&lt;U+393C&gt;&lt;U+3E61&gt;&lt;U+393C&gt;&lt;U+3E30&gt;飛隢撓&lt;U+653C&gt;&lt;U+3E35&gt;</code>dst`<U+653C><U+3E35><U+383C><U+3E66><U+623C><U+3E65>摮楝敺<U+623C><U+3E65><U+623C><U+3E63>銵<U+383C><U+3E31><U+623C><U+3E64>平蝟餌絞<U+653C><U+3E36><U+383C><U+3E39><U+393C><U+3E36>府瑼<U+613C><U+3E31><U+393C><U+3E63><U+393C><U+3E63>鼓<U+653C><U+3E35><U+393C><U+3E63><U+393C><U+3E61><U+623C><U+3E35><U+393C><U+3E65><U+383C><U+3E32><U+653C><U+3E39><U+383C><U+3E31>見<U+653C><U+3E37><U+393C><U+3E61><U+383C><U+3E62><U+623C><U+3E64><U+623C><U+3E63>Ⅱ隤<U+393C><U+3E63><U+383C><U+3E39>Ⅱ撖血神<U+653C><U+3E35><U+653C><U+3E39><U+613C><U+3E61><U+613C><U+3E31><U+383C><U+3E32></p>
+<p>最後，使用rstudio的同學等等可以輸入：<code>library(rstudioapi)</code>後使用<code>viewer(dst)</code>看看這個圖片。沒有使用rstudio的同學請輸入<code>dst</code>取得儲存路徑後，自行透過作業系統打開該檔案看看繪圖的結果。透過這樣的動作，確認圖片確實寫入這個檔案。</p>
 </div>
 <div id="stage-77" class="section level2">
 <h2>stage 77</h2>
-<p><U+653C><U+3E36>銝<U+623C><U+3E65><U+613C><U+3E65><U+383C><U+3E38>脣憭折<U+613C><U+3E64><U+383C><U+3E65><U+393C><U+3E39><U+393C><U+3E36><U+623C><U+3E66>韏瑁<U+613C><U+3E36><U+623C><U+3E63><U+613C><U+3E62><U+393C><U+3E30>飛<U+653C><U+3E35><U+383C><U+3E35>撓<U+653C><U+3E35><code>skip()</code>霈<U+383C><U+3E38><U+383C><U+3E37><U+653C><U+3E35><U+383C><U+3E38><U+613C><U+3E37><U+383C><U+3E63>鼓<U+653C><U+3E35><U+393C><U+3E63>憓<U+383C><U+3E32></p>
+<p>接下來讓我們進入大魔王時間。保險起見，請同學先輸入<code>skip()</code>讓我們重新初始化繪圖環境。</p>
 <pre class="r"><code>try(dev.off(), silent = TRUE)</code></pre>
 </div>
 <div id="stage-78" class="section level2">
 <h2>stage 78</h2>
-<p><code>hsb</code><U+653C><U+3E36><U+653C><U+3E36><U+383C><U+3E38><U+623C><U+3E61><U+383C><U+3E35><U+623C><U+3E61><U+383C><U+3E32>末<U+653C><U+3E37><U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+623C><U+3E63>ㄐ<U+653C><U+3E39>閮<U+623C><U+3E63><U+623C><U+3E61>飛<U+653C><U+3E37><U+393C><U+3E34><U+393C><U+3E61>蝷<U+623C><U+3E33><U+393C><U+3E36><U+383C><U+3E38>飛<U+653C><U+3E37><U+393C><U+3E34><U+653C><U+3E35><U+393C><U+3E30><U+613C><U+3E37><U+653C><U+3E37><U+393C><U+3E61>岫<U+653C><U+3E36><U+383C><U+3E38>蜀<U+653C><U+3E33><U+383C><U+3E32><U+653C><U+3E36>鞈<U+393C><U+3E36><U+383C><U+3E63>11<U+653C><U+3E35><U+613C><U+3E63><U+623C><U+3E64><U+383C><U+3E31>200蝑<U+613C><U+3E38><U+383C><U+3E63><U+623C><U+3E63><U+383C><U+3E38>200雿飛<U+653C><U+3E37><U+393C><U+3E34><U+623C><U+3E63><U+623C><U+3E63><U+383C><U+3E63>蝚砌<U+623C><U+3E38>甈<U+383C><U+3E34>(id)隞<U+613C><U+3E33>銵刻府<U+653C><U+3E35><U+393C><U+3E30>飛<U+653C><U+3E37><U+393C><U+3E34><U+393C><U+3E61>楊<U+653C><U+3E38><U+393C><U+3E39><U+623C><U+3E63><U+393C><U+3E62>蝚砌<U+623C><U+3E61><U+613C><U+3E63><U+383C><U+3E34>(sex)隞<U+613C><U+3E33>銵典飛<U+653C><U+3E37><U+393C><U+3E34>批嚗洵銝<U+613C><U+3E63><U+383C><U+3E34>(race)隞<U+613C><U+3E33>銵典飛<U+653C><U+3E37><U+393C><U+3E34><U+393C><U+3E61>車<U+653C><U+3E36><U+393C><U+3E37><U+623C><U+3E63><U+393C><U+3E62>蝚砍<U+393C><U+3E62><U+613C><U+3E63><U+383C><U+3E34>(ses)隞<U+613C><U+3E33>銵典飛<U+653C><U+3E37><U+393C><U+3E34>振摨剔冗蝬<U+613C><U+3E64><U+623C><U+3E34><U+623C><U+3E63><U+393C><U+3E62>蝚砌<U+623C><U+3E61><U+613C><U+3E63><U+383C><U+3E34>(schtyp)隞<U+613C><U+3E33>銵冽摮豢<U+653C><U+3E36><U+653C><U+3E35>蝡<U+383C><U+3E38><U+613C><U+3E37><U+613C><U+3E62><U+623C><U+3E63><U+393C><U+3E62>蝚砍甈<U+383C><U+3E34>(prog)隞<U+613C><U+3E33>銵典飛<U+653C><U+3E36><U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E31><U+393C><U+3E65><U+623C><U+3E63><U+393C><U+3E62>蝚砌<U+623C><U+3E38><U+613C><U+3E63>蝚砍<U+383C><U+3E64><U+623C><U+3E38>甈<U+383C><U+3E39><U+653C><U+3E35><U+393C><U+3E30><U+613C><U+3E37>岫<U+653C><U+3E36><U+383C><U+3E38>蜀<U+653C><U+3E33><U+383C><U+3E32>隢<U+393C><U+3E30>飛頛詨View(hsb)<U+653C><U+3E35><U+383C><U+3E35><U+393C><U+3E63><U+393C><U+3E63><U+653C><U+3E36><U+393C><U+3E33><U+383C><U+3E32></p>
+<p><code>hsb</code>是我們事先準備好的資料，裡面記載了學生的基礎資料與學生在各個科目的考試成績。本資料包含11個欄位、200筆記錄（200位學生），第一欄(id)代表該名學生的編號；第二欄(sex)代表學生性別；第三欄(race)代表學生的種族；第四欄(ses)代表學生家庭社經等級；第五欄(schtyp)代表是學校是公立或私立；第六欄(prog)代表學校的類型；第七欄至第十一欄則是各科考試成績。請同學輸入View(hsb)先看看數據。</p>
 <pre class="r"><code>View(hsb)</code></pre>
 </div>
 <div id="stage-79" class="section level2">
 <h2>stage 79</h2>
-<p>隢<U+393C><U+3E35><U+393C><U+3E30>飛嚗write`甈<U+623C><U+3E64><U+383C><U+3E37>府<U+653C><U+3E37><U+653C><U+3E35>銝<U+653C><U+3E35><U+653C><U+3E35><U+393C><U+3E65><U+383C><U+3E35><U+393C><U+3E39><U+393C><U+3E30><U+623C><U+3E63><U+613C><U+3E31>隢A,<U+653C><U+3E36><U+653C><U+3E35>潸<U+613C><U+3E62>B</p>
+<p>請問同學，<code>write</code>欄位應該用哪一個R型態處理？類別請選A,數值請選B</p>
 <p>B</p>
 </div>
 <div id="stage-80" class="section level2">
 <h2>stage 80</h2>
-<p>NA</p>
+<p>請同學用<code>plot</code>和<code>density</code>的函數組合繪製<code>hsb$write</code>的數據。<code>bw</code>請用“SJ”</p>
 <pre class="r"><code>plot(density(hsb$write, bw = &quot;SJ&quot;))</code></pre>
 </div>
 <div id="stage-81" class="section level2">
 <h2>stage 81</h2>
-<p>NA</p>
+<p>請問這張圖一共有幾個峰？</p>
 <p>2</p>
 </div>
 <div id="stage-82" class="section level2">
 <h2>stage 82</h2>
-<p>NA</p>
+<p>請問資料有沒有異常的極大值或極小值？</p>
 <p>Yes</p>
 </div>
 <div id="stage-83" class="section level2">
 <h2>stage 83</h2>
-<p>NA</p>
+<p>請問極小值大概是多少？</p>
 <p>-100</p>
 </div>
 <div id="stage-84" class="section level2">
 <h2>stage 84</h2>
-<p><U+653C><U+3E35>撖圳hsb$write`<U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E36><U+393C><U+3E33>葉嚗隞<U+613C><U+3E35>-99靘<U+613C><U+3E38><U+623C><U+3E63>憭梁<U+393C><U+3E61><U+623C><U+3E33><U+393C><U+3E36>蝷暹<U+393C><U+3E63><U+613C><U+3E37>飛<U+653C><U+3E37><U+393C><U+3E61><U+653C><U+3E36><U+393C><U+3E33>葉敺虜閬<U+383C><U+3E32><U+653C><U+3E38><U+653C><U+3E37><U+653C><U+3E37><U+393C><U+3E61><U+613C><U+3E36>死<U+653C><U+3E35><U+383C><U+3E63>隞亥<U+613C><U+3E65><U+383C><U+3E38><U+653C><U+3E35><U+383C><U+3E38><U+393C><U+3E65><U+623C><U+3E39><U+383C><U+3E39><U+623C><U+3E63>停瘜冽<U+383C><U+3E34><U+653C><U+3E39><U+623C><U+3E61><U+623C><U+3E33><U+393C><U+3E36><U+393C><U+3E61>撣詻<U+383C><U+3E32></p>
+<p>其實<code>hsb$write</code>的數據中，是以-99來記載遺失的資料。這在社會科學的數據中很常見。而適當的視覺化可以讓我們在分析之前，就注意到這些資料的異常。</p>
 </div>
 <div id="stage-85" class="section level2">
 <h2>stage 85</h2>
-<p>NA</p>
+<p>請同學對<code>hsb$sex</code>畫出圓餅圖</p>
 <pre class="r"><code>pie(table(hsb$sex))</code></pre>
 </div>
 <div id="stage-86" class="section level2">
 <h2>stage 86</h2>
-<p>NA</p>
+<p>最後我們直接用大量的範例繪圖程式碼，讓同學學習各種圖形繪製的細節調教。</p>
 </div>
 <div id="stage-87" class="section level2">
 <h2>stage 87</h2>
-<p>NA</p>
+<p>我們看看圓餅圖的範例。結束請按<code>submit()</code></p>
 <pre class="r"><code>NA
 sex &lt;- table(hsb$sex)
 
@@ -547,7 +547,7 @@ NA
 </div>
 <div id="stage-88" class="section level2">
 <h2>stage 88</h2>
-<p>NA</p>
+<p>我們看看長條圖的範例。結束請按<code>submit()</code></p>
 <pre class="r"><code>NA
 math &lt;- hsb$math
 hist(math)
@@ -575,7 +575,7 @@ NA</code></pre>
 </div>
 <div id="stage-89" class="section level2">
 <h2>stage 89</h2>
-<p>NA</p>
+<p>我們看看機率分佈圖的範例。結束請按<code>submit()</code></p>
 <pre class="r"><code>math &lt;- hsb$math
 plot(density(math))
 math.sj &lt;- density(math, bw = &quot;SJ&quot;)
@@ -613,7 +613,7 @@ NA</code></pre>
 </div>
 <div id="stage-90" class="section level2">
 <h2>stage 90</h2>
-<p>NA</p>
+<p>我們看看折線圖的範例。結束請按<code>submit()</code></p>
 <pre class="r"><code>NA
 
 NA
