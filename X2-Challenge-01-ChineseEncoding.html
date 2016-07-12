@@ -248,10 +248,10 @@ $(document).ready(function () {
 <div id="stage-29" class="section level2">
 <h2>stage 29</h2>
 <p>最後，還是要請同學利用這次所學的內容，做一個小練習。請同學在完成之後存檔，並輸入<code>submit()</code>來檢查結果是否符合預期。如果同學在檔案中看到亂碼，請使用Rstudio左上角的File-&gt;ReopenWithEncoding…-&gt;選取：UTF-8</p>
-<pre class="r"><code>#' 隢&lt;90&gt;飛&lt;e7&gt;&lt;e9&gt;&lt;ab&gt;&lt;af&gt;&lt;e6&gt;&lt;89&gt;摮貊&lt;9a&gt;&lt;8a&gt;撌改&lt;bc&gt;&lt;ae&gt;&lt;e5&gt;&lt;8f&gt;orglist.path`&lt;e7&gt;&lt;9a&gt;&lt;aa&gt;&lt;a1&gt;&lt;88&gt;
-#' 鞈&lt;96&gt;&lt;be&gt;&lt;ba&gt;&lt;bc&gt;&lt;9a&gt;&lt;http://data.gov.tw/node/7307&gt;
+<pre class="r"><code>#' 請同學用這章節所學的技巧，讀取`orglist.path`的檔案
+#' 資料來源：&lt;http://data.gov.tw/node/7307&gt;
 
-# &lt;雿隞亙&lt;e9&gt;ㄐ&lt;e5&gt;&lt;81&gt;&lt;90&gt;車&lt;e5&gt;&lt;98&gt;岫&gt;
+# &lt;你可以在這裡做各種嘗試&gt;
 answer.raw &lt;- readBin(orglist.path, what = &quot;raw&quot;, n = file.info(orglist.path)$size)
 answer.txt &lt;- stringi::stri_encode(answer.raw, from = &quot;UTF-16&quot;, to = &quot;UTF-8&quot;)
 get_text_connection_by_l10n_info &lt;- function(x) {

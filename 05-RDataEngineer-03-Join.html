@@ -212,12 +212,12 @@ $(document).ready(function () {
 <h2>stage 21</h2>
 <p>接著請同學從flights中「依序」選出<code>year:day,hour,origin,dest,tailnum,carrier</code>等欄位，再抽出前100筆記資料，最後和<code>airlines</code>做<code>left_join</code>。</p>
 <pre class="r"><code>answer01 &lt;- local({
-  # 隢甇文‵撖思&lt;bd&gt;&lt;9a&gt;&lt;a8&gt;&lt;bc&gt;Ⅳ
+  # 請在此填寫你的程式碼
   slice(flights, 1:100) %&gt;%
     select(year:day, hour, origin, dest, tailnum, carrier) %&gt;%
     left_join(y = airlines, by = &quot;carrier&quot;)
 })
-# 蝯&lt;9d&gt;&lt;b9&gt;&lt;be&gt;&lt;ab&gt;&lt;9b&gt;console頛詨`submit()`</code></pre>
+# 結束之後請回到console輸入`submit()`</code></pre>
 </div>
 <div id="stage-22" class="section level2">
 <h2>stage 22</h2>
@@ -296,12 +296,12 @@ $(document).ready(function () {
 <div id="stage-38" class="section level2">
 <h2>stage 38</h2>
 <p>以上的內容，大致上把<code>left_join</code>的所有功能與應用上可能發生的狀況細解一遍。接著我們來練習解決一個問題：起飛機場的風速對抵達時間的延遲是不是有影響。請同學在完成之後存檔，並輸入<code>submit()</code>來檢查結果是否符合預期。如果同學在檔案中看到亂碼，請使用Rstudio左上角的File-&gt;Reopen</p>
-<pre class="r"><code># 隢&lt;90&gt;飛雿輻`left_join`撠weather`&lt;e7&gt;&lt;9a&gt;&lt;b3&gt;&lt;a8&gt;票&lt;e5&gt;`flights`鞈&lt;96&gt;葉
-#   &lt;e5&gt;&lt;90&gt;蔥&lt;e7&gt;&lt;9a&gt;&lt;81&gt;&lt;a8&gt;&lt;ab&gt;蝙&lt;e7&gt; year:day, hour, origin &lt;e7&gt;&lt;e6&gt;&lt;88&gt;&lt;90&gt;蔥&lt;e7&gt;&lt;9a&gt;ey
-#   &lt;e6&gt;&lt;8f&gt;內嚗&lt;ab&gt;炎&lt;e6&gt;weather&lt;e8&gt;&lt;88&gt;lights&lt;e7&gt;&lt;9a&gt;&lt;ac&gt;&lt;bd&gt;&lt;90&gt;迂&lt;e9&gt;&lt;87&gt;&lt;a4&gt;&lt;9a&gt;&lt;e5&gt;&lt;88&gt;&lt;86&gt;
-# 瘥&lt;b0&gt;&lt;ae&gt;敺&lt;bc&gt;&lt;ab&gt;&lt;85&gt;&lt;81&gt;&lt;b3&gt;&lt;96&gt;&lt;9a&gt;&lt;b8&gt;&lt;90&gt;&lt;bc&gt;&lt;9a&gt;
-# - 蝯&lt;9e&gt;&lt;e5&gt;&lt;8c&gt;wind_speed&lt;e8&gt;&lt;88&gt;rr_delay&lt;e9&gt;&lt;e5&gt;&lt;ac&gt;&lt;bd&gt;&lt;8d&gt;
-# - 銝虫&lt;b8&gt;&lt;ba&gt;&lt;ac&gt;&lt;bd&gt;葉&lt;e9&gt;銝&lt;87&gt;府&lt;e6&gt;&lt;9c&gt;A&lt;e6&gt;&lt;88&gt;aN
+<pre class="r"><code># 請同學使用`left_join`將`weather`的資訊貼到`flights`資料中
+#   合併的過程請使用 year:day, hour, origin 當成合併的key
+#   提示：請檢查weather與flights的欄位名稱重複的部分
+# 比對完畢後，請先做資料的清理：
+# - 結果只包含wind_speed與arr_delay這兩個欄位
+# - 並且這些欄位中都不應該有NA或NaN
 answer02.1 &lt;- local({
   select(flights, year:day, hour, origin, dest, tailnum, carrier, arr_delay) %&gt;%
     left_join(weather) %&gt;%
@@ -315,25 +315,25 @@ stopifnot(sum(is.nan(answer02.1$wind_speed)) == 0)
 stopifnot(sum(is.na(answer02.1$arr_delay)) == 0)
 stopifnot(sum(is.nan(answer02.1$arr_delay)) == 0)
 
-# &lt;e6&gt;&lt;e8&gt;&lt;91&gt;&lt;88&gt;&lt;a6&gt;&lt;8a&gt;◢&lt;e9&gt;&lt;bc&gt;ind_speed)&lt;e5&gt;&lt;81&gt;&lt;88&gt;&lt;b4&gt;&lt;82&gt;
-# &lt;e7&gt;&lt;e6&gt;&lt;e6&gt;&lt;88&gt;&lt;b0&gt;除鞊∠&lt;9a&gt;&lt;e6&gt;&lt;93&gt;&lt;b2&gt;&lt;9c&gt;&lt;83&gt;&lt;e7&gt;霅&lt;bc&gt;&lt;89&gt;隞交&lt;9c&gt;憟賜&lt;9a&gt;&lt;88&gt;&lt;a1&gt;瘜停&lt;e6&gt;&lt;e9&gt;&lt;81&gt;&lt;e6&gt;&lt;93&gt;&lt;9a&gt;&lt;af&gt;&lt;8e&gt;&lt;be&gt;&lt;8a&gt;&lt;82&gt;
-# quantile&lt;e5&gt;&lt;e6&gt;&lt;e6&gt;&lt;9c&gt;&lt;8a&gt;銝&lt;e5&gt;&lt;e5&gt;澆&lt;90&gt;&lt;87&gt;葉&lt;e7&gt;&lt;9a&gt;&lt;e5&gt;&lt;88&gt;&lt;bd&gt;嚗&lt;b9&gt;停&lt;e6&gt;隤迎&lt;bc&gt;&lt;9a&gt;
-# answer02.2[1]&lt;e6&gt;&lt;9c&gt;&lt;b6&gt;&lt;81&gt;&lt;8e&gt; 0% &lt;e7&gt;&lt;9a&gt;&lt;84&gt; answer02.2
-# answer02.2[2]&lt;e6&gt;&lt;9c&gt;&lt;b6&gt;&lt;81&gt;&lt;8e&gt; 25% &lt;e7&gt;&lt;9a&gt;&lt;84&gt; answer02.2
-# answer02.2[3]&lt;e6&gt;&lt;9c&gt;&lt;b6&gt;&lt;81&gt;&lt;8e&gt; 50% &lt;e7&gt;&lt;9a&gt;&lt;84&gt; answer02.2
-# answer02.2[4]&lt;e6&gt;&lt;9c&gt;&lt;b6&gt;&lt;81&gt;&lt;8e&gt; 75% &lt;e7&gt;&lt;9a&gt;&lt;84&gt; answer02.2
-# answer02.2[5]&lt;e6&gt;&lt;9c&gt;&lt;b6&gt;&lt;81&gt;&lt;8e&gt; 100% &lt;e7&gt;&lt;9a&gt;&lt;84&gt; answer02.2
+# 接著我們要把風速（wind_speed)做分級。
+# 由於我們對氣象的數據沒有背景知識，所以最好的分類方法就是透過數據的比率來抓。
+# quantile函數會抓出一個數值向量中的百分位數，也就是說：
+# answer02.2[1]會超過 0% 的 answer02.2
+# answer02.2[2]會超過 25% 的 answer02.2
+# answer02.2[3]會超過 50% 的 answer02.2
+# answer02.2[4]會超過 75% 的 answer02.2
+# answer02.2[5]會超過 100% 的 answer02.2
 answer02.2 &lt;- quantile(answer02.1$wind_speed, seq(0, 1, by = 0.25))
 stopifnot(length(answer02.2) == 5)
 stopifnot(answer02.2[1] == 0)
 stopifnot(answer02.2[5] == max(answer02.2))
 
-# &lt;e6&gt;&lt;9c&gt;敺&lt;bc&gt;&lt;88&gt;&lt;e7&gt;`cut`&lt;e8&gt;&lt;88&gt;answer02.2`撠&lt;8e&gt;&lt;a7&gt;&lt;9a&gt;ind_speed&lt;e5&gt;&lt;81&gt;&lt;88&gt;&lt;a1&gt;&lt;82&gt;
-# 隞 answer02.2[1]&lt;e8&gt;answer02.2[2]&lt;e7&gt;&lt;9a&gt;◢&lt;e9&gt;&lt;bc&gt;&lt;9c&gt;◤甇賊&lt;a1&gt;蝑&lt;b4&gt;&lt;9a&gt;1
-# 隞 answer02.2[2]&lt;e8&gt;answer02.2[3]&lt;e7&gt;&lt;9a&gt;◢&lt;e9&gt;&lt;bc&gt;&lt;9c&gt;◤甇賊&lt;a1&gt;蝑&lt;b4&gt;&lt;9a&gt;2
-# 隞 answer02.2[3]&lt;e8&gt;answer02.2[4]&lt;e7&gt;&lt;9a&gt;◢&lt;e9&gt;&lt;bc&gt;&lt;9c&gt;◤甇賊&lt;a1&gt;蝑&lt;b4&gt;&lt;9a&gt;3
-# 隞 answer02.2[4]&lt;e8&gt;answer02.2[5]&lt;e7&gt;&lt;9a&gt;◢&lt;e9&gt;&lt;bc&gt;&lt;9c&gt;◤甇賊&lt;a1&gt;蝑&lt;b4&gt;&lt;9a&gt;4
-# &lt;e6&gt;&lt;e8&gt;&lt;91&gt;&lt;bc&gt;&lt;88&gt;&lt;a8&gt;&lt;ae&gt;rr_delay&lt;e5&gt;瘥&lt;b8&gt;蝔桀&lt;88&gt;&lt;a1&gt;葉&lt;e7&gt;&lt;9a&gt;像&lt;e5&gt;&lt;9d&gt;
+# 最後，我們利用`cut`與`answer02.2`對原始的wind_speed做分類。
+# 介於 answer02.2[1]至answer02.2[2]的風速，會被歸類為等級1
+# 介於 answer02.2[2]至answer02.2[3]的風速，會被歸類為等級2
+# 介於 answer02.2[3]至answer02.2[4]的風速，會被歸類為等級3
+# 介於 answer02.2[4]至answer02.2[5]的風速，會被歸類為等級4
+# 接著，我們計算arr_delay在每一種分類中的平均數
 answer02.3 &lt;- local({
   mutate(answer02.1, wind_speed = cut(wind_speed, breaks = c(answer02.2[1]-1e-5, tail(answer02.2, -1)))) %&gt;%
     group_by(wind_speed) %&gt;%
@@ -343,7 +343,7 @@ stopifnot(nrow(answer02.3) == 4)
 stopifnot(colnames(answer02.3) == c(&quot;wind_speed&quot;, &quot;mean(arr_delay)&quot;))
 if (packageVersion(&quot;nycflights13&quot;) != &quot;0.2.0&quot;) stopifnot(answer02.3[[2]] &gt; 4)
 stopifnot(answer02.3[[2]] &lt; 16)
-# 隢&lt;90&gt;飛摰&lt;88&gt;&lt;be&gt;&lt;9b&gt;console頛詨`submit()`&lt;e5&gt;&lt;81&gt;炎&lt;e6&gt;</code></pre>
+# 請同學完成後回到console輸入`submit()`做檢查</code></pre>
 </div>
 <div id="stage-39" class="section level2">
 <h2>stage 39</h2>
@@ -498,13 +498,13 @@ stopifnot(answer02.3[[2]] &lt; 16)
 <div id="stage-73" class="section level2">
 <h2>stage 73</h2>
 <p>就請同學多多加油了！利用從RBasic到RDataEngineer系列所學到的知識，完成這個挑戰。請同學在完成之後存檔，並輸入<code>submit()</code>來檢查結果是否符合預期。如果同學在檔案中看到亂碼，請使用Rstudio左上角的File-&gt;Reopen</p>
-<pre class="r"><code>#' 隢&lt;e5&gt;&lt;90&gt;車&lt;e6&gt;撘&lt;ae&gt;&lt;e5&gt;&lt;8f&gt;gdp_path`&lt;e7&gt;&lt;9a&gt;&lt;b3&gt;&lt;96&gt;&lt;e7&gt;&lt;90&gt;&lt;b3&gt;&lt;96&gt;&lt;bc&gt;蒂&lt;e6&gt;&lt;8a&gt;&lt;9c&gt;敺&lt;9a&gt;&lt;b5&gt;&lt;9e&gt;&lt;ad&gt;霈`gdp`&lt;e3&gt;&lt;82&gt;
-#' &lt;e6&gt;&lt;8f&gt;內嚗gdp_path`銝剔&lt;9a&gt;洵銝甈&lt;e6&gt;&lt;93&gt;撟&lt;b4&gt;/摮&lt;a3&gt;&lt;e3&gt;洵鈭&lt;ac&gt;&lt;e6&gt;&lt;93&gt;閰脣迤&lt;e7&gt;&lt;9a&gt;DP(&lt;e7&gt;&lt;e8&gt;)
-#' 蝯&lt;9e&gt;&lt;87&gt;府閬&lt;9c&gt;甈&lt;9a&gt;&lt;e6&gt;&lt;93&gt;&lt;bc&gt;洵銝甈撟湛&lt;bc&gt;洵鈭&lt;ac&gt;&lt;e6&gt;&lt;88&gt;&lt;9c&gt;&lt;af&gt;僑&lt;e7&gt;&lt;9a&gt;DP
-#' &lt;e5&gt;擃敦蝭隢&lt;8f&gt;&lt;9c&gt;敺&lt;9a&gt;stopifnot`&lt;e7&gt;&lt;9a&gt;炎&lt;e6&gt;鈭&lt;a0&gt;&lt;85&gt;
-#' &lt;e6&gt;&lt;8f&gt;內嚗&lt;e6&gt;&lt;8e&gt;&lt;e6&gt;&lt;93&gt;葉&lt;e9&gt;&lt;96&gt;&lt;9a&gt;&lt;99&gt;&lt;bc&gt;&lt;ab&gt;嚗gsub(pattern = &quot;,&quot;, replacement = &quot;&quot;, x = &lt;雿&lt;9a&gt;&lt;ad&gt;葡&lt;e5&gt;&lt;90&gt;&lt;87&gt;&lt;8f&gt;&gt;)`
+<pre class="r"><code>#' 請用各種方式讀取`gdp_path`的資料、整理資料，並把最後的結果存到變數`gdp`。
+#' 提示：`gdp_path`中的第一欄數據是年/季、第二欄數據是該季的GDP(百萬)
+#' 結果應該要有兩欄的數據，第一欄是年，第二欄是我國每年的GDP
+#' 具體細節請參考最後的`stopifnot`的檢查事項
+#' 提示：拿掉數據中間的逗號，請用：`gsub(pattern = &quot;,&quot;, replacement = &quot;&quot;, x = &lt;你的字串向量&gt;)`
 gdp &lt;- local({
-  # 隢‵撖思&lt;bd&gt;&lt;9a&gt;&lt;a8&gt;&lt;bc&gt;Ⅳ
+  # 請填寫你的程式碼
   read.table(gdp_path, skip = 4, header = FALSE, sep = &quot;,&quot;) %&gt;%
     slice(1:132) %&gt;%
     select(season = V1, gdp = V2) %&gt;%
@@ -524,10 +524,10 @@ stopifnot(nrow(gdp) == 33)
 stopifnot(range(gdp$year) == c(&quot;1981&quot;, &quot;2013&quot;))
 stopifnot(range(gdp$gdp) == c(1810829,14564242) * 1000000)
 
-#' cl_info&lt;e7&gt;&lt;9a&gt;&lt;b3&gt;&lt;96&gt;&lt;8c&gt;&lt;e5&gt;&lt;90&gt;振&lt;e9&gt;&lt;8a&gt;銵&lt;9a&gt;鞎賊&lt;a4&gt;&lt;a1&gt;&lt;bc&gt;ortgage_bal嚗&lt;b3&gt;&lt;a8&gt;&lt;88&gt;&lt;b3&gt;&lt;96&gt;&lt;9a&gt;&lt;99&gt;&lt;96&gt;&lt;bc&gt;ata_dt嚗&lt;82&gt;
-#' 隢&lt;e5&gt;&lt;90&gt;車&lt;e6&gt;瘜&lt;e7&gt;&lt;90&gt;l_info&lt;e7&gt;&lt;9a&gt;&lt;b3&gt;&lt;96&gt;&lt;bc&gt;&lt;8a&gt;&lt;9c&gt;敺&lt;9a&gt;&lt;b5&gt;&lt;9e&gt;&lt;e7&gt;&lt;90&gt;`cl_info_year`
-#' 蝯&lt;9e&gt;&lt;87&gt;府閬&lt;9c&gt;甈&lt;9a&gt;&lt;e6&gt;&lt;93&gt;&lt;bc&gt;洵銝甈撟湛&lt;bc&gt;洵鈭&lt;ac&gt;瘥僑&lt;e6&gt;鞎賊&lt;a4&gt;&lt;a1&gt;&lt;9a&gt;&lt;bc&gt;(隢誑瘥僑&lt;e7&gt;&lt;9a&gt;&lt;b8&gt;&lt;e6&gt;&lt;9c&gt;遢鞈&lt;96&gt;皞&lt;96&gt;)
-#' &lt;e5&gt;擃敦蝭隢&lt;8f&gt;&lt;9c&gt;敺&lt;9a&gt;stopifnot`瑼Ｘ鈭&lt;a0&gt;&lt;85&gt;
+#' cl_info的資料包含各家銀行的房貸餘額（mortgage_bal）資訊與資料的時間（data_dt）。
+#' 請用各種方法整理cl_info的資料，把最後的結果整理至`cl_info_year`
+#' 結果應該要有兩欄的數據，第一欄是年，第二欄是每年房貸餘額的值(請以每年的一月份資料為準)
+#' 具體細節請參考最後的`stopifnot`檢查事項
 cl_info_year &lt;- local({
   select(cl_info, data_dt, mortgage_bal) %&gt;%
     mutate(month = substring(data_dt,1,7)) %&gt;%
@@ -548,12 +548,12 @@ stopifnot(nrow(cl_info_year) == 9)
 stopifnot(range(cl_info_year$year) == c(&quot;2006&quot;, &quot;2014&quot;))
 stopifnot(range(cl_info_year$mortgage_total_bal) == c(3.79632e+12, 5.726784e+12))
 
-#' &lt;e6&gt;&lt;9c&gt;敺&lt;ab&gt;&lt;90&gt;飛&lt;e7&gt;&lt;e9&gt;&lt;96&gt;隤脩&lt;a8&gt;&lt;89&gt;摮貊&lt;9a&gt;&lt;8a&gt;銵&lt;e5&gt;&lt;90&gt;gdp`&lt;e8&gt;&lt;88&gt;cl_info`&lt;e7&gt;&lt;9a&gt;&lt;b3&gt;&lt;96&gt;&lt;bc&gt;&lt;8c&gt;
-#' 閮&lt;ae&gt;&lt;e6&gt;鞎賊&lt;a4&gt;&lt;a1&gt;&lt;88&gt;dp&lt;e7&gt;&lt;9a&gt;&lt;af&gt;&lt;8e&gt;&lt;bc&gt;ortgage_total_bal / gdp嚗&lt;82&gt;
-#' 隢&lt;b0&gt;&lt;b5&gt;&lt;9e&gt;撓&lt;e5&gt;&lt;e5&gt;銝&lt;e5&gt;ata.frame嚗洵銝&lt;e6&gt;&lt;94&gt;撟港遢嚗洵鈭&lt;ac&gt;&lt;e6&gt;鞎賊&lt;a4&gt;&lt;a1&gt;&lt;9a&gt;DP雿&lt;9c&gt;&lt;af&gt;&lt;8e&gt;&lt;82&gt;
-#' 蝝啁&lt;af&gt;隢&lt;8f&gt;stopifnot`&lt;e7&gt;&lt;9a&gt;炎&lt;e6&gt;
+#' 最後請同學用這門課程所學的技術整合`gdp`與`cl_info`的資料，
+#' 計算出房貸餘額與gdp的比率（mortgage_total_bal / gdp）。
+#' 請將結果輸出到一個data.frame，第一攔是年份，第二欄是房貸餘額的GDP佔有比率。
+#' 細節請參考`stopifnot`的檢查
 answerHW &lt;- local({
-  # 隢&lt;e9&gt;&lt;82&gt;‵撖思&lt;bd&gt;&lt;9a&gt;&lt;a8&gt;&lt;bc&gt;Ⅳ
+  # 請在這邊填寫你的程式碼
   inner_join(cl_info_year, gdp, by = &quot;year&quot;) %&gt;%
     mutate(index = mortgage_total_bal / gdp) %&gt;%
     select(year, index)

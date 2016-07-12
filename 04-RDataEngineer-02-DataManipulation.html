@@ -193,14 +193,14 @@ $(document).ready(function () {
 <div id="stage-17" class="section level2">
 <h2>stage 17</h2>
 <p>如果我們要使用RBasic系列所所使用的語法，要如何得到同樣的結果呢？請同學試著寫寫看。提示：兩個布林比較和一個<code>[</code>。這題請在檔案：RDataEngineer-05-01.R中作答，完成後請存檔並切換到console中輸入：submit()</p>
-<pre class="r"><code># local&lt;e5&gt;&lt;e6&gt;&lt;e5&gt;&lt;e6&gt;&lt;9c&gt;撓&lt;e5&gt;&lt;e6&gt;&lt;9c&gt;敺&lt;b8&gt;&lt;e5&gt;xpression&lt;e7&gt;&lt;9a&gt;&lt;b5&gt;&lt;9e&gt;&lt;9c&gt;
-# &lt;e6&gt;&lt;89&gt;隞乩葉&lt;e9&gt;&lt;96&gt;遣蝡&lt;9a&gt;&lt;ae&gt;銝&lt;9c&gt;情&lt;e6&gt;&lt;9f&gt;憭
+<pre class="r"><code># local函數只會輸出最後一個expression的結果
+# 所以中間建立的變數不會污染到外部
 answer01 &lt;- local({
-  # &lt;e6&gt;&lt;8f&gt;內嚗&lt;85&gt;flights$month &lt;e5&gt;&lt;92&gt;&lt;8c&gt; 1 瘥&lt;bc&gt;&lt;83&gt;
+  # 提示：先拿flights$month 和 1 比較
   month_is_1 &lt;- flights$month == 1
-  # &lt;e5&gt;&lt;86&gt;flights$day &lt;e5&gt;&lt;92&gt;&lt;8c&gt; 1 瘥&lt;bc&gt;&lt;83&gt;
+  # 再拿flights$day 和 1 比較
   day_is_1 &lt;- flights$day == 1
-  # &lt;e6&gt;銝&lt;e5&gt;&lt;e5&gt;&lt;af&gt;&lt;bc&gt;&lt;b5&gt;&lt;9e&gt;&lt;81&gt;&lt;9a&gt; &amp; 敺&lt;b8&gt; `[``
+  # 拿上面兩個比較結果做 &amp; 後丟到 `[``
   is_target &lt;- month_is_1 &amp; day_is_1
   flights[is_target,]
 })</code></pre>
@@ -234,7 +234,7 @@ answer01 &lt;- local({
 <h2>stage 24</h2>
 <p>請問同學，在2013年的紐約，共有多少班次的飛機起飛有延誤？(<code>dep_delay&gt;0</code>)請同學在視窗開啟的Script中編寫，並且在完成後輸入<code>submit()</code></p>
 <pre class="r"><code>answer02 &lt;- local({
-  # 隢&lt;be&gt;lights蝭拚&lt;e5&gt;dep_delay &gt; 0&lt;e7&gt;&lt;9a&gt;&lt;b3&gt;&lt;96&gt;&lt;99&gt;
+  # 請從flights篩選出dep_delay &gt; 0的資料
   target &lt;- filter(flights, dep_delay &gt; 0)
   nrow(target)
 })</code></pre>
@@ -334,13 +334,13 @@ answer01 &lt;- local({
 <h2>stage 44</h2>
 <p>這裡出一個小問題讓大家練習：請同學選出<code>flights</code>中<code>dep_time</code>為NA的資料，並只挑出<code>year</code>、<code>month</code>和<code>day</code>這三欄。請同學在視窗開啟的Script中編寫，並且在完成後輸入<code>submit()</code></p>
 <pre class="r"><code>answer03 &lt;- local({
-  # 隢filter&lt;e6&gt;&lt;8c&gt;dep_time&lt;e7&gt;NA&lt;e7&gt;&lt;9a&gt;&lt;b3&gt;&lt;96&gt;&lt;99&gt;
-  # 雿隞亦is.na
+  # 請用filter挑出dep_time為NA的資料
+  # 你可以用is.na
   result1 &lt;- dplyr::filter(flights, is.na(dep_time))
-  # 隢select敺esult1&lt;e6&gt;&lt;8c&gt;year, month &lt;e5&gt;&lt;92&gt;ay
+  # 請用select從result1挑出year, month 和day
   select(result1, year:day)
 })
-# 摰&lt;88&gt;&lt;be&gt;&lt;bc&gt;&lt;ab&gt;&lt;9b&gt;console頛詨submit()</code></pre>
+# 完成後，請回到console輸入submit()</code></pre>
 </div>
 <div id="stage-45" class="section level2">
 <h2>stage 45</h2>
@@ -406,9 +406,9 @@ answer01 &lt;- local({
 <div id="stage-59" class="section level2">
 <h2>stage 59</h2>
 <p>這裡請同學做一些小練習。請在完成之後存檔，並輸入<code>submit()</code>來檢查結果是否符合預期。如果同學在檔案中看到亂碼，請使用Rstudio左上角的File-&gt;Reopen</p>
-<pre class="r"><code># &lt;e6&gt;&lt;88&gt;&lt;ae&gt;儔gain&lt;e7&gt;arr_delay - dep_delay
+<pre class="r"><code># 我們定義gain為arr_delay - dep_delay
 
-# 隢&lt;ae&gt;1 &lt;e6&gt;&lt;9c&gt;遢撟喳&lt;9d&gt;&lt;9a&gt;ain
+# 請算出1 月份平均的gain
 answer04.1 &lt;- local({
   filter(flights, month == 1) %&gt;%
     mutate(gain = arr_delay - dep_delay) %&gt;%
@@ -418,10 +418,10 @@ answer04.1 &lt;- local({
 stopifnot(class(answer04.1) == &quot;numeric&quot;)
 stopifnot(length(answer04.1) == 1)
 
-# 隢&lt;95&gt;arrier&lt;e7&gt;AA&lt;e7&gt;&lt;9a&gt;&lt;a3&gt;&lt;a9&gt;&lt;bc&gt;銝tailnum&lt;e9&gt;&lt;e6&gt;&lt;9c&gt;A摮嚗&lt;9f&gt;
+# 請問carrier為AA的飛機，是不是tailnum都有AA字眼？
 answer04.2 &lt;- local({
-  # 隢‵撖思&lt;bd&gt;&lt;9a&gt;&lt;a8&gt;&lt;bc&gt;Ⅳ
-  # 隢策&lt;e5&gt;雿&lt;9a&gt;&lt;ad&gt;&lt;a1&gt;&lt;bc&gt;&lt;9a&gt; TRUE or FALSE
+  # 請填寫你的程式碼
+  # 請給出你的答案： TRUE or FALSE
   retval &lt;-
     filter(flights, carrier == &quot;AA&quot;, !grepl(&quot;AA&quot;, tailnum)) %&gt;%
     nrow
@@ -430,9 +430,9 @@ answer04.2 &lt;- local({
 stopifnot(class(answer04.2) == &quot;logical&quot;)
 stopifnot(length(answer04.2) == 1)
 
-# 隢&lt;95&gt;ep_time隞 2301&lt;e8&gt;2400銋&lt;96&gt;&lt;9a&gt;像&lt;e5&gt;&lt;9d&gt;ep_delay&lt;e7&gt;雿&lt;95&gt;
+# 請問dep_time介於 2301至2400之間的平均dep_delay為何
 answer04.3 &lt;- local({
-  # 隢‵撖思&lt;bd&gt;&lt;9a&gt;&lt;a8&gt;&lt;bc&gt;Ⅳ
+  # 請填寫你的程式碼
   retval &lt;-
     filter(flights, 2301 &lt;= dep_time, dep_time &lt;= 2400) %&gt;%
     summarise(mean(dep_delay, na.rm = TRUE))
@@ -441,7 +441,7 @@ answer04.3 &lt;- local({
 stopifnot(class(answer04.3) == &quot;numeric&quot;)
 stopifnot(length(answer04.3) == 1)
 
-# 摰&lt;88&gt;&lt;be&gt;&lt;ab&gt;&lt;ad&gt;&lt;aa&gt;&lt;bc&gt;蒂&lt;e5&gt;&lt;9b&gt;console頛詨`submit()`</code></pre>
+# 完成後請存檔，並回到console輸入`submit()`</code></pre>
 </div>
 <div id="stage-60" class="section level2">
 <h2>stage 60</h2>
@@ -474,9 +474,9 @@ stopifnot(length(answer04.3) == 1)
 <div id="stage-67" class="section level2">
 <h2>stage 67</h2>
 <p>請同學試著用<code>%&gt;%</code>完成剛剛RDataEngineer-05-04.R。請在完成之後存檔，並輸入<code>submit()</code>來檢查結果是否符合預期。如果同學在檔案中看到亂碼，請使用Rstudio左上角的File-&gt;Reopen</p>
-<pre class="r"><code># &lt;e6&gt;&lt;88&gt;&lt;ae&gt;儔gain&lt;e7&gt;arr_delay - dep_delay
+<pre class="r"><code># 我們定義gain為arr_delay - dep_delay
 
-# 隢&lt;ae&gt;1 &lt;e6&gt;&lt;9c&gt;遢撟喳&lt;9d&gt;&lt;9a&gt;ain
+# 請算出1 月份平均的gain
 answer04.1 &lt;- local({
   filter(flights, month == 1) %&gt;%
     mutate(gain = arr_delay - dep_delay) %&gt;%
@@ -486,10 +486,10 @@ answer04.1 &lt;- local({
 stopifnot(class(answer04.1) == &quot;numeric&quot;)
 stopifnot(length(answer04.1) == 1)
 
-# 隢&lt;95&gt;arrier&lt;e7&gt;AA&lt;e7&gt;&lt;9a&gt;&lt;a3&gt;&lt;a9&gt;&lt;bc&gt;銝tailnum&lt;e9&gt;&lt;e6&gt;&lt;9c&gt;A摮嚗&lt;9f&gt;
+# 請問carrier為AA的飛機，是不是tailnum都有AA字眼？
 answer04.2 &lt;- local({
-  # 隢‵撖思&lt;bd&gt;&lt;9a&gt;&lt;a8&gt;&lt;bc&gt;Ⅳ
-  # 隢策&lt;e5&gt;雿&lt;9a&gt;&lt;ad&gt;&lt;a1&gt;&lt;bc&gt;&lt;9a&gt; TRUE or FALSE
+  # 請填寫你的程式碼
+  # 請給出你的答案： TRUE or FALSE
   retval &lt;-
     filter(flights, carrier == &quot;AA&quot;, !grepl(&quot;AA&quot;, tailnum)) %&gt;%
     nrow
@@ -498,9 +498,9 @@ answer04.2 &lt;- local({
 stopifnot(class(answer04.2) == &quot;logical&quot;)
 stopifnot(length(answer04.2) == 1)
 
-# 隢&lt;95&gt;ep_time隞 2301&lt;e8&gt;2400銋&lt;96&gt;&lt;9a&gt;像&lt;e5&gt;&lt;9d&gt;ep_delay&lt;e7&gt;雿&lt;95&gt;
+# 請問dep_time介於 2301至2400之間的平均dep_delay為何
 answer04.3 &lt;- local({
-  # 隢‵撖思&lt;bd&gt;&lt;9a&gt;&lt;a8&gt;&lt;bc&gt;Ⅳ
+  # 請填寫你的程式碼
   retval &lt;-
     filter(flights, 2301 &lt;= dep_time, dep_time &lt;= 2400) %&gt;%
     summarise(mean(dep_delay, na.rm = TRUE))
@@ -509,7 +509,7 @@ answer04.3 &lt;- local({
 stopifnot(class(answer04.3) == &quot;numeric&quot;)
 stopifnot(length(answer04.3) == 1)
 
-# 摰&lt;88&gt;&lt;be&gt;&lt;ab&gt;&lt;ad&gt;&lt;aa&gt;&lt;bc&gt;蒂&lt;e5&gt;&lt;9b&gt;console頛詨`submit()`</code></pre>
+# 完成後請存檔，並回到console輸入`submit()`</code></pre>
 </div>
 <div id="stage-68" class="section level2">
 <h2>stage 68</h2>
@@ -531,7 +531,7 @@ stopifnot(length(answer04.3) == 1)
 <div id="stage-72" class="section level2">
 <h2>stage 72</h2>
 <p>接著，我們把剛剛解答<code>answer04.1</code>的動作中，扣掉<code>filter</code>的部份，再做一次。請同學看看改過之後的結果，輸入<code>submit()</code>即可。這題不用對程式做修改。</p>
-<pre class="r"><code># &lt;e9&gt;銝蝔株&lt;a8&gt;&lt;ae&gt;nswer04.1&lt;e7&gt;&lt;9a&gt;撘&lt;8f&gt;
+<pre class="r"><code># 這是一種計算answer04.1的方式
 # answer04.1 &lt;- local({
 #   retval &lt;-
 #     filter(flights, month == 1) %&gt;%
@@ -541,13 +541,13 @@ stopifnot(length(answer04.3) == 1)
 # })
 
 answer05 &lt;-
-  # &lt;e7&gt;鈭&lt;b8&gt;&lt;a5&gt;絲閬&lt;bc&gt;&lt;86&gt;神銝甈︸f&lt;e7&gt;&lt;9a&gt;&lt;ae&gt;儔
+  # 為了清楚起見，再寫一次df的定義
   group_by(flights, month) %&gt;%
-  # mutate &lt;e5&gt;&lt;92&gt;&lt;8c&gt; summarise &lt;e7&gt;&lt;9a&gt;隞賢停&lt;e7&gt;&lt;e6&gt;&lt;8a&gt;&lt;84&gt;
+  # mutate 和 summarise 的部份就照抄
   mutate(gain = arr_delay - dep_delay) %&gt;%
   summarise(mean(gain, na.rm = TRUE))
 
-# &lt;e9&gt;ㄐ&lt;e7&gt;&lt;9a&gt;nswer05&lt;e6&gt;銝&lt;e5&gt;ata.frame</code></pre>
+# 這裡的answer05是一個data.frame</code></pre>
 </div>
 <div id="stage-73" class="section level2">
 <h2>stage 73</h2>
@@ -579,7 +579,7 @@ answer05 &lt;-
 <h2>stage 79</h2>
 <p>請在完成之後存檔，並輸入<code>submit()</code>來檢查結果是否符合預期。如果同學在檔案中看到亂碼，請使用Rstudio左上角的File-&gt;Reopen</p>
 <pre class="r"><code>cl_info2 &lt;- local({
-  # 隢‵撖思&lt;bd&gt;&lt;9a&gt;&lt;a8&gt;&lt;bc&gt;Ⅳ
+  # 請填寫你的程式碼
   mutate(cl_info, year_month = substring(data_dt, 1, 7)) %&gt;%
     select(year_month, mortgage_bal)
 })
@@ -589,7 +589,7 @@ stopifnot(ncol(cl_info2) == 2)
 stopifnot(!is.null(cl_info2$mortgage_bal))
 
 cl_info3 &lt;- local({
-  # 隢‵撖思&lt;bd&gt;&lt;9a&gt;&lt;a8&gt;&lt;bc&gt;Ⅳ
+  # 請填寫你的程式碼
   group_by(cl_info2, year_month) %&gt;%
     summarise(mortgage_total_bal = sum(mortgage_bal)) %&gt;%
     arrange(year_month)
@@ -598,7 +598,7 @@ cl_info3 &lt;- local({
 stopifnot(nrow(cl_info3) == 98)
 stopifnot(ncol(cl_info3) == 2)
 stopifnot(!is.unsorted(cl_info3$year_month))
-#' &lt;e9&gt;&lt;b3&gt;&lt;96&gt;&lt;9b&gt;閬&lt;e5&gt;&lt;92&gt;DP&lt;e5&gt;&lt;81&gt;&lt;af&gt;&lt;bc&gt;&lt;bc&gt;停&lt;e6&gt;銝&lt;e5&gt;&lt;88&gt;&lt;9c&gt;&lt;e5&gt;&lt;e7&gt;瘜⊥疵&lt;e5&gt;&lt;8c&gt;&lt;9a&gt;&lt;8c&gt;&lt;a8&gt;&lt;99&gt;</code></pre>
+#' 這個資料集只要能和GDP做比較，就是一個我國房地產泡沫化的指標</code></pre>
 </div>
 
 

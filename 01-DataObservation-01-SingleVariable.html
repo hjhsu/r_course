@@ -516,62 +516,62 @@ $(document).ready(function () {
 <div id="stage-87" class="section level2">
 <h2>stage 87</h2>
 <p>我們看看圓餅圖的範例。結束請按<code>submit()</code></p>
-<pre class="r"><code>NA
+<pre class="r"><code># 先建立sex物件
 sex &lt;- table(hsb$sex)
 
-NA
+# 預設圖
 pie(sex)
 
-NA
+# 加上標題
 pie(sex, main = &quot;Sex&quot;)
 
-NA
-NA
-NA
+# 改顏色
+col &lt;- rainbow(length(sex)) # 利用rainbow函數產生若干種不同的色系
+col # 這是RGB的值
 pie(sex, main = &quot;Sex&quot;, col = col)
 
-NA
-NA
-NA
-NA
+# 加上比率
+pct &lt;- sex / sum(sex) * 100 # 計算百分比
+label &lt;- paste0(names(sex), &quot; &quot;, pct, &quot;%&quot;) # 產生說明文字
+label # 同學可以比較label, names(sex), pct 和 &quot;%&quot; 的結果
 pie(sex, labels = label)
 
 if (FALSE) {
   # 3D pie chart
-NA
+  library(plotrix) # 同學請自行安裝這個套件
   pie3D(sex, labels = label)
 }
 
-NA
+# 請回到console輸入`submit()`
 </code></pre>
 </div>
 <div id="stage-88" class="section level2">
 <h2>stage 88</h2>
 <p>我們看看長條圖的範例。結束請按<code>submit()</code></p>
-<pre class="r"><code>NA
+<pre class="r"><code># 先建立math物件
 math &lt;- hsb$math
 hist(math)
 
-NA
+# 改變title
 hist(math, main = &quot;Histogram of math!&quot;)
 
-NA
+# 改變x軸說明
 hist(math, xlab = &quot;Value of math&quot;)
 
-NA
+# 改變y軸說明
 hist(math, ylab = &quot;frequency&quot;)
 
-NA
+# 改變顏色
 hist(math, col = &quot;blue&quot;)
 
-NA
+# 圖標
 legend(&quot;topright&quot;, &quot;test&quot;)
 
-NA
+# 改變切割點
 hist(math, breaks = 2)
 hist(math, breaks = 10)
 hist(math, breaks = 20)
-NA</code></pre>
+# 請回到console輸入`submit()`</code></pre>
 </div>
 <div id="stage-89" class="section level2">
 <h2>stage 89</h2>
@@ -580,12 +580,12 @@ NA</code></pre>
 plot(density(math))
 math.sj &lt;- density(math, bw = &quot;SJ&quot;)
 plot(math.sj)
-NA
-NA
-NA
+# 線的粗細
+plot(math.sj, lwd = 2) # lwd越大越粗
+# 線的型態
 plot(math.sj, lty = 2) 
 if (FALSE) {
-NA
+  # 以下指令可以畫出lty的數字與畫圖後的結果
   showLty &lt;- function(ltys, xoff = 0, ...) {
     stopifnot((n &lt;- length(ltys)) &gt;= 1)
     op &lt;- par(mar = rep(.5,4)); on.exit(par(op))
@@ -601,40 +601,40 @@ NA
   }
   showLty(1:6)
 }
-NA
+# 線的顏色
 plot(math.sj, col = &quot;red&quot;)
-NA
-NA
-NA
+# 對線之下的面積著色
+polygon(math.sj, col = &quot;red&quot;) # 這是一個低階繪圖函數
+# 標題
 plot(math.sj, main = &quot;math&quot;)
-NA
+# x軸標題
 plot(math.sj, xlab = &quot;math&quot;)
-NA</code></pre>
+# 請回到console輸入`submit()`</code></pre>
 </div>
 <div id="stage-90" class="section level2">
 <h2>stage 90</h2>
 <p>我們看看折線圖的範例。結束請按<code>submit()</code></p>
-<pre class="r"><code>NA
+<pre class="r"><code>x &lt;- tail(sunspot.year, 50) # 只選出最後50筆資料做圖
 
-NA
+# 畫出散布圖
 plot(x) 
-NA
-NA
-# 隤輯
+# 將點連接起來
+lines(x) # 低階繪圖函數
+# 調色
 lines(x, col = &quot;red&quot;)
-NA
+# 加粗
 lines(x, lwd = 2)
-NA
-NA
+# 改變線的型態
+plot(x) # 重新畫圖
 lines(x, lty = 3)
-NA
+# 標題
 plot(x, main = &quot;sunspot&quot;)
-NA
+# 刪除x 軸座標
 plot(x, xaxt = &quot;n&quot;)
-NA
-NA
+# y 軸座標更改
+plot(x, yaxt = &quot;n&quot;) # 先刪除y軸座標
 axis(2, at = seq(10, 200, 10), labels = seq(10, 200, 10))
-NA
+# 請回到console輸入`submit()`
 </code></pre>
 </div>
 

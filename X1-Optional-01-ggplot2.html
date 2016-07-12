@@ -246,22 +246,22 @@ $(document).ready(function () {
 <div id="stage-29" class="section level2">
 <h2>stage 29</h2>
 <p>請同學利用<code>group_by</code>和<code>summarise</code>計算各種sex類別的個數。</p>
-<pre class="r"><code># 隢&lt;a8&gt;&lt;ae&gt;ex憿&lt;e7&gt;&lt;9a&gt;
+<pre class="r"><code># 請計算sex類別的個數
 
 answer01 &lt;- local({
-  # 隢&lt;e9&gt;&lt;82&gt;‵撖思&lt;bd&gt;&lt;9a&gt;&lt;a8&gt;&lt;bc&gt;Ⅳ
+  # 請在這邊填寫你的程式碼
   group_by(hsb, sex) %&gt;%
     summarise(count = n())
 })
 
-# 隢&lt;85&gt;Ⅱ摰&lt;bd&gt;&lt;9a&gt;&lt;ad&gt;&lt;a1&gt;&lt;81&gt;誑銝葫閰&lt;a6&gt;
+# 請先確定你的答案通過以下測試
 stopifnot(colnames(answer01) == c(&quot;sex&quot;, &quot;count&quot;))
 stopifnot(nrow(answer01) == 2)
 stopifnot(is.data.frame(answer01))
 stopifnot(sum(answer01$count) == nrow(hsb))
 stopifnot(sort(answer01$sex) == sort(c(&quot;female&quot;, &quot;male&quot;)))
 
-# 蝣箄&lt;aa&gt;&lt;ae&gt;銋&lt;be&gt;&lt;bc&gt;&lt;ab&gt;&lt;9b&gt;console頛詨`submit()`</code></pre>
+# 確認完畢之後，請回到console輸入`submit()`</code></pre>
 </div>
 <div id="stage-30" class="section level2">
 <h2>stage 30</h2>
