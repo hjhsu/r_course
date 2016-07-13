@@ -299,9 +299,9 @@ $(document).ready(function () {
 <h2>stage 39</h2>
 <p>最後我們請同學利用之前所學，從<code>pirate_path</code>中爬取經緯度，再利用ggmap將海盜的通報事件畫到地圖上。</p>
 <pre class="r"><code>src &lt;- readLines(file(pirate_path, encoding = &quot;BIG5&quot;))
-tmp &lt;- strsplit(src, readLines(.get_path(&quot;.hw&quot;))[2])
+tmp &lt;- strsplit(src, &quot;：&quot;)[2])
 key &lt;- sapply(tmp, &quot;[[&quot;, 1)
-is_target &lt;- key == readLines(.get_path(&quot;.hw&quot;))[1]
+is_target &lt;- key == &quot;經緯度&quot;
 value &lt;- sapply(tmp[is_target], &quot;[[&quot;, 2)
 pirate &lt;- data.frame(
   lat = substring(value, 3, 4) %&gt;% as.numeric + substring(value, 6, 7) %&gt;% as.numeric / 60,
